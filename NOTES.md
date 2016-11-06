@@ -92,14 +92,27 @@ https://vuejs.org
 React Native
 Shadow DOM
 https://github.com/webyak/react-static-plate
+http://postcss.parts
+http://cssnext.io
 
 Reads
+https://github.com/MicheleBertoli/css-in-js
+https://speakerdeck.com/vjeux/react-css-in-js
+http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html
+https://docs.google.com/spreadsheets/d/1FaPtpyk66IJLSWt1FpDKpNu-gfrOUzVi8ZhDIiZ7sK8/edit#gid=0
+http://fullstackforum.com/software/2015/07/14/styling-in-react-and-atomic-css/
+http://bradfrost.com/blog/post/atomic-web-design/
+http://andrewhfarmer.com/how-to-style-react/
+https://medium.com/seek-developers/block-element-modifying-your-javascript-components-d7f99fcab52b#.5eyfqco7q
+https://twitter.com/chantastic/status/754495969517985792
 https://docs.google.com/presentation/d/1pL8e2OC8iDUWCvGkixYB18bRXjiVRmSgwiWoxiQN3vQ/edit#slide=id.p
 https://www.youtube.com/watch?v=NoaxsCi13yQ
 https://www.youtube.com/watch?v=E3jQQsFxUes&feature=youtu.be&t=837
 https://www.youtube.com/watch?v=BXOF_8jDdf8
+https://www.youtube.com/watch?v=U86-MFPsarQ
 http://blog.vjeux.com/2015/javascript/react-rally-animated-react-performance-toolbox.html
-http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html
+https://css-tricks.com/css-modules-part-1-need/
+https://github.com/ahfarmer/react-samples/tree/master/css-modules-by-example
 https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.mv70ujmlg
 https://medium.com/seek-developers/the-end-of-global-css-90d2a4a06284#.95ekiyxcn
 http://survivejs.com/react/advanced-techniques/styling-react/
@@ -111,11 +124,14 @@ https://medium.com/maintainable-react-apps/journey-to-enjoyable-maintainable-sty
 https://github.com/zeit/next.js/issues/22
 http://glenmaddern.com/articles/interoperable-css
 https://speakerdeck.com/davidwells/bulletproof-css-in-react
+https://vimeo.com/channels/986495/187454104
+https://facebook.github.io/react/docs/dom-elements.html
 
 React Libraries that offer UI components
 https://github.com/react-bootstrap/react-bootstrap/
-https://github.com/callemall/material-ui
+https://github.com/callemall/material-ui/tree/master/src
 https://github.com/nordsoftware/react-foundation
+https://github.com/Semantic-Org/Semantic-UI-React
 https://github.com/Evo-Forge/Essence
 https://react-mdl.github.io/react-mdl/
 https://github.com/nikgraf/belle/
