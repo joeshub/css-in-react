@@ -1,0 +1,24 @@
+{
+  "name": "04-postcss-autoprefixer-uglify",
+  "version": "1.0.0",
+  "description": "PostCSS autoprifixes new CSS code, cssmin shrinks output, uglify reduces built file size",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack --progress --colors",
+    "start": "webpack-dev-server --progress --colors --inline --hot --port 8080"
+  },
+  "author": "Joe Seifi",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.2",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.1",
+    "node-sass": "^3.11.2",
+    "postcss-loader": "^1.1.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
