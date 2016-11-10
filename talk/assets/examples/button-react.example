@@ -1,0 +1,7 @@
+const LikeButton = ({ likes }) => {
+  return (
+    <button className="btn btn-primary">
+      Like <span className="badge">{likes}</span>
+    </button>
+  )
+}

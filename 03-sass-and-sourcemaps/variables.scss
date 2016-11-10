@@ -1,7 +1,7 @@
-$bg-color: pink;
-$bg-color-medium: peachpuff;
+$bg-color: #20c063;
+$bg-color-medium: #F74A27;
 
-@mixin viewport($size) {
+@mixin viewport ($size) {
   @if ($size == medium) {
     @media only screen and (min-width: 415px) {
       @content

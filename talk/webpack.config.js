@@ -46,6 +46,9 @@ module.exports = {
       loaders: ["style", "raw"],
       include: __dirname
     }, {
+      test: /\.scss$/,
+      loader: 'style!css?sourceMap!sass?sourceMap'
+    }, {
       test: /\.svg$/,
       loader: "url?limit=10000&mimetype=image/svg+xml",
       include: path.join(__dirname, "assets")

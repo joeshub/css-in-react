@@ -8,9 +8,6 @@ module.exports = {
     path: __dirname,
     filename: "bundle.js"
   },
-  plugins: [
-    new ExtractTextPlugin("bundle.css", {allChunks: true})
-  ],
   module: {
     loaders: [
       {
@@ -18,5 +15,8 @@ module.exports = {
         loader: DEBUG ? "style!css?sourceMap!sass?sourceMap" : ExtractTextPlugin.extract("style", "css?sourceMap!sass?sourceMap")
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin("bundle.css", {allChunks: true})
+  ]
 };

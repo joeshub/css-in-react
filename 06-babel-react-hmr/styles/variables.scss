@@ -1,0 +1,12 @@
+$bg-color: #20c063;
+$bg-color-medium: #F74A27;
+$text-color: #444;
+$text-color-inverted: #fff;
+
+@mixin viewport ($size) {
+  @if ($size == medium) {
+    @media only screen and (min-width: 415px) {
+      @content
+    }
+  }
+}

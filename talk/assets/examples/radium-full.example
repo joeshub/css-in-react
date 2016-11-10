@@ -1,0 +1,30 @@
+export const styles = {
+  btn: {
+    display: 'inline-block',
+    border: '0',
+    padding: '6px 12px',
+
+    btn_primary: {
+      color: '#fff',
+      backgroundColor: '#f74A27',
+
+      ':hover': {
+        backgroundColor: '#ff7857'
+      },
+
+      '@media (min-width: 992px)': {
+        padding: '12px' 
+      },
+
+      badge: {
+        color: '#f74A27',
+        backgroundColor: '#fff'
+      }
+    },
+    badge: {
+      display: 'inline-block',
+      borderRadius: '10px',
+      padding: '3px 6px'
+    }
+  }
+}

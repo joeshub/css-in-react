@@ -7,14 +7,14 @@ module.exports = {
     path: __dirname,
     filename: "bundle.js"
   },
-  plugins: [
-    new ExtractTextPlugin("bundle.css")
-  ],
   module: {
     loaders: [
       { test: /\.css$/,
         loader: DEBUG ? "style!css" : ExtractTextPlugin.extract("style", "css")
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin("bundle.css")
+  ]
 };

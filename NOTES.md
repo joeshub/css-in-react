@@ -1,31 +1,36 @@
-basic css + media Queries
-hot reloading css
+# TODO
 
-extract text plugin
-importing css files
+- radium
+- csjs, glamor
+- css modules
+- postcss and css next http://cssnext.io/
 
-Sass
-sourcemaps
+https://bigbitecreative.com/a-look-into-writing-future-css-with-postcss-cssnext/
 
-html webpack plugin
-autoprefixer
-uglify plugins
+- https://github.com/rtsao/csjs
+- https://github.com/martinandert/react-inline
+- https://github.com/rtsao/csjs
+- pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
 
-inline styles
-style = {}
+- This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
 
-react-css-modules + sass
+- https://formidable.com/blog/2015/03/01/launching-radium/
+- https://byjoeybaker.com/react-inline-styles
+-  https://github.com/FormidableLabs/radium/tree/master/docs/comparison
+- https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.t3xylc475
 
-css in js
-https://github.com/Khan/aphrodite
+- react-css-modules + sass
+- PostCSS http://cssnext.io/usage/
+- Aphrodite https://github.com/Khan/aphrodite
+- Server side rendering
+- Animation
+- Component state
+- sass resource loader https://github.com/shakacode/sass-resources-loader
+- https://github.com/jxnblk/repng
+https://reactjsnews.com/isomorphic-react-in-real-life
 
 
-sass resource loader
-https://github.com/shakacode/sass-resources-loader
-
-
-Topics
-- Media Queries
+# Topics - Media Queries
 - Assets
     - Images
     - Fonts
@@ -47,6 +52,7 @@ Topics
     - OOCSS
     - SMACSS
     - ATOMIC CSS
+    - SUIT CSS
 - Problems with Spaghetthi CSS
     - Global Namespace & Isolation
     - Nondeterministic
@@ -89,7 +95,7 @@ Topics
             - Autoprefixing - border, flex, box-shadow etc
             - Extract CSS into separate files - avoid FOUC
 
-Talk ideas
+# Talk ideas
 - Learning from other languages and other frameworks. From other developers. Student of core concepts not frameworks.
 - From next.js README
     - Why CSS-in-JS?
@@ -98,7 +104,7 @@ Talk ideas
         - Compiling regular CSS files would be counter-productive to some of our goals. Some of these are listed below.
         - Please note: we are very interested in supporting regular CSS, since it's so much easier to write and already familiar. To that end, we're currently exploring the possibility of leveraging Shadow DOM to avoid the entire CSS parsing and mangling step [#22]
 
-Frameworks
+# Frameworks
 https://github.com/andreypopp/react-css-components
 https://github.com/threepointone/glamor
 https://github.com/styled-components/styled-components
@@ -113,7 +119,7 @@ https://github.com/tachyons-css/react-native-style-tachyons
 https://github.com/Wildhoney/Interpose
 http://reactpatterns.com/#Style component - proxy
 
-Outside World
+# Outside World
 https://vuejs.org
 React Native
 Shadow DOM
@@ -121,7 +127,7 @@ https://github.com/webyak/react-static-plate
 http://postcss.parts
 http://cssnext.io
 
-Reads
+# Reads
 https://github.com/MicheleBertoli/css-in-js
 https://speakerdeck.com/vjeux/react-css-in-js
 http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html
@@ -152,8 +158,9 @@ http://glenmaddern.com/articles/interoperable-css
 https://speakerdeck.com/davidwells/bulletproof-css-in-react
 https://vimeo.com/channels/986495/187454104
 https://facebook.github.io/react/docs/dom-elements.html
+http://learn.shayhowe.com/advanced-html-css/complex-selectors/
 
-React Libraries that offer UI components
+# React Libraries that offer UI components
 https://github.com/react-bootstrap/react-bootstrap/
 https://github.com/callemall/material-ui/tree/master/src
 https://github.com/nordsoftware/react-foundation
@@ -168,16 +175,28 @@ https://github.com/react-toolbox/react-toolbox/
 https://github.com/ant-design/ant-design
 http://coveo.github.io/vapor/components/
 
-Animation libraries
+# Animation libraries
 https://github.com/joshwcomeau/react-flip-move
 
-Slideshow frameworks
+# Slideshow frameworks
 https://github.com/FormidableLabs/spectacle-boilerplate
+https://github.com/thejameskyle/spectacle-code-slide
 
-Talks
+# Tools
+http://staxmanade.com/CssToReact/
+https://babeljs.io/repl/
+
+# Talks
 ReactJS at Trulia!
-http://www.meetup.com/ReactJS-San-Francisco/events/231925171/
+- http://www.meetup.com/ReactJS-San-Francisco/events/231925171/
 
 SXSW March 9th-March 19th
-http://schedule.sxsw.com/2017/events/PP67181
-http://schedule.sxsw.com/2017/speakers/832149
+- http://schedule.sxsw.com/2017/events/PP67181
+- http://schedule.sxsw.com/2017/speakers/832149
+
+# Webpack
+- file loader - generates files with hashes, can set a min size limit
+- url loader - creates inline data URLs for small resources
+- image loader - compress images
+- css loader - finds import and url() statements and turns them into require
+- style loader - style loader injects the resulting css into the bundle, JSON to style

@@ -1,9 +1,9 @@
 body {
-  background: pink;
+  background: #20c063;
 }
 
 @media only screen and (min-width: 415px) {
   body {
-    background: yellow;
+    background-color: #F74A27;
   }
 }

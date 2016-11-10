@@ -1,0 +1,19 @@
+@import "web-fonts.scss";
+@import "variables.scss";
+
+body {
+  background: url('../images/bg.png') 0 0 repeat $bg-color;
+  padding: 20px;
+  font-size: 20px;
+  color: $text-color;
+
+  @include viewport(medium) {
+    background-color: $bg-color-medium;
+  };
+
+  p {
+    font-family: lora;
+    font-size: 30px;
+    color: $text-color-inverted;
+  }
+}
