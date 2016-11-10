@@ -285,9 +285,10 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading bold caps fit>Frameworks for</Heading>
-            <Heading bold fit>inline styles</Heading>
+            <Heading bold fit>CSS in JS</Heading>
             <List>
               <Appear><ListItem>Radium</ListItem></Appear>
+              <Appear><ListItem>styled-components</ListItem></Appear>
               <Appear><ListItem>aphrodite</ListItem></Appear>
               <Appear><ListItem>jss, cxs, csjs, glamor</ListItem></Appear>
               <Appear><ListItem>so so many more</ListItem></Appear>
@@ -340,7 +341,7 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>Wraps your function or component with @decorators</ListItem></Appear>
               <Appear><ListItem>Creates a class to manage state for :hover :active :focus</ListItem></Appear>
-              <Appear><ListItem textColor="black">Radium.getState(this.state, 'keyForButton', ':hover')</ListItem></Appear>
+              <Appear><ListItem><Code textSize={18}>Radium.getState(this.state, 'btnPrimary', ':hover')</Code></ListItem></Appear>
               <Appear><ListItem>To style similar child elements you can use .map()</ListItem></Appear>
               <Appear><ListItem>matchMedia for media queries - IE polyfill, server-side?</ListItem></Appear>
               <Appear><ListItem>Styles are inline, extract into CSS for production?</ListItem></Appear>
@@ -350,70 +351,167 @@ export default class Presentation extends React.Component {
           <Slide notes="You get free dead code elimination, styles of unused components are left out of the build.">
             <Heading bold caps fit>inline styles (the good)</Heading>
             <List>
-              <Appear><ListItem>Built in dead code elimination</ListItem></Appear>
-              <Appear><ListItem>Presentation logic is in your view, know where to find and edit it.</ListItem></Appear>
+              <Appear><ListItem>No globals (with caveats)</ListItem></Appear>
+              <Appear><ListItem>Built in dead code elimination, only used components</ListItem></Appear>
+              <Appear><ListItem>Presentation logic is in your view, find and edit</ListItem></Appear>
+              <Appear><ListItem>State, Constants</ListItem></Appear>
+              <Appear><ListItem>Composition, Loops, Computation</ListItem></Appear>
+              <Appear><ListItem>Distribute via import and export</ListItem></Appear>
+              <Appear><ListItem>Dynamic styling, app & DOM state e.g. data attributes</ListItem></Appear>
+              <Appear><ListItem>Some :pseudo selectors re-implemented in JavaScript</ListItem></Appear>
+              <Appear><ListItem>For example <Code textSize={18}>:last-child</Code> becomes <Code textSize={18}>i === arr.length - 1</Code></ListItem></Appear>
             </List>
           </Slide>
 
-          <Slide notes="">
+          <Slide notes="Browser states aren't functional until the app is hydrated with JS, meaning that elements will not have hover, focus, or active styles until JS is loaded. Server-side render will need to know your browser size, chance of being wrong - FISC flash of incorrectly styled content">
             <Heading bold caps fit>inline styles (the bad)</Heading>
             <List>
-              <Appear><ListItem></ListItem></Appear>
-              <Appear><ListItem>You can't define CSS keyframe animations in inline styles, so you can't define them in Radium JS objects. You can, however, reference a CSS animation you defined in a stylesheet (and soon a CSS animation you define in a Style tag) in an inline style:</ListItem></Appear>
-              <Appear><ListItem>Two Radium features don't work completely with server side rendering yet:
-                Media queries in their present state can't be evaluated until the app is hydrated with JS, meaning that the server-side render will not include proper media query styles.
-              Browser states aren't functional until the app is hydrated with JS, meaning that elements will not have hover, focus, or active styles until JS is loaded.</ListItem></Appear>
-              <Appear><ListItem>Media Queries or Element Queries - matchMedia - server side -  initial state you ship down to the client has a very good chance of being wrong - FISC flash of incorrectly styled content</ListItem></Appear>
-              <Appear><ListItem>Re-usable animations with @keyframes are out too. That's a bummer because CSS-based animations are a lot easier to make performant than JavaScript based animations</ListItem></Appear>
-              <Appear><ListItem>debugging in devtools is a pain. Inline-styles make it impossible to see changes made to one component affect all other similar components.</ListItem></Appear>
-              <Appear><ListItem>Of course, there's also the problem of re-usability. One of the greatest features (and pain points) of CSS is that styles can be overridden with specificity or order. Inline styles have the highest specificity and are last in the order priority. Without a way to override styles, it's much harder to build generic components like button or a.</ListItem></Appear>
-              <Appear><ListItem>duplicate markup for (potentially many) similarly styled elements.</ListItem></Appear>
-              <Appear><ListItem>browser needs to parse all the  style tags instead of a single CSS rule</ListItem></Appear>
-              <Appear><ListItem>Without global styles we loose out on the cascading nature of CSS</ListItem></Appear>
-              <Appear><ListItem>vendor prefixes - without style-fallbacks, we don't get wonderful features like flexbox</ListItem></Appear>
+              <Appear><ListItem>No <Code textSize={18}>::after ::before ::selection</Code></ListItem></Appear>
+              <Appear><ListItem>Media Queries have to use <Code textSize={18}>window.matchMedia()</Code></ListItem></Appear>
+              <Appear><ListItem>Overriding style rules is not native</ListItem></Appear>
+              <Appear><ListItem>Autoprefixing <Code textSize={18}>display: -webkit-flex; display: flex;</Code></ListItem></Appear>
+              <Appear><ListItem>Animations via @keyframes re-implemented in JS</ListItem></Appear>
+              <Appear><ListItem>Highest priority before !important No Specificity Cascading</ListItem></Appear>
+              <Appear><ListItem>Performance</ListItem></Appear>
+              <Appear><ListItem>Debugging in devtools is a pain</ListItem></Appear>
+              <Appear><ListItem>Duplicate markup for similar elements</ListItem></Appear>
             </List>
           </Slide>
 
-          <Slide notes="">
-            <Heading bold caps fit>inline styles (the ugly)</Heading>
+          <Slide>
+            <Heading bold caps fit>CSS Modules</Heading>
+          </Slide>
+
+          <Slide>
+            <Heading bold fit>react-css-modules</Heading>
             <List>
-              <Appear><ListItem></ListItem></Appear>
-              <Appear><ListItem>You can't define CSS keyframe animations in inline styles, so you can't define them in Radium JS objects. You can, however, reference a CSS animation you defined in a stylesheet (and soon a CSS animation you define in a Style tag) in an inline style:</ListItem></Appear>
-              <Appear><ListItem>Two Radium features don't work completely with server side rendering yet:
-                Media queries in their present state can't be evaluated until the app is hydrated with JS, meaning that the server-side render will not include proper media query styles.
-              Browser states aren't functional until the app is hydrated with JS, meaning that elements will not have hover, focus, or active styles until JS is loaded.</ListItem></Appear>
-              <Appear><ListItem>Media Queries or Element Queries - matchMedia - server side -  initial state you ship down to the client has a very good chance of being wrong - FISC flash of incorrectly styled content</ListItem></Appear>
-              <Appear><ListItem>Re-usable animations with @keyframes are out too. That's a bummer because CSS-based animations are a lot easier to make performant than JavaScript based animations</ListItem></Appear>
-              <Appear><ListItem>debugging in devtools is a pain. Inline-styles make it impossible to see changes made to one component affect all other similar components.</ListItem></Appear>
-              <Appear><ListItem>Of course, there's also the problem of re-usability. One of the greatest features (and pain points) of CSS is that styles can be overridden with specificity or order. Inline styles have the highest specificity and are last in the order priority. Without a way to override styles, it's much harder to build generic components like button or a.</ListItem></Appear>
-              <Appear><ListItem>duplicate markup for (potentially many) similarly styled elements.</ListItem></Appear>
-              <Appear><ListItem>browser needs to parse all the  style tags instead of a single CSS rule</ListItem></Appear>
-              <Appear><ListItem>Without global styles we loose out on the cascading nature of CSS</ListItem></Appear>
-              <Appear><ListItem>vendor prefixes - without style-fallbacks, we don't get wonderful features like flexbox</ListItem></Appear>
+              <Appear><ListItem>Based on Interoperable CSS - loadable, linkable CSS</ListItem></Appear>
+              <Appear><ListItem>styles object or this.props.styles[yourClasslassName]</ListItem></Appear>
+              <Appear><ListItem>Works with SASS, PostCSS etc.</ListItem></Appear>
+              <Appear><ListItem>Broken CSS = compile error</ListItem></Appear>
+              <Appear><ListItem>Using an undefined CSS Module = no warning</ListItem></Appear>
+              <Appear><ListItem>CSS Modules syntax</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide>
+            <Layout>
+              <Fill>
+                <Heading bold caps>sass</Heading>
+                <CodePane textSize={12} lang='css' source={require('raw!../assets/examples/modules.example')}></CodePane>
+              </Fill>
+              <Fill>
+                <Heading bold caps>react</Heading>
+                <CodePane textSize={12} lang='jsx' source={require('raw!../assets/examples/modules-react.example')}></CodePane>
+              </Fill>
+            </Layout>
+          </Slide>
 
-            Pros of inline styles
-            https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
+          <CodeSlide
+            textSize={24}
+            transition={[]}
+            lang="jsx"
+            code={require('raw!../assets/examples/modules-react.example')}
+            ranges={[
+              { loc: [0, 0], title: 'react-css-modules syntax' },
+              { loc: [0, 17] },
+              { loc: [1, 2], note: 'import the library' },
+              { loc: [2, 3], note: 'import your css or sass file' },
+              { loc: [4, 6], note: '@decorate your component with your styles' },
+              { loc: [10, 11], note: 'use styleName to reference your css rules' }
+            ]} />
 
-            div
-
-            display: -webkit-flex;
-            display: flex;
-
-            Because you can't declare two display styles. That makes flexbox impossible because iOS needs the webkit prefix.
+          <Slide>
+            <Heading bold fit>react-css-modules notes</Heading>
+            <List>
+              <Appear><ListItem>Configure your compoent classnames via <Code textSize={18}>localIdentName</Code></ListItem></Appear>
+              <Appear><ListItem>Webpack css loader <Code textSize={18}>[path]___[name]__[local]___[hash:base64:5]</Code></ListItem></Appear>
+              <Appear><ListItem>Generated classname <Code textSize={18}>styles-___likebutton__btn-primary___HYx7V</Code></ListItem></Appear>
+              <Appear><ListItem>No overruling, intentionally nor unintentially</ListItem></Appear>
+              <Appear><ListItem>Composition <Code textSize={18}>composes: parentClass</Code> same as <Code textSize={18}>@extend</Code> in Sass</ListItem></Appear>
+              <Appear><ListItem>Others from ICSS <Code textSize={18}>:global :export :import</Code></ListItem></Appear>
+              <Appear><ListItem>Use Extract Text Plugin in production</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide>
+            <Heading bold caps fit>Styled Components</Heading>
           </Slide>
 
           <Slide>
+            <Layout>
+              <Fill>
+                <Heading bold caps>styled</Heading>
+                <CodePane textSize={12} lang='jsx' source={require('raw!../assets/examples/styled-components.example')}></CodePane>
+              </Fill>
+              <Fill>
+                <Heading bold caps>react</Heading>
+                <CodePane textSize={12} lang='jsx' source={require('raw!../assets/examples/styled-components-react.example')}></CodePane>
+              </Fill>
+            </Layout>
+          </Slide>
+
+          <CodeSlide
+            textSize={24}
+            transition={[]}
+            lang="javascript"
+            code={require('raw!../assets/examples/styled-components.example')}
+            ranges={[
+              { loc: [0, 0], title: 'styled components syntax' },
+              { loc: [0, 25] },
+              { loc: [0, 1], note: 'import the library' },
+              { loc: [2, 3], note: 'implement your styled component in an ES6 template literal' },
+              { loc: [4, 17], note: 'write plain css' },
+              { loc: [6, 17], note: 'with nested rules' },
+              { loc: [9, 10], note: 'and pseudo selectors' },
+              { loc: [13, 15], note: 'notice no quotes around anything! gotcha at first' },
+              { loc: [14, 15], note: 'use variables, math, anything you can do in JS' }
+            ]} />
+
+
+          <CodeSlide
+            textSize={24}
+            transition={[]}
+            lang="jsx"
+            code={require('raw!../assets/examples/styled-components-react.example')}
+            ranges={[
+              { loc: [0, 0], title: 'styled components usage' },
+              { loc: [0, 18] },
+              { loc: [1, 2], note: 'import your styled component' },
+              { loc: [8, 11], note: 'render it, passing in your overloaded classes and child classes' }
+            ]} />
+
+            <Slide>
+              <Heading bold fit>styled components notes</Heading>
+              <List>
+                <Appear><ListItem>Autoprefixing included for free</ListItem></Appear>
+                <Appear><ListItem>Write plain css, no weird polyfills needed</ListItem></Appear>
+                <Appear><ListItem>Generated classnames are namespaced <Code textSize={18}>btn-primary gjkSC</Code></ListItem></Appear>
+                <Appear><ListItem>Injects style tags into the document head</ListItem></Appear>
+                <Appear><ListItem>Suppports server-side rendering, but not extract text plugin</ListItem></Appear>
+                <Appear><ListItem>keyframes helper keeps your rules local to your component</ListItem></Appear>
+                <Appear><ListItem>Theming is built in</ListItem></Appear>
+              </List>
+            </Slide>
+
+          <Slide>
+            <Heading bold caps fit>WHAT'S NEXT</Heading>
+            <List>
+              <Appear><ListItem>Web Components and Shadow DOM</ListItem></Appear>
+              <Appear><ListItem>cssnext</ListItem></Appear>
+              <Appear><ListItem>CSS4</ListItem></Appear>
+              <Appear><ListItem>¿¡ !?</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide>
-            <Link href="https://github.com/joeshub/css-in-react"><Text bold caps textColor="tertiary">View on Github</Text></Link>
+            <Heading bold caps fit>Thank you!</Heading>
+
+            <Text>👋🏼</Text>
+            <Link textColor="black" href="https://github.com/joeshub/css-in-react">
+
+            <Text lineHeight={4} marginTop={20} bold textColor="tertiary">View examples on Github</Text>
+          </Link>
           </Slide>
 
         </Deck>

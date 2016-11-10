@@ -14,3 +14,11 @@ Starts from a very simple webpack build using plain old css and demonstrate how 
 8. sass button used in javascirpt
 9. react style object used in javascript to make the same button
 10. radium in react
+11. react-css-modules
+12. styled components
+
+## usage
+1. clone this reop
+2. cd to the directory you want (1-12)
+3. nvm use (we use stable for this project)
+4. npm i && npm start

@@ -1,36 +1,5 @@
-# TODO
-
-- radium
-- csjs, glamor
-- css modules
-- postcss and css next http://cssnext.io/
-
-https://bigbitecreative.com/a-look-into-writing-future-css-with-postcss-cssnext/
-
-- https://github.com/rtsao/csjs
-- https://github.com/martinandert/react-inline
-- https://github.com/rtsao/csjs
-- pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
-
-- This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
-
-- https://formidable.com/blog/2015/03/01/launching-radium/
-- https://byjoeybaker.com/react-inline-styles
--  https://github.com/FormidableLabs/radium/tree/master/docs/comparison
-- https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.t3xylc475
-
-- react-css-modules + sass
-- PostCSS http://cssnext.io/usage/
-- Aphrodite https://github.com/Khan/aphrodite
-- Server side rendering
-- Animation
-- Component state
-- sass resource loader https://github.com/shakacode/sass-resources-loader
-- https://github.com/jxnblk/repng
-https://reactjsnews.com/isomorphic-react-in-real-life
-
-
-# Topics - Media Queries
+# Topics
+- Media Queries
 - Assets
     - Images
     - Fonts
@@ -74,7 +43,7 @@ https://reactjsnews.com/isomorphic-react-in-real-life
             - Less
             - Stylus
         - POST-PROCESS
-            -  PostCSS
+            - PostCSS
             - cssnext
 - REACT
     - Inline Styles
@@ -119,15 +88,29 @@ https://github.com/tachyons-css/react-native-style-tachyons
 https://github.com/Wildhoney/Interpose
 http://reactpatterns.com/#Style component - proxy
 
-# Outside World
-https://vuejs.org
-React Native
-Shadow DOM
-https://github.com/webyak/react-static-plate
-http://postcss.parts
-http://cssnext.io
+# TODO
+- csjs, glamor
+- css modules
+- postcss and css next http://cssnext.io/
+- https://bigbitecreative.com/a-look-into-writing-future-css-with-postcss-cssnext/
+- https://github.com/rtsao/csjs
+- https://github.com/martinandert/react-inline
+- https://github.com/rtsao/csjs
+- pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
+- This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
+- https://formidable.com/blog/2015/03/01/launching-radium/
+- https://github.com/FormidableLabs/radium/tree/master/docs/comparison
+- PostCSS http://cssnext.io/usage/
+- Aphrodite https://github.com/Khan/aphrodite
+- Server side rendering
+- Animation
+- Component state
+- sass resource loader https://github.com/shakacode/sass-resources-loader
+- https://github.com/jxnblk/repng
+- https://reactjsnews.com/isomorphic-react-in-real-life
 
-# Reads
+# TOREAD
+https://github.com/styled-components/comparison
 https://github.com/MicheleBertoli/css-in-js
 https://speakerdeck.com/vjeux/react-css-in-js
 http://blog.vjeux.com/2014/javascript/react-css-in-js-nationjs.html
@@ -174,6 +157,19 @@ https://github.com/grommet/grommet
 https://github.com/react-toolbox/react-toolbox/
 https://github.com/ant-design/ant-design
 http://coveo.github.io/vapor/components/
+
+# Outside World
+https://vuejs.org
+React Native
+Shadow DOM https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
+https://github.com/Wildhoney/ReactShadow
+https://github.com/webyak/react-static-plate
+http://postcss.parts
+http://cssnext.io
+
+# Reads
+- https://byjoeybaker.com/react-inline-styles
+- https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.t3xylc475
 
 # Animation libraries
 https://github.com/joshwcomeau/react-flip-move

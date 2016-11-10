@@ -1,0 +1,24 @@
+import styled from 'styled-components'
+
+const StyledLikeButton = styled.button`
+  display: inline-block;
+  border: 0;
+  padding: 6px 12px,
+  &.btn-primary {
+    color: #fff;
+    background-color: #f74A27;
+    &:hover {
+      background-color: #ff7857;
+    }
+    .badge {
+      color: #f74A27;
+      background-color: ${THEME.bgColor};
+    }
+  }
+  .badge {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 3px 6px;
+  }
+`
+export default StyledLikeButton

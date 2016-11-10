@@ -1,0 +1,23 @@
+@import "variables.scss";
+
+.btn {
+  display: inline-block;
+  border: 0;
+  padding: 6px 12px;
+  &.btn-primary {
+    color: $text-color;
+    background-color: $button-color;
+    &:hover {
+      background-color: $button-color-hover;
+    }
+    .badge {
+      color: $button-color;
+      background-color: $text-color;
+    }
+  }
+  .badge {
+    display: inline-block;
+    border-radius: 10px;
+    padding: 3px 6px;
+  }
+}
