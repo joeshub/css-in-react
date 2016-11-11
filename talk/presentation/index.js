@@ -75,17 +75,11 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading bold caps fill>
-              CSS in
+              CSS <Text textColor="black" style={{marginTop:20}}>in</Text>
             </Heading>
-            <Heading bold fit>
+            <Heading bold fit style={{marginTop:-50}}>
               React
             </Heading>
-          </Slide>
-
-          <Slide transition={['zoom']} bgImage={images.gbu.replace('/', '')} bgDarken={0.65} textColor="primary">
-            <Appear><Heading bold caps fit>the good</Heading></Appear>
-            <Appear><Heading bold caps fit> the bad </Heading></Appear>
-            <Appear><Heading caps fit>and the ugly</Heading></Appear>
           </Slide>
 
           <Slide>
@@ -93,8 +87,14 @@ export default class Presentation extends React.Component {
               <Logo />
             </div>
             <Link href="https://twitter.com/joeseifi">
-              <Text>@joeseifi</Text>
+              <Text textColor="white" style={{marginBottom:50,marginTop:50}}>Joe Seifi &nbsp;&nbsp;&nbsp; @joeseifi</Text>
             </Link>
+          </Slide>
+          
+          <Slide transition={['zoom']} bgImage={images.gbu.replace('/', '')} bgDarken={0.65} textColor="primary">
+            <Appear><Heading bold caps fit textSize="10px">the good</Heading></Appear>
+            <Appear><Heading bold caps> the bad </Heading></Appear>
+            <Appear><Heading caps fit>and the ugly</Heading></Appear>
           </Slide>
 
           <Slide bgImage={images.good.replace('/', '')} bgDarken={0.65} textColor="primary">
@@ -119,7 +119,7 @@ export default class Presentation extends React.Component {
             <List textColor="secondary">
               <Appear><ListItem>Flat - nested rules not supported</ListItem></Appear>
               <Appear><ListItem>Needs vendor prefixes</ListItem></Appear>
-              <Appear><ListItem>No Variables, No Functions</ListItem></Appear>
+              <Appear><ListItem>No variables, no functions</ListItem></Appear>
               <Appear><ListItem>Some dynamic updates still require JavaScript</ListItem></Appear>
             </List>
           </Slide>
@@ -130,10 +130,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor="secondary">
               <Appear><ListItem>Global namespace pollution</ListItem></Appear>
-              <Appear><ListItem>Importance, Specificity wars, & eventually !important</ListItem></Appear>
+              <Appear><ListItem>Importance, specificity wars, & eventually !important</ListItem></Appear>
               <Appear><ListItem>Nondeterministic, depends on source order</ListItem></Appear>
-              <Appear><ListItem>Encapsulation - Sharing code across components is scary</ListItem></Appear>
-              <Appear><ListItem>Changes & Dead code elimination are manual</ListItem></Appear>
+              <Appear><ListItem>Encapsulation - sharing code across components is scary</ListItem></Appear>
+              <Appear><ListItem>Changes & dead code elimination are manual</ListItem></Appear>
               <Appear><ListItem>Missing rules and syntax errors at runtime</ListItem></Appear>
             </List>
           </Slide>
@@ -143,7 +143,7 @@ export default class Presentation extends React.Component {
               Methodologies
             </Heading>
             <Heading>
-              (like flux for css)
+              (like flux for CSS)
             </Heading>
             <List>
               <Appear><ListItem>Object-Oriented CSS (OOCSS)</ListItem></Appear>
@@ -159,7 +159,7 @@ export default class Presentation extends React.Component {
               Pre/Post Processors
             </Heading>
             <Heading>
-              (like babel for css)
+              (like babel for CSS)
             </Heading>
             <List>
               <Appear><ListItem>SASS</ListItem></Appear>
@@ -172,7 +172,7 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading bold caps fit>example:</Heading>
-            <Heading bold fit>a like button</Heading>
+            <Heading>a like button</Heading>
           </Slide>
 
           <Slide>
@@ -194,6 +194,7 @@ export default class Presentation extends React.Component {
             transition={[]}
             lang="javascript"
             code={require('raw!../assets/examples/button-react.example')}
+            border="10px solid green"
             ranges={[
               { loc: [0, 8], title: 'DOM API' },
               { loc: [2, 5], note: 'JSX syntax' },
@@ -247,7 +248,7 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/json.example')}
             ranges={[
-              { loc: [0, 25], title: 'CSS in JavaScript' },
+              { loc: [0, 25], title: 'CSS IN JAVASCRIPT' },
               { loc: [11, 14], note: 'No support for pseudo selectors like :hover & :after' },
               { loc: [16, 17], note: 'camelCase all your property names' },
               { loc: [20, 23], note: 'and wrap value declarations in quotes' }
@@ -259,7 +260,7 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/json-react.example')}
             ranges={[
-              { loc: [0, 25], title: 'in your component' },
+              { loc: [0, 25], title: 'IN YOUR COMPONENT' },
               { loc: [2, 3], note: 'import your styles object' },
               { loc: [6, 10], note: 'and spread them into inline style rules' },
               { loc: [12, 17], note: 'Notice! 2 rule references to inline rule objects vs. just the "badge" className in CSS. Selectors are gone! No descendent selectors, no sibling selectors, no attribute selectors etc.' }
@@ -272,12 +273,12 @@ export default class Presentation extends React.Component {
 
           <Slide>
             <Heading bold caps fit>issues with using the plain</Heading>
-            <Heading bold fit>JSON Object</Heading>
+            <Heading bold fit>JSON object</Heading>
             <List>
-              <Appear><ListItem>No Pseudo Selectors :hover :before etc.</ListItem></Appear>
-              <Appear><ListItem>No Media Queries @media viewport etc.</ListItem></Appear>
-              <Appear><ListItem>No Rule Nesting</ListItem></Appear>
-              <Appear><ListItem>No Auto Prefixing</ListItem></Appear>
+              <Appear><ListItem>No pseudo selectors :hover :before etc.</ListItem></Appear>
+              <Appear><ListItem>No media queries @media viewport etc.</ListItem></Appear>
+              <Appear><ListItem>No rule nesting</ListItem></Appear>
+              <Appear><ListItem>No auto prefixing</ListItem></Appear>
               <Appear><ListItem>No CSS extraction</ListItem></Appear>
               <Appear><ListItem>FOUC</ListItem></Appear>
             </List>
@@ -288,10 +289,9 @@ export default class Presentation extends React.Component {
             <Heading bold fit>CSS in JS</Heading>
             <List>
               <Appear><ListItem>Radium</ListItem></Appear>
+              <Appear><ListItem>react-css-modules</ListItem></Appear>
               <Appear><ListItem>styled-components</ListItem></Appear>
-              <Appear><ListItem>aphrodite</ListItem></Appear>
-              <Appear><ListItem>jss, cxs, csjs, glamor</ListItem></Appear>
-              <Appear><ListItem>so so many more</ListItem></Appear>
+              <Appear><ListItem>aphrodite, jss, cxs, csjs, glamor, so many more</ListItem></Appear>
             </List>
           </Slide>
 
@@ -314,7 +314,7 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/radium-full.example')}
             ranges={[
-              { loc: [0, 0], title: 'Radium style syntax' },
+              { loc: [0, 0], title: 'RADIUM STYLE SYNTAX' },
               { loc: [0, 20] },
               { loc: [1, 6], note: 'javascript object notation' },
               { loc: [1, 10], note: 'and we get nesting back' },
@@ -329,7 +329,7 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/radium-react.example')}
             ranges={[
-              { loc: [0, 0], title: 'Radium React syntax' },
+              { loc: [0, 0], title: 'RADIUM REACT SYNTAX' },
               { loc: [0, 20] },
               { loc: [1, 3], note: 'import your styles and Radium' },
               { loc: [4, 6], note: 'decorate your component class with @Radium' },
@@ -337,12 +337,12 @@ export default class Presentation extends React.Component {
             ]} />
 
           <Slide>
-            <Heading bold fit>Radium notes</Heading>
+            <Heading bold fit caps>Radium notes</Heading>
             <List>
               <Appear><ListItem>Wraps your function or component with @decorators</ListItem></Appear>
               <Appear><ListItem>Creates a class to manage state for :hover :active :focus</ListItem></Appear>
               <Appear><ListItem><Code textSize={18}>Radium.getState(this.state, 'btnPrimary', ':hover')</Code></ListItem></Appear>
-              <Appear><ListItem>To style similar child elements you can use .map()</ListItem></Appear>
+              <Appear><ListItem>Style similar child elements with .map()</ListItem></Appear>
               <Appear><ListItem>matchMedia for media queries - IE polyfill, server-side?</ListItem></Appear>
               <Appear><ListItem>Styles are inline, extract into CSS for production?</ListItem></Appear>
             </List>
@@ -354,8 +354,8 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>No globals (with caveats)</ListItem></Appear>
               <Appear><ListItem>Built in dead code elimination, only used components</ListItem></Appear>
               <Appear><ListItem>Presentation logic is in your view, find and edit</ListItem></Appear>
-              <Appear><ListItem>State, Constants</ListItem></Appear>
-              <Appear><ListItem>Composition, Loops, Computation</ListItem></Appear>
+              <Appear><ListItem>State, constants</ListItem></Appear>
+              <Appear><ListItem>Composition, loops, computation</ListItem></Appear>
               <Appear><ListItem>Distribute via import and export</ListItem></Appear>
               <Appear><ListItem>Dynamic styling, app & DOM state e.g. data attributes</ListItem></Appear>
               <Appear><ListItem>Some :pseudo selectors re-implemented in JavaScript</ListItem></Appear>
@@ -367,8 +367,7 @@ export default class Presentation extends React.Component {
             <Heading bold caps fit>inline styles (the bad)</Heading>
             <List>
               <Appear><ListItem>No <Code textSize={18}>::after ::before ::selection</Code></ListItem></Appear>
-              <Appear><ListItem>Media Queries have to use <Code textSize={18}>window.matchMedia()</Code></ListItem></Appear>
-              <Appear><ListItem>Overriding style rules is not native</ListItem></Appear>
+              <Appear><ListItem>Media queries have to use <Code textSize={18}>window.matchMedia()</Code></ListItem></Appear>
               <Appear><ListItem>Autoprefixing <Code textSize={18}>display: -webkit-flex; display: flex;</Code></ListItem></Appear>
               <Appear><ListItem>Animations via @keyframes re-implemented in JS</ListItem></Appear>
               <Appear><ListItem>Highest priority before !important No Specificity Cascading</ListItem></Appear>
@@ -383,14 +382,12 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide>
-            <Heading bold fit>react-css-modules</Heading>
+            <Heading bold fit caps>react-css-modules</Heading>
             <List>
               <Appear><ListItem>Based on Interoperable CSS - loadable, linkable CSS</ListItem></Appear>
-              <Appear><ListItem>styles object or this.props.styles[yourClasslassName]</ListItem></Appear>
               <Appear><ListItem>Works with SASS, PostCSS etc.</ListItem></Appear>
               <Appear><ListItem>Broken CSS = compile error</ListItem></Appear>
               <Appear><ListItem>Using an undefined CSS Module = no warning</ListItem></Appear>
-              <Appear><ListItem>CSS Modules syntax</ListItem></Appear>
             </List>
           </Slide>
 
@@ -413,7 +410,7 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/modules-react.example')}
             ranges={[
-              { loc: [0, 0], title: 'react-css-modules syntax' },
+              { loc: [0, 0], title: 'REACT-CSS-MODULES SYNTAX' },
               { loc: [0, 17] },
               { loc: [1, 2], note: 'import the library' },
               { loc: [2, 3], note: 'import your css or sass file' },
@@ -422,15 +419,16 @@ export default class Presentation extends React.Component {
             ]} />
 
           <Slide>
-            <Heading bold fit>react-css-modules notes</Heading>
+            <Heading bold fit caps>react-css-modules notes</Heading>
             <List>
-              <Appear><ListItem>Configure your compoent classnames via <Code textSize={18}>localIdentName</Code></ListItem></Appear>
-              <Appear><ListItem>Webpack css loader <Code textSize={18}>[path]___[name]__[local]___[hash:base64:5]</Code></ListItem></Appear>
+              <Appear><ListItem>styles object or this.props.styles[yourClasslassName]</ListItem></Appear>
+              <Appear><ListItem>Configure your component classnames via <Code textSize={18}>localIdentName</Code></ListItem></Appear>
+              <Appear><ListItem>Webpack CSS loader <Code textSize={18}>[path]___[name]__[local]___[hash:base64:5]</Code></ListItem></Appear>
               <Appear><ListItem>Generated classname <Code textSize={18}>styles-___likebutton__btn-primary___HYx7V</Code></ListItem></Appear>
-              <Appear><ListItem>No overruling, intentionally nor unintentially</ListItem></Appear>
+              <Appear><ListItem>No overruling, intentionally nor unintentionally</ListItem></Appear>
               <Appear><ListItem>Composition <Code textSize={18}>composes: parentClass</Code> same as <Code textSize={18}>@extend</Code> in Sass</ListItem></Appear>
               <Appear><ListItem>Others from ICSS <Code textSize={18}>:global :export :import</Code></ListItem></Appear>
-              <Appear><ListItem>Use Extract Text Plugin in production</ListItem></Appear>
+              <Appear><ListItem>Use extract text plugin in production</ListItem></Appear>
             </List>
           </Slide>
 
@@ -457,7 +455,7 @@ export default class Presentation extends React.Component {
             lang="javascript"
             code={require('raw!../assets/examples/styled-components.example')}
             ranges={[
-              { loc: [0, 0], title: 'styled components syntax' },
+              { loc: [0, 0], title: 'STYLED COMPONENTS SYNTAX' },
               { loc: [0, 25] },
               { loc: [0, 1], note: 'import the library' },
               { loc: [2, 3], note: 'implement your styled component in an ES6 template literal' },
@@ -475,20 +473,20 @@ export default class Presentation extends React.Component {
             lang="jsx"
             code={require('raw!../assets/examples/styled-components-react.example')}
             ranges={[
-              { loc: [0, 0], title: 'styled components usage' },
+              { loc: [0, 0], title: 'STYLED COMPONENTS USAGE' },
               { loc: [0, 18] },
               { loc: [1, 2], note: 'import your styled component' },
               { loc: [8, 11], note: 'render it, passing in your overloaded classes and child classes' }
             ]} />
 
             <Slide>
-              <Heading bold fit>styled components notes</Heading>
+              <Heading bold fit caps>styled components notes</Heading>
               <List>
                 <Appear><ListItem>Autoprefixing included for free</ListItem></Appear>
-                <Appear><ListItem>Write plain css, no weird polyfills needed</ListItem></Appear>
+                <Appear><ListItem>Write plain CSS, no weird polyfills needed</ListItem></Appear>
                 <Appear><ListItem>Generated classnames are namespaced <Code textSize={18}>btn-primary gjkSC</Code></ListItem></Appear>
                 <Appear><ListItem>Injects style tags into the document head</ListItem></Appear>
-                <Appear><ListItem>Suppports server-side rendering, but not extract text plugin</ListItem></Appear>
+                <Appear><ListItem>Supports server-side rendering, but not extract text plugin</ListItem></Appear>
                 <Appear><ListItem>keyframes helper keeps your rules local to your component</ListItem></Appear>
                 <Appear><ListItem>Theming is built in</ListItem></Appear>
               </List>
