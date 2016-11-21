@@ -168,14 +168,20 @@ http://reactpatterns.com/#Style component - proxy
 - https://github.com/ant-design/ant-design
 - http://coveo.github.io/vapor/components/
 
-# Outside World
-https://vuejs.org
-React Native
-Shadow DOM https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
-https://github.com/Wildhoney/ReactShadow
-https://github.com/webyak/react-static-plate
-http://postcss.parts
-http://cssnext.io
+# Shadow DOM and Web components
+- https://github.com/skatejs/skatejs
+- https://github.com/zeit/next.js/issues/22
+- https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
+- https://github.com/Wildhoney/ReactShadow
+
+# CSS next
+- http://postcss.parts
+- http://cssnext.io
+
+# Other ideas
+- https://vuejs.org
+- React Native
+- https://github.com/webyak/react-static-plate
 
 # Animation libraries
 https://github.com/joshwcomeau/react-flip-move
