@@ -1,7 +1,7 @@
 {
   "name": "12-styled-components",
   "version": "1.0.0",
-  "description": "React button styled using react-css-modules",
+  "description": "React button styled using styled-components",
   "main": "webpack.config.js",
   "scripts": {
     "dist": "cross-env NODE_ENV=production webpack --config webpack.dist.js --progress --colors",
