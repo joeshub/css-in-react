@@ -4,8 +4,8 @@
   "description": "PostCSS autoprifixes new CSS code, cssmin shrinks output, uglify reduces built file size",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --progress --colors",
-    "start": "webpack-dev-server --progress --colors --inline --hot --port 8080"
+    "build": "NODE_ENV=production ../node_modules/.bin/webpack --progress --colors",
+    "start": "../node_modules/.bin/webpack-dev-server --progress --colors --inline --hot --port 3333"
   },
   "author": "Joe Seifi",
   "license": "ISC",

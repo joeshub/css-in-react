@@ -1,0 +1,20 @@
+@import "web-fonts.css";
+
+body {
+  background: url('../images/bg.png') 0 0 repeat #f74A27;
+  padding: 20px;
+  font-size: 20px;
+  color: #444;
+}
+
+body p {
+  font-family: lora;
+  font-size: 30px;
+  color: #fff;
+}
+
+@media only screen and (min-width: 415px) {
+  body {
+    background-color: #20c063;
+  }
+}

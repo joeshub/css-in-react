@@ -4,8 +4,8 @@
   "description": "React button styled using react-css-modules",
   "main": "webpack.config.js",
   "scripts": {
-    "dist": "cross-env NODE_ENV=production webpack --config webpack.dist.js --progress --colors",
-    "start": "cross-env NODE_ENV=development node server.js"
+    "dist": "../node_modules/.bin/cross-env NODE_ENV=production ../node_modules/.bin/webpack --config webpack.dist.js --progress --colors",
+    "start": "../node_modules/.bin/cross-env NODE_ENV=development node server.js"
   },
   "author": "Joe Seifi",
   "license": "ISC",

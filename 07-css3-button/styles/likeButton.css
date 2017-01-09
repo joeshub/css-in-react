@@ -1,5 +1,3 @@
-@import "variables.scss";
-
 .btn {
   display: inline-block;
   text-align: center;
@@ -11,15 +9,15 @@
 }
 
 .btn.btn-primary {
-  color: $text-color-inverted;
-  background-color: $button-color;
+  color: #fff;
+  background-color: #f74A27;
 }
 .btn.btn-primary:hover {
-  background-color: $button-color-hover;
+  background-color: #ff7857;
 }
 .btn.btn-primary > .badge {
-  color: $button-color;
-  background-color: $text-color-inverted;
+  color: #f74A27;
+  background-color: #fff;
 }
 
 .btn > .badge {
