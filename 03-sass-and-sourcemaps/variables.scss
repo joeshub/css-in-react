@@ -1,6 +1,10 @@
 $bg-color: #20c063;
 $bg-color-medium: #F74A27;
 
+%body-font {
+  font-family: sans-serif;
+}
+
 @mixin viewport ($size) {
   @if ($size == medium) {
     @media only screen and (min-width: 415px) {

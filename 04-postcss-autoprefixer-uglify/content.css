@@ -1,0 +1,17 @@
+@import "variables.css";
+
+body {
+  @apply --bodyfont;
+  background-color: var(--bg-color);
+  padding: 20px;
+  font-size: 20px;
+
+  @media (--medium-viewport) {
+    background: var(--bg-color-medium);
+  };
+
+  & p {
+    filter: drop-shadow(3px 0px 5px #444);
+  }
+
+}

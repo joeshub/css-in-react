@@ -1,3 +1,3 @@
-require("./content.scss");
+require("./content.css");
 
 module.exports = "Loaded from content.js";

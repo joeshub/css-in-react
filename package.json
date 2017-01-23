@@ -18,6 +18,8 @@
 
     "autoprefixer": "^6.5.2",
     "postcss-loader": "^1.1.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0",
     "html-webpack-plugin": "^2.24.1",
 
     "file-loader": "^0.9.0",

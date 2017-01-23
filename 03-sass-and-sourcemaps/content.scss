@@ -1,3 +1,13 @@
+@import "variables.scss";
+
 body {
-  font-family: sans-serif;
+  @extend %body-font;
+  background-color: $bg-color;
+  padding: 20px;
+  display: flex;
+
+  @include viewport(medium) {
+    background: $bg-color-medium;
+  };
+  
 }
