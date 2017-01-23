@@ -9,7 +9,7 @@ module.exports = {
   entry: "./src/entry.js",
   output: {
     path: __dirname + '/dist',
-    publicPath: DEBUG ? 'http://localhost:8080/' : '',
+    publicPath: DEBUG ? 'http://localhost:3333/' : '',
     filename: "bundle.js"
   },
   module: {
