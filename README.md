@@ -16,7 +16,7 @@ Starts from a very simple webpack build using plain old CSS and demonstrate how 
 1. Basic CSS, media queries, hot reloading css
 2. [extract text plugin](https://github.com/webpack/extract-text-webpack-plugin), importing css files
 3. [Sass](https://github.com/sass/sass) with sourcemaps
-4. [html webpack plugin](https://github.com/ampedandwired/html-webpack-plugin), [PostCSS](https://github.com/postcss/postcss) [autoprefixer](https://github.com/postcss/autoprefixer), uglify
+4. [html webpack plugin](https://github.com/ampedandwired/html-webpack-plugin), [PostCSS](https://github.com/postcss/postcss), [cssnext](http://cssnext.io/), [autoprefixer](https://github.com/postcss/autoprefixer), uglify
 5. Images, font, and paths
 6. [Babel](https://github.com/babel/babel), [React](https://github.com/facebook/react), and hot module replacement with [Webpack](https://github.com/webpack/webpack)
 7. CSS3 button used in javascript
