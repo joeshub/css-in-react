@@ -19,6 +19,9 @@
       background-color: $text-color;
     }
   }
+  &.btn-liked {
+    background-color: black;
+  }
   .badge {
     display: inline-block;
     text-align: center;

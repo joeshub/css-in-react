@@ -34,7 +34,7 @@ module.exports = {
           presets:['react', 'es2015'],
           env: {
             development: {
-              plugins: ['transform-decorators-legacy',['react-transform', {
+              plugins: ['transform-class-properties', 'transform-decorators-legacy',['react-transform', {
                 transforms: [{
                   transform: 'react-transform-hmr',
                   imports: ['react'],
@@ -45,9 +45,8 @@ module.exports = {
           }
         }
       }, {
-        test: /\.(scss|css)$/,
-        // loader: 'style!css?sourceMap!postcss!sass?sourceMap'
-        loader: 'style?sourceMap!css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap'
+        test: /\.scss$/,
+        loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass'
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: ['file?name=[path][name].[hash].[ext]']

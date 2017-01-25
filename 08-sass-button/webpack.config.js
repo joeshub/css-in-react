@@ -45,8 +45,8 @@ module.exports = {
           }
         }
       }, {
-        test: /\.(scss|css)$/,
-        loader: 'style!css?sourceMap!postcss!sass?sourceMap'
+        test: /\.scss$/,
+        loader: 'style!css?sourceMap!sass'
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: ['file?name=[path][name].[hash].[ext]']

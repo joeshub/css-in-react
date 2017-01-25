@@ -34,7 +34,7 @@ module.exports = {
           presets:['react', 'es2015'],
           env: {
             development: {
-              plugins: ['transform-decorators-legacy',['react-transform', {
+              plugins: ['transform-class-properties', 'transform-decorators-legacy', ['react-transform', {
                 transforms: [{
                   transform: 'react-transform-hmr',
                   imports: ['react'],

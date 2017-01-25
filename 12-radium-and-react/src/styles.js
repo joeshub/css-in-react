@@ -8,6 +8,9 @@ export const styles = {
     border: '0',
     cursor: 'pointer',
 
+    btn_liked: {
+      backgroundColor: 'black'
+    },
     btn_primary: {
       color: '#fff',
       backgroundColor: '#f74A27',
