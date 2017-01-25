@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import THEME from './theme'
 
-const LikeButtonStyle = styled.button`
+const StyledLikeButton = styled.button`
   display: inline-block;
   text-align: center;
   font-size: 14px;
@@ -9,7 +9,7 @@ const LikeButtonStyle = styled.button`
   padding: 6px 12px;
   border: 0;
   cursor: pointer;
-  &.btn-primary {
+  ${props => props.primary ? `
     color: ${THEME.textColor};
     background-color: ${THEME.buttonColor};
     &:hover {
@@ -19,7 +19,7 @@ const LikeButtonStyle = styled.button`
       color: ${THEME.buttonColorHover};
       background-color: ${THEME.textColor};
     }
-  }
+    ` : ''};
   .badge {
     display: inline-block;
     text-align: center;
@@ -31,4 +31,4 @@ const LikeButtonStyle = styled.button`
     top: -1px;
   }
 `
-export default LikeButtonStyle
+export default StyledLikeButton

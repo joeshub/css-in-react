@@ -5,7 +5,7 @@ class LikeButton extends Component {
   render () {
     const { likes } = this.props
     return (
-      <StyledLikeButton className="btn-primary">
+      <StyledLikeButton primary>
         Like <span className="badge">{likes}</span>
       </StyledLikeButton>
     )
