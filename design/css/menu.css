@@ -94,7 +94,7 @@
 .burger[aria-pressed="true"]~.burger__items {
   display: block;
   top: 76px;
-  height: 100vh;
+  height: calc(100vh - 76px);
   opacity: 1;
   visibility: visible;
 }

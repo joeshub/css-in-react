@@ -77,6 +77,7 @@
 
 .photo {
   display: flex;
+  flex-shrink: 0;
   position: relative;
 }
 
@@ -136,7 +137,6 @@
 
 .notes {
   display: block;
-  flex-grow: 1;
   overflow: auto;
   line-height: 1.2;
   margin-right: -20px;
@@ -181,9 +181,6 @@
 }
 
 .feedback {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
   padding: 20px 0;
   border-top: 1px solid #ddd;
 }
@@ -195,7 +192,7 @@
 }
 
 .commentform__input {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   border: 0;
   background-color: #F6F6F6;
