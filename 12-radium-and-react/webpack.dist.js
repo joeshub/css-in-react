@@ -31,13 +31,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        loader: 'babel-loader'
       }, {
         test: /\.(scss|css)$/,
-        loader: ExtractTextPlugin.extract('style','css?sourceMap&minimize!postcss!sass?sourceMap')
+        loader: ExtractTextPlugin.extract('style','css?sourceMap&minimize!postcss!sass')
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: ['file?name=[path][name].[hash].[ext]']

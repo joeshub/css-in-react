@@ -1,0 +1,12 @@
+:root {
+  --bg-color          : #20c063;
+  --bg-color-medium   : #F74A27;
+  --text-color        : #fff;
+  --button-color      : #f74A27;
+  --button-color-hover: #ff7857;
+  --bodyfont          : {
+    font-family       : sans-serif;
+  }
+}
+
+@custom-media --medium-viewport (min-width: 415px);

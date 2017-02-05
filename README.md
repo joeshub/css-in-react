@@ -23,8 +23,8 @@ Starts from a very simple webpack build using plain old CSS and demonstrate how 
 8. [Sass](https://github.com/sass/sass) button used in javascirpt
 9. [React](https://github.com/facebook/react) inline style object used in javascript to make the same button
 10. [react-css-modules](https://github.com/gajus/react-css-modules) with React
-11. [postcss-modules](https://github.com/jacobp100/es-css-modules) with React
+11. [postcss](https://github.com/postcss/postcss) and css-modules with React
 12. [radium](https://github.com/FormidableLabs/radium) with React
-13. [Aphrodite](https://github.com/Khan/aphrodite) with React
+13. [aphrodite](https://github.com/Khan/aphrodite) with React
 14. [styled components](https://github.com/styled-components/styled-components) with React
 15. [styletron](https://github.com/rtsao/styletron) with React

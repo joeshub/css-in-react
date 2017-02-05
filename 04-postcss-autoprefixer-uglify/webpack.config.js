@@ -1,7 +1,7 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var cssNext = require('postcss-cssnext');
-var atImport = require("postcss-import")
+var cssNext = require('postcss-cssnext')
+var atImport = require('postcss-import')
 var DEBUG = process.env.NODE_ENV !== 'production' ? true : false;
 
 module.exports = {

@@ -1,0 +1,40 @@
+@import url("variables.css");
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-family: arial;
+  padding: 6px 12px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  color: var(--text-color);
+  background-color: var(--button-color);
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--button-color-hover);
+}
+
+.btn.btn-primary > .badge {
+  color: var(--button-color);
+  background-color: var(--text-color);
+}
+
+.btn.btn-primary.btn-liked {
+  background-color: black;
+}
+
+.btn > .badge {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 3px 6px;
+  position: relative;
+  top: -1px;
+}

@@ -1,0 +1,20 @@
+@import "web-fonts.css";
+@import "variables.css";
+
+body {
+  background: url('../../assets/images/bg.png') 0 0 repeat var(--bg-color);
+  padding: 20px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+ 
+body {
+  @media (--medium-viewport) {
+    background-color: var(--bg-color-medium);
+  };
+}
+
+p {
+  font-family: lora;
+  font-size: 30px;
+}

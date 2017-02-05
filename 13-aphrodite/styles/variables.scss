@@ -1,0 +1,13 @@
+$bg-color: #f74A27;
+$bg-color-medium: #20c063;
+$text-color: #fff;
+$button-color: #f74A27;
+$button-color-hover: #ff7857;
+
+@mixin viewport ($size) {
+  @if ($size == medium) {
+    @media only screen and (min-width: 415px) {
+      @content
+    }
+  }
+}

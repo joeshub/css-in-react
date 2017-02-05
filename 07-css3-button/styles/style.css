@@ -1,7 +1,7 @@
 @import "web-fonts.css";
 
 body {
-  background: url('../images/bg.png') 0 0 repeat #f74A27;
+  background: url('../../assets/images/bg.png') 0 0 repeat #f74A27;
   padding: 20px;
   font-size: 20px;
   color: #444;

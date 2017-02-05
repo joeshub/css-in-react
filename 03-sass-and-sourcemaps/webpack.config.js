@@ -12,7 +12,7 @@ module.exports = {
     loaders: [
       {
         test: /\.(scss|css)$/,
-        loader: DEBUG ? "style!css?sourceMap!sass?sourceMap" : ExtractTextPlugin.extract("style", "css?sourceMap!sass?sourceMap")
+        loader: DEBUG ? "style!css?sourceMap!sass" : ExtractTextPlugin.extract("style", "css?sourceMap!sass")
       }
     ]
   },

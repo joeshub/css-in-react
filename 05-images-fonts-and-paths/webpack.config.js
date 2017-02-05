@@ -17,10 +17,10 @@ module.exports = {
       {
         test: /\.(scss|css)$/,
         loader: DEBUG ?
-          "style!css?sourceMap!postcss!sass?sourceMap" :
+          "style!css?sourceMap!postcss!sass" :
           ExtractTextPlugin.extract(
             "style",
-            "css?sourceMap&minimize!postcss!sass?sourceMap"
+            "css?sourceMap&minimize!postcss!sass"
           )
       },{
         test: /\.(jpe?g|png|gif|svg)$/i,

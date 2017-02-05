@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from '../styles/likebutton.scss'
+import classnames from 'classnames'
 
 @CSSModules(styles, {allowMultiple: true})
 export default class LikeButton extends Component {
@@ -13,12 +14,13 @@ export default class LikeButton extends Component {
   render () {
     const { likes } = this.props
     const { liked } = this.state
-    let buttonStyles = 'btn btn-primary'
-    if (liked) buttonStyles += ' btn-liked'
+    const buttonClassNames = classnames('btn', 'btn-primary', {
+      'btn-liked': liked
+    })
     return (
       <button 
         onClick={this.onClick}
-        styleName={buttonStyles}>
+        styleName={buttonClassNames}>
         Like <span styleName="badge">{likes}</span>
       </button>
     )

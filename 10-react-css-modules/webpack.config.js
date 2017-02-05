@@ -29,21 +29,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets:['react', 'es2015'],
-          env: {
-            development: {
-              plugins: ['transform-class-properties', 'transform-decorators-legacy',['react-transform', {
-                transforms: [{
-                  transform: 'react-transform-hmr',
-                  imports: ['react'],
-                  locals: ['module']
-                }]
-              }]]
-            }
-          }
-        }
+        loader: 'babel-loader'
       }, {
         test: /\.scss$/,
         loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass'

@@ -29,24 +29,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets:['react', 'es2015'],
-          env: {
-            development: {
-              plugins: ['transform-class-properties', 'transform-decorators-legacy', ['react-transform', {
-                transforms: [{
-                  transform: 'react-transform-hmr',
-                  imports: ['react'],
-                  locals: ['module']
-                }]
-              }]]
-            }
-          }
-        }
+        loader: 'babel-loader'
       }, {
         test: /\.(scss|css)$/,
-        loader: 'style!css?sourceMap!postcss!sass?sourceMap'
+        loader: 'style!css?sourceMap!postcss!sass'
       }, {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: ['file?name=[path][name].[hash].[ext]']
