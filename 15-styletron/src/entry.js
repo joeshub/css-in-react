@@ -11,6 +11,8 @@ const styleSheet = document.createElement('style')
 document.head.appendChild(styleSheet)
 const styletron = new Styletron([styleSheet])
 
-render(<StyletronProvider styletron={styletron}>
-  <LikeButton likes={9}/>
-</StyletronProvider>, document.getElementById('output'))
+render (
+  <StyletronProvider styletron={styletron}>
+    <LikeButton likes={9}/>
+  </StyletronProvider>, document.getElementById('output')
+)
