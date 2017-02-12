@@ -1,9 +1,0 @@
-body {
-  background: #20c063;
-}
-
-@media only screen and (min-width: 415px) {
-  body {
-    background-color: #F74A27;
-  }
-}

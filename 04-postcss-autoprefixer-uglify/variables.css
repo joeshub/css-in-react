@@ -1,9 +1,0 @@
-:root {
-  --bg-color: #20c063;
-  --bg-color-medium: #F74A27;
-  --bodyfont: {
-    font-family: sans-serif;
-  }
-}
-
-@custom-media --medium-viewport (min-width: 415px);
