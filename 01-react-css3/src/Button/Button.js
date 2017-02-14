@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import './button.css'
 
 export class Button extends Component {
@@ -14,9 +15,12 @@ export class Button extends Component {
   }
 
   render () {
+    const buttonClassNames = classnames('btn', 'btn-primary', {
+      'depressed': this.state.depressed
+    })
     return (
       <button 
-        className={`btn btn-primary ${this.state.depressed ? 'depressed' : ''}`} 
+        className={buttonClassNames} 
         onClick={this.onButtonClicked} 
         {...this.props}>
       </button>
