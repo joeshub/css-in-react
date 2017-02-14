@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-var autoprefixer = require('autoprefixer')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var devConfig = {
   host: '0.0.0.0',
@@ -13,7 +13,7 @@ module.exports = {
   entry: [
     'webpack-hot-middleware/client',
     'babel-polyfill',
-    './src/entry'
+    './src/App'
   ],
   output: {
     path: path.join(__dirname),
@@ -21,6 +21,7 @@ module.exports = {
     publicPath: 'http://' + devConfig.host  + ':' + devConfig.port + '/',
   },
   plugins: [
+    new HtmlWebpackPlugin({inject: true, template: '../assets/templates/app.html'}),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
@@ -30,19 +31,15 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      }, {
-        test: /\.scss$/,
-        loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass'
-      }, {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: ['file?name=[path][name].[hash].[ext]']
-      }, {
-        test: /\.woff2?$/,
-        loader: 'url?limit=6500000&mimetype=application/font-woff&name=[path]/fonts/[name].[ext]'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
-  },
-  postcss: [
-    autoprefixer()
-  ]
+  }
 }

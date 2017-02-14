@@ -1,0 +1,24 @@
+.btn {
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font: bold 32px helvetica;
+  padding: 20px 40px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  color: #fff;
+  background-color: #ec4800;
+  transition: all 300ms;
+}
+
+.btn.btn-primary:hover {
+  background-color: #f98d00;
+}
+
+.btn.btn-primary.depressed {
+  color: #848484;
+  background-color: #bebebe;
+}
