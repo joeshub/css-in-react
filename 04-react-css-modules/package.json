@@ -10,7 +10,6 @@
   "author": "Joe Seifi",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.5.2",
     "babel-core": "^6.4.0",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.1",

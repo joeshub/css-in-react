@@ -1,29 +1,24 @@
 var path = require('path')
 var webpack = require('webpack')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-var devConfig = {
-  host: '0.0.0.0',
-  port: '3333'
-}
-
 module.exports = {
-  devConfig: devConfig,
-  devtool: 'source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    'babel-polyfill',
-    './src/App'
-  ],
+  entry: ['babel-polyfill','./src/App.js'],
   output: {
-    path: path.join(__dirname),
-    filename: 'bundle.js',
-    publicPath: 'http://' + devConfig.host  + ':' + devConfig.port + '/',
+    path: path.join(__dirname + '/build'),
+    filename: 'app.js',
+    publicPath: ''
   },
   plugins: [
     new HtmlWebpackPlugin({inject: true, template: '../assets/templates/app.html'}),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new ExtractTextPlugin('app.css', {allChunks: true}),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   module: {
     loaders: [

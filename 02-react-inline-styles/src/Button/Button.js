@@ -8,21 +8,18 @@ const styles = {
     'font': 'bold 32px helvetica',
     'padding': '20px 40px',
     'border': '0',
-    'cursor': 'pointer'
-  },
-
-  'btn_primary': {
+    'cursor': 'pointer',
     'color': '#fff',
     'backgroundColor': '#ec4800',
     'transition': 'all 300ms'
   },
 
   // Not possible
-  'btn_primary_hover': {
+  'btn_hover': {
     'backgroundColor': '#f98d00'
   },
 
-  'btn_primary_depressed': {
+  'btn_depressed': {
     'color': '#848484',
     'backgroundColor': '#bebebe'
   }
@@ -42,12 +39,11 @@ export class Button extends Component {
   }
 
   render () {
-    const depressedStyles = this.state.depressed ? styles.btn_primary_depressed : {}
+    const depressedStyles = this.state.depressed ? styles.btn_depressed : {}
     return (
       <button 
         style={{
           ...styles.btn,
-          ...styles.btn_primary,
           ...depressedStyles
         }}
         onClick={this.onButtonClicked} 

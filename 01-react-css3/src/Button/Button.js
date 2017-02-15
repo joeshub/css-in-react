@@ -15,7 +15,7 @@ export class Button extends Component {
   }
 
   render () {
-    const buttonClassNames = classnames('btn', 'btn-primary', {
+    const buttonClassNames = classnames('btn', {
       'depressed': this.state.depressed
     })
     return (
