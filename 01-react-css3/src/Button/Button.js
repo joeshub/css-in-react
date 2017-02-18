@@ -5,7 +5,7 @@ import './button.css'
 export class Button extends Component {
 
   state = {
-    depressed:  false
+    depressed: false
   }
 
   onButtonClicked = () => {
