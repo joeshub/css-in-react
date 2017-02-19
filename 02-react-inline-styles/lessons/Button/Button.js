@@ -11,17 +11,18 @@ const styles = {
     'cursor': 'pointer',
     'color': '#fff',
     'backgroundColor': '#ec4800',
-    'transition': 'all 300ms'
+    'transition': 'all 300ms',
+
+    'depressed': {
+      'color': '#848484',
+      'backgroundColor': '#bebebe'
+    }
+    
   },
 
   // Not possible
   'btn_hover': {
     'backgroundColor': '#f98d00'
-  },
-
-  'btn_depressed': {
-    'color': '#848484',
-    'backgroundColor': '#bebebe'
   }
 
 }
@@ -37,7 +38,7 @@ export class Button extends Component {
   })
   
   render () {
-    const depressedStyles = this.state.depressed ? styles.btn_depressed : {}
+    const depressedStyles = this.state.depressed ? styles.btn.depressed : {}
     
     return (
       <button 
