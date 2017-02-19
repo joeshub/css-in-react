@@ -1,0 +1,20 @@
+body {
+  background-color: #fff;
+  font-size: 24px;
+  font-family: helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: #EC4800;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #F98D00;
+}
+
+li {
+  list-style-type: none;
+  margin: 30px 0;
+}

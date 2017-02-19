@@ -9,9 +9,9 @@ var config = require(path.join(process.cwd(), 'webpack.config'))
 
 var app = express()
 var compiler = webpack(config)
-// var dashboard = new Dashboard()
+var dashboard = new Dashboard()
 
-// compiler.apply(new DashboardPlugin(dashboard.setData))
+compiler.apply(new DashboardPlugin(dashboard.setData))
 
 app.use(webpackDevMiddleware(compiler, {
   noInfo: true,
@@ -20,8 +20,10 @@ app.use(webpackDevMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler))
 
+app.use('/', express.static(path.join(__dirname, '../public')))
+
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../../assets/templates/app.html'))
+  res.sendFile(path.join(__dirname, '../public/templates/app.html'))
 })
 
 app.listen(config.devServer.port, config.devServer.host , function (err) {

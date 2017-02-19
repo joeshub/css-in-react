@@ -1,17 +1,17 @@
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
-// var Dashboard = require('webpack-dashboard')
-// var DashboardPlugin = require('webpack-dashboard/plugin')
+var Dashboard = require('webpack-dashboard')
+var DashboardPlugin = require('webpack-dashboard/plugin')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var config = require(path.join(process.cwd(), 'webpack.config'))
 
 var app = express()
 var compiler = webpack(config)
-// var dashboard = new Dashboard()
+var dashboard = new Dashboard()
 
-// compiler.apply(new DashboardPlugin(dashboard.setData))
+compiler.apply(new DashboardPlugin(dashboard.setData))
 
 app.use(webpackDevMiddleware(compiler, {
   noInfo: true,
@@ -21,7 +21,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler))
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../templates/app.html'))
+  res.sendFile(path.join(__dirname, '../public/templates/app.html'))
 })
 
 app.listen(config.devServer.port, config.devServer.host , function (err) {

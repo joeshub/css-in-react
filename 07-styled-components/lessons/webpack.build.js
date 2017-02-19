@@ -3,14 +3,14 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: ['babel-polyfill','./App.js'],
+  entry: ['babel-polyfill','./entry.js'],
   output: {
     path: path.join(__dirname + '/build'),
     filename: 'app.js',
     publicPath: ''
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: '../../assets/templates/app.html' }),
+    new HtmlWebpackPlugin({ inject: true, template: '../../public/templates/app.html' }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
@@ -24,6 +24,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader','css-loader']
       },
       {
         test: /\.json$/,

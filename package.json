@@ -6,12 +6,12 @@
   "license": "ISC",
   "scripts": {
     "clean": "find 0* -type d -name build | xargs rm -rf",
-    "start": "./node_modules/.bin/cross-env NODE_ENV=development node assets/scripts/start-all.js",
-    "lessons1": "cd 01-react-css3/lessons && npm start",
-    "lessons2": "cd 02-react-inline-styles && npm start",
-    "lessons3": "cd 03-radium && npm start",
-    "lessons5": "cd 05-react-css-modules && npm start",
-    "lessons7": "cd 07-styled-components && npm start"
+    "start": "node scripts/make-index.js && ./node_modules/.bin/cross-env NODE_ENV=development node scripts/server-all.js",
+    "lesson1": "cd 01-react-css3/lessons && npm start",
+    "lesson2": "cd 02-react-inline-styles && npm start",
+    "lesson3": "cd 03-radium && npm start",
+    "lesson5": "cd 05-react-css-modules && npm start",
+    "lesson7": "cd 07-styled-components && npm start"
   },
   "devDependencies": {
     "aphrodite": "^1.1.0",

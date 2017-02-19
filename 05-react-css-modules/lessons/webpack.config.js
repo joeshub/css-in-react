@@ -1,16 +1,17 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-var settings = require('../../assets/scripts/settings.js')
+var settings = require('../../scripts/settings.js')
 var devServer = settings.devServer
 
 module.exports = {
   devServer: devServer,
   devtool: 'source-map',
   entry: [
-    'webpack-hot-middleware/client',
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client?reload=1',
     'babel-polyfill',
-    './App'
+    './entry'
   ],
   output: {
     path: path.join(__dirname),
@@ -18,7 +19,7 @@ module.exports = {
     publicPath: 'http://' + devServer.host  + ':' + devServer.port + '/',
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: '../../assets/templates/app.html' }),
+    new HtmlWebpackPlugin({ inject: true, template: '../../public/templates/app.html' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
