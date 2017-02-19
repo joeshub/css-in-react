@@ -1,64 +1,58 @@
 {
   "name": "css-in-react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Learn to use various CSS in JS frameworks with your React project",
   "author": "Joe Seifi",
   "license": "ISC",
+  "scripts": {
+    "clean": "find 0* -type d -name build | xargs rm -rf",
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development node assets/scripts/start-all.js",
+    "lessons1": "cd 01-react-css3/lessons && npm start",
+    "lessons2": "cd 02-react-inline-styles && npm start",
+    "lessons3": "cd 03-radium && npm start",
+    "lessons5": "cd 05-react-css-modules && npm start",
+    "lessons7": "cd 07-styled-components && npm start"
+  },
   "devDependencies": {
-
-    "css-loader": "^0.25.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2",
-
-    "json-loader": "^0.5.4",
-
-    "extract-text-webpack-plugin": "^1.0.1",
-
-    "node-sass": "^3.11.2",
-    "sass-loader": "^4.0.2",
-
-    "classnames": "^2.2.5",
+    "aphrodite": "^1.1.0",
     "autoprefixer": "^6.5.2",
-    "postcss-loader": "^1.1.0",
-    "postcss-cssnext": "^2.9.0",
-    "postcss-import": "^9.1.0",
-    "html-webpack-plugin": "^2.24.1",
-
-    "file-loader": "^0.9.0",
-    "image-webpack-loader": "^3.0.0",
-    "url-loader": "^0.5.7",
-
     "babel-core": "^6.4.0",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.1",
-    "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.3.14",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "babel-preset-react-hmre": "^1.0.1",
     "babel-preset-stage-0": "^6.3.13",
+    "classnames": "^2.2.5",
     "cross-env": "^1.0.7",
+    "css-loader": "^0.26.1",
     "eslint": "^3.9.1",
     "eslint-plugin-react": "^6.6.0",
     "express": "^4.13.3",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
-    "react-transform-hmr": "^1.0.4",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.5.0",
-
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.28.0",
+    "image-webpack-loader": "^3.2.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.11.2",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.1.0",
     "radium": "^0.18.1",
-
-    "aphrodite": "^1.1.0",
-
+    "react": "^15.2.1",
     "react-css-modules": "^3.7.10",
-
-    "styled-components": "^1.0.10",
-
-    "styletron-react": "^2.3.0"
-    
+    "react-dom": "^15.2.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "styled-components": "^1.4.3",
+    "styletron-react": "^2.3.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dashboard": "^0.3.0",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.17.0"
   }
 }

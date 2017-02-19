@@ -1,0 +1,36 @@
+{
+  "name": "react-css3",
+  "version": "1.0.0",
+  "description": "React Button component with CSS and Style loader",
+  "main": "app.js",
+  "scripts": {
+    "start": "../../node_modules/.bin/cross-env NODE_ENV=development node ../../assets/scripts/lessons.js",
+    "build": "../../node_modules/.bin/cross-env NODE_ENV=production ../../node_modules/.bin/webpack --config webpack.build.js --progress --colors"
+  },
+  "author": "Joe Seifi",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "cross-env": "^1.0.7",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-plugin-react": "^6.6.0",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "html-webpack-plugin": "^2.28.0",
+    "json-loader": "^0.5.4",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.17.0"
+  }
+}
