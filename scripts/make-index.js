@@ -74,17 +74,9 @@ const markup = ReactDOMServer.renderToStaticMarkup(
           )
         }),
         
-        React.createElement('li', { key: 'songplaya1' },
+        React.createElement('li', { key: 'sxburritos' },
           React.createElement('span', {}, 'static - '),
-          React.createElement('a', { href: '/songplaya/phase1/' }, 'SongPlaya - Phase 1')
-        ),
-        React.createElement('li', { key: 'songplaya2' },
-          React.createElement('span', {}, 'static - '),
-          React.createElement('a', { href: '/songplaya/phase2/' }, 'SongPlaya - Phase 2')
-        ),
-        React.createElement('li', { key: 'songplaya3' },
-          React.createElement('span', {}, 'static - '),
-          React.createElement('a', { href: '/songplaya/phase3/' }, 'SongPlaya - Phase 3')
+          React.createElement('a', { href: '/sxburritos/' }, 'SXBURRITOS - Project Design')
         )
 
       )
