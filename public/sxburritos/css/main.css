@@ -2,11 +2,17 @@
 
 body {
   background-color: #E1E1E1;
-  font-size: 1.125rem;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 608px) {
+  body {
+    font-size: 15px;
+  }
 }
 
 body, input, button {  
-  font-family: roboto, helvetica;
+  font-family: helvetica;
 }
 
 body, a {
@@ -84,7 +90,7 @@ body, a {
 @media screen and (min-width: 608px) {
   .order {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 30px auto 0;
   }
 }
 
@@ -116,6 +122,10 @@ body, a {
 /* food options */
 .food_options {
   background-color: #fff;
+}
+
+.options_list {
+  transition: 300ms all ease-in;
 }
 
 @media screen and (min-width: 608px) {
@@ -197,6 +207,7 @@ body, a {
 .option_item_price {
   padding-left: 10px;
   font-weight: normal;
+  color: #848484;
 }
 
 @media screen and (min-width: 608px) {
@@ -225,7 +236,7 @@ body, a {
 
 @media screen and (min-width: 608px) {
   .buy {
-    height: 130px;
+    height: 80px;
     position: inherit;
     bottom: inherit;
     justify-content: center;
@@ -252,6 +263,7 @@ body, a {
   background-color: #fff;
   color: #000;
   box-shadow: 1px -1px 2px rgba(0, 0, 0, .2);
+  width: 110px;
 }
 
 .buy_button:hover {
@@ -267,4 +279,5 @@ body, a {
 .footer {
   text-align: center;
   padding: 20px;
+  font-size: 12px;
 }

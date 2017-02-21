@@ -60,7 +60,7 @@ const markup = ReactDOMServer.renderToStaticMarkup(
   React.createElement('html', {},
     React.createElement('head', {},
       React.createElement('title', {}, pageTitle),
-      React.createElement('link', { rel: 'stylesheet', href: '/css/base.css' })
+      React.createElement('link', { rel: 'stylesheet', href: '/css/app.css' })
     ),
     React.createElement('body', { id: 'index' },
 
