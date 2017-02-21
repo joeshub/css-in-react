@@ -10,22 +10,17 @@ function isDirectory (dir) {
 }
 
 const basePath = path.join(__dirname)
-// console.log('basePath', basePath)
 
 const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
   if(projdDir.startsWith('0') && projdDir.indexOf('-') === 2) {
     return isDirectory(path.join(basePath, projdDir))
   }
 })
-// console.log('projectPaths', projectPaths)
 
 // HMR using react-hot-loader 3 & webpack-hot-middleware
-// https://github.com/gaearon/react-hot-loader/tree/next/docs
-// https://github.com/gaearon/redux-devtools/commit/64f58b7010a1b2a71ad16716eb37ac1031f93915
-
 var reactHotLoader = 'react-hot-loader/patch'
 var webpackHotMiddleware = 'webpack-hot-middleware/client?reload=1'
-var babelPolyfill = 'babel-polyfill'
+var babelPolyfill = 'babel-polyfill' // core-js ?
 
 var hotEntries = [reactHotLoader, webpackHotMiddleware]
 
@@ -41,7 +36,6 @@ const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
   }
   return allEntreis
 }, {})
-// console.log('webpackEntries', webpackEntries)
 
 let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
   acc.push(new HtmlWebpackPlugin({
@@ -52,7 +46,6 @@ let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
   }))
   return acc
 }, [])
-// console.log('htmlPlugins', htmlPlugins)
 
 const webpackPlugins = [
   ...htmlPlugins,
@@ -62,7 +55,7 @@ const webpackPlugins = [
 
 module.exports = {
   devServer: devServer,
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: webpackEntries,
   plugins: webpackPlugins,
   output: {
@@ -76,7 +69,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['react-hot-loader/webpack', 'babel-loader']
+        use: ['react-hot-loader/webpack', 'babel-loader?cacheDirectory=true']
       },
       {
         test: /05-react-css-modules\/.*\.css$/,

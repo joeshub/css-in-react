@@ -1,25 +1,27 @@
 var path = require('path')
 var express = require('express')
-var serveStatic = require('serve-static')
 var webpack = require('webpack')
-// var Dashboard = require('webpack-dashboard')
-// var DashboardPlugin = require('webpack-dashboard/plugin')
-var webpackDevMiddleware = require('webpack-dev-middleware')
-var webpackHotMiddleware = require('webpack-hot-middleware')
+var serveStatic = require('serve-static')
 var config = require(path.join(process.cwd(), 'webpack.config'))
-
 var server = express()
 var compiler = webpack(config)
 
-// var dashboard = new Dashboard()
-// compiler.apply(new DashboardPlugin(dashboard.setData))
+server.use(require('webpack-dev-middleware')(compiler, { 
+  publicPath: config.output.publicPath,
+  stats: {
+    chunks: false,
+    children: false,
+    modules: false,
+    colors: true
+  }
+}))
 
-server.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath}))
-server.use(webpackHotMiddleware(compiler))
+server.use(require('webpack-hot-middleware')(compiler))
+
 server.use('/', serveStatic(path.join(__dirname, '../public')))
 
 server.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/templates/server.html'))
+  res.sendFile(path.join(__dirname, '../public/templates/app.html'))
 })
 
 server.listen(config.devServer.port, config.devServer.host , function (err) {

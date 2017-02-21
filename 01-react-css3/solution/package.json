@@ -1,7 +1,7 @@
 {
-  "name": "songplaya-react-css3",
+  "name": "react-css3-session-solution",
   "version": "1.0.0",
-  "description": "Song Playa - CSS files imported into React - Solution",
+  "description": "React with CSS - Session solution",
   "main": "app.js",
   "scripts": {
     "start": "../../node_modules/.bin/cross-env NODE_ENV=development node ../../scripts/server-lessons.js",

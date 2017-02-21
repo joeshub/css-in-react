@@ -4,7 +4,7 @@ var port = 3333
 module.exports = {
   devServer: {
     host: host,
-    port: port,
+    port: port
   },
   publicPath: 'http://' + host  + ':' + port + '/'
 }
