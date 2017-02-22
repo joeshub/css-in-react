@@ -20,13 +20,18 @@ body, a {
 }
 
 /* svg icons and buttons */
-.icon {
+.icon:after {
+  background-size: 12px;
+  display: block;
+  content: '';
   width: 12px;
   height: 12px;
-  margin-left:8px;
+  margin-left: 6px;
+  display: inline-block;
 }
-.icon.icon-plus{
-  fill: #fff;
+
+.icon-plus:after {
+  background: url(../svg/add.svg) 50% 50% no-repeat;
 }
 
 .btn {
@@ -51,7 +56,7 @@ body, a {
   background-color: #bebebe;
 }
 
-.btn.withicon {
+.btn.icon {
   display: flex;
   align-items: center;
   justify-content: center;
