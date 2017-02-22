@@ -1,16 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import classnames from 'classnames'
-import './button.css'
+import '../../../public/workshop/css/button.css'
 
 // TODO Should take initial state depressed or not
 
 export class Button extends Component {
 
   state = { depressed: false }
+  
+  static propTypes = {
+    onClick: PropTypes.func
+  }
 
   onButtonClicked = () => {
     const { onClick } = this.props
-    onClick(this.state.depressed)
+    if (typeof onClick === 'function') {
+      onClick(this.state.depressed)
+    }
     this.setState({
       depressed: !this.state.depressed
     })

@@ -11,8 +11,8 @@ module.exports = {
     publicPath: ''
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: '../../public/templates/app.html' }),
-    new ExtractTextPlugin({ filename: 'app.css', disable: false, allChunks: true }),
+    new HtmlWebpackPlugin({ inject: true, template: '../../templates/app.html' }),
+    new ExtractTextPlugin({ filename: 'lessons.css', disable: false, allChunks: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {

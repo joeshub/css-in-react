@@ -60,7 +60,7 @@ const markup = ReactDOMServer.renderToStaticMarkup(
   React.createElement('html', {},
     React.createElement('head', {},
       React.createElement('title', {}, pageTitle),
-      React.createElement('link', { rel: 'stylesheet', href: '/css/app.css' })
+      React.createElement('link', { rel: 'stylesheet', href: '/lessons/css/main.css' })
     ),
     React.createElement('body', { id: 'index' },
 
@@ -76,7 +76,7 @@ const markup = ReactDOMServer.renderToStaticMarkup(
         
         React.createElement('li', { key: 'tacoshack' },
           React.createElement('span', {}, 'design - '),
-          React.createElement('a', { href: '/tacoshack/' }, 'Taco Shack')
+          React.createElement('a', { href: '/workshop/' }, 'Taco Shack')
         )
 
       )

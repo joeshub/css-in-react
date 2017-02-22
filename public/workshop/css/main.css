@@ -1,4 +1,4 @@
-@import url("./reset.css");
+/* app specific */
 
 body {
   background-color: #E1E1E1;
@@ -19,55 +19,6 @@ body, a {
   color: #222324;
 }
 
-/* svg icons and buttons */
-.icon:after {
-  background-size: 12px;
-  display: block;
-  content: '';
-  width: 12px;
-  height: 12px;
-  margin-left: 6px;
-  display: inline-block;
-}
-
-.icon-plus:after {
-  background: url(../svg/add.svg) 50% 50% no-repeat;
-}
-
-.btn {
-  display: inline-block;
-  outline: none;
-  text-align: center;
-  font: bold 15px helvetica;
-  padding: 10px 10px;
-  border: 0;
-  cursor: pointer;
-  color: #fff;
-  background-color: #ec4800;
-  transition: all 120ms;
-}
-
-.btn:hover {
-  background-color: #f98d00;
-}
-
-.btn.depressed {
-  color: #848484;
-  background-color: #bebebe;
-}
-
-.btn.option_add_button.depressed:after {
-  display: none;
-}
-
-.btn.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: right;
-}
-
-/* app specific */
 .app {
   min-width: 320px;
 }
