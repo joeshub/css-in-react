@@ -1,7 +1,7 @@
 {
   "name": "react-css3",
   "version": "1.0.0",
-  "description": "React Button component with CSS and Style loader",
+  "description": "Button - CSS and Style loader",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "app.js",

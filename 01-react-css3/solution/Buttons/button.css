@@ -1,0 +1,25 @@
+/* TODO this is also in our global css file */
+
+.btn {
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font: bold 32px helvetica;
+  padding: 20px 40px;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background-color: #ec4800;
+  transition: all 300ms;
+}
+
+.btn:hover {
+  background-color: #f98d00;
+}
+
+.btn.depressed {
+  color: #848484;
+  background-color: #bebebe;
+}
+
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { AddToCartButton } from './Buttons'
 import '../../public/css/tacoshack.css'
 
 export default class App extends Component {
@@ -11,29 +12,29 @@ export default class App extends Component {
         <section className="order">
           <main className="food">
             <figure className="food_photo">
-              <img className="food_photo_image" src="../../img/burrito_large.jpg" />
+              <img className="food_photo_image" src="../../img/taco.jpg" />
             </figure>
             <div className="food_options">
               <ul className="options_list">
                 <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/pulledpork.jpg" /></figure>
-                  <div className="option_item_name">Pulled Pork<span className="option_item_price">$3.00</span></div>
-                  <button className="btn depressed option_add_button">Remove</button>
+                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/steak.jpg" /></figure>
+                  <div className="option_item_name">Carne Asada<span className="option_item_price">$3.00</span></div>
+                  <AddToCartButton />
                 </li>
                 <li className="option_item">
                   <figure className="option_item_image"><img className="option_item_photo" src="../../img/guacamole.jpg" /></figure>
                   <div className="option_item_name">Guacamole<span className="option_item_price">$2.00</span></div>
-                  <button className="btn icon icon-plus option_add_button">Add</button>
+                  <AddToCartButton />
                 </li>
                 <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/brownrice.jpg" /></figure>
-                  <div className="option_item_name">Brown Rice<span className="option_item_price">$1.00</span></div>
-                  <button className="btn icon icon-plus option_add_button">Add</button>
+                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/fish.jpg" /></figure>
+                  <div className="option_item_name">Baja Fish<span className="option_item_price">$1.00</span></div>
+                  <AddToCartButton />
                 </li>
                 <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/salsa.jpg" /></figure>
-                  <div className="option_item_name">Extra Salsa<span className="option_item_price">$0.50</span></div>
-                  <button className="btn icon icon-plus option_add_button">Add</button>
+                  <figure className="option_item_image"><img className="option_item_photo" src="../../img/chicken.jpg" /></figure>
+                  <div className="option_item_name">Chicken<span className="option_item_price">$0.50</span></div>
+                  <AddToCartButton />
                 </li>
               </ul>
             </div>

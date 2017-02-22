@@ -1,7 +1,7 @@
 {
   "name": "styled-components",
   "version": "1.0.0",
-  "description": "React button styled using styled components",
+  "description": "Button - styled components",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "app.js",

@@ -1,7 +1,7 @@
 {
   "name": "react-inline-styles",
   "version": "1.0.0",
-  "description": "React Button component with inline styles",
+  "description": "Button - React inline styles",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "app.js",

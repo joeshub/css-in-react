@@ -1,7 +1,7 @@
 {
   "name": "radium-and-react",
   "version": "1.0.0",
-  "description": "React button styled using Radium",
+  "description": "Button - Radium",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "app.js",

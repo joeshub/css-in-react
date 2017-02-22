@@ -44,7 +44,7 @@ body, a {
   cursor: pointer;
   color: #fff;
   background-color: #ec4800;
-  transition: all 300ms;
+  transition: all 120ms;
 }
 
 .btn:hover {
@@ -54,6 +54,10 @@ body, a {
 .btn.depressed {
   color: #848484;
   background-color: #bebebe;
+}
+
+.btn.option_add_button.depressed:after {
+  display: none;
 }
 
 .btn.icon {
@@ -75,17 +79,23 @@ body, a {
   justify-content: center;
   height: 70px;
   align-items: center;
-  background-color: #323A4C;
+  background-color: #02573A;
   color: #fff;
 }
 
 .logo {
   background-image: url(../img/logo.png);
-  width: 319px;
-  height: 61px;
+  width: 800px;
+  height: 54px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 50%;
+  background-size: 80%;
+}
+
+@media screen and (min-width: 608px) {
+  .logo {
+    background-size: 50%;
+  }
 }
 
 .logo span {

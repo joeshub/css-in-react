@@ -1,7 +1,7 @@
 {
   "name": "react-css3-session-solution",
   "version": "1.0.0",
-  "description": "React with CSS - Session solution",
+  "description": "Taco Shack - CSS and Style loader",
   "main": "app.js",
   "scripts": {
     "start": "../../node_modules/.bin/cross-env NODE_ENV=development node ../../scripts/server-lessons.js",
