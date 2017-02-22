@@ -29,17 +29,16 @@ const styles = {
 
 export class Button extends Component {
 
-  state = {
-    depressed: false
-  }
+  state = { depressed: false }
 
   onButtonClicked = () => this.setState({
     depressed: !this.state.depressed
   })
   
   render () {
-    const depressedStyles = this.state.depressed ? styles.btn.depressed : {}
-    
+    const depressedStyles = 
+    this.state.depressed ? 
+    styles.btn.depressed : {}
     return (
       <button 
         style={{
@@ -51,5 +50,4 @@ export class Button extends Component {
       </button>
     )
   }
-
 }

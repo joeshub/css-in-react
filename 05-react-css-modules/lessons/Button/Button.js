@@ -6,9 +6,7 @@ import classnames from 'classnames'
 @CSSModules(styles, {allowMultiple: true})
 export class Button extends Component {
 
-  state = {
-    depressed: false
-  }
+  state = { depressed: false }
 
   onButtonClicked = () => this.setState({
     depressed: !this.state.depressed
@@ -18,7 +16,6 @@ export class Button extends Component {
     const buttonClassNames = classnames('btn', {
       'depressed': this.state.depressed
     })
-    
     return (
       <button
         styleName={buttonClassNames}
@@ -27,5 +24,4 @@ export class Button extends Component {
       </button>
     )
   }
-
 }

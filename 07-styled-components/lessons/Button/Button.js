@@ -19,9 +19,7 @@ const StyledButton = styled.button`
 
 export class Button extends Component {
 
-  state = {
-    depressed: false
-  }
+  state = { depressed: false }
 
   onButtonClicked = () => this.setState({
     depressed: !this.state.depressed
