@@ -16,9 +16,9 @@ const styles = {
     ':hover': {
       backgroundColor: '#f98d00'
     },
-    btn_depressed: {
-      'color': '#848484',
-      'backgroundColor': '#bebebe',
+    depressed: {
+      color: '#848484',
+      backgroundColor: '#bebebe',
       ':hover': {
         backgroundColor: '#bebebe'
       }
@@ -26,8 +26,7 @@ const styles = {
   }
 }
 
-@Radium
-export class Button extends Component {
+@Radium export class Button extends Component {
 
   state = {
     depressed: false
@@ -38,7 +37,7 @@ export class Button extends Component {
   })
   
   render () {
-    const depressedStyles = this.state.depressed ? styles.btn.btn_depressed : {}
+    const depressedStyles = this.state.depressed ? styles.btn.depressed : {}
 
     return (
       <button 

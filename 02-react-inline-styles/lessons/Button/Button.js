@@ -2,27 +2,27 @@ import React, { Component } from 'react'
 
 const styles = {
   'btn': {
-    'display': 'inline-block',
-    'outline': 'none',
-    'textAlign': 'center',
-    'font': 'bold 32px helvetica',
-    'padding': '20px 40px',
-    'border': '0',
-    'cursor': 'pointer',
-    'color': '#fff',
-    'backgroundColor': '#ec4800',
-    'transition': 'all 300ms',
+    display: 'inline-block',
+    outline: 'none',
+    textAlign: 'center',
+    font: 'bold 32px helvetica',
+    padding: '20px 40px',
+    border: '0',
+    cursor: 'pointer',
+    color: '#fff',
+    backgroundColor: '#ec4800',
+    transition: 'all 300ms',
 
-    'depressed': {
-      'color': '#848484',
-      'backgroundColor': '#bebebe'
+    depressed: {
+      color: '#848484',
+      backgroundColor: '#bebebe'
     }
     
   },
 
   // Not possible
-  'btn_hover': {
-    'backgroundColor': '#f98d00'
+  btn_hover: {
+    backgroundColor: '#f98d00'
   }
 
 }

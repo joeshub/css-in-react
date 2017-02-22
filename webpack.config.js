@@ -81,6 +81,10 @@ module.exports = {
         exclude: /05-react-css-modules/,
       },
       {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: ['file-loader?name=[path][name].[hash].[ext]']
+      },
+      {
         test: /\.json$/,
         use: 'json-loader'
       }
