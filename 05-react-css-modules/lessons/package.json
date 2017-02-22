@@ -4,7 +4,7 @@
   "description": "Button - react-css-modules",
   "author": "Joe Seifi",
   "license": "ISC",
-  "main": "app.js",
+  "main": "build/app.js",
   "scripts": {
     "start": "../../node_modules/.bin/cross-env NODE_ENV=development node ../../scripts/server-lessons.js",
     "build": "../../node_modules/.bin/cross-env NODE_ENV=production ../../node_modules/.bin/webpack --config webpack.build.js --progress --colors"
