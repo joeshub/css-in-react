@@ -1,22 +1,24 @@
 /* buttons with icons */
+
 .btn.icon {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* cross axis */
+  justify-content: center; /* main axis */
 }
 
 .btn.icon:after {
-  background-size: 12px;
-  display: block;
   content: '';
+  display: inline-block;
   width: 12px;
   height: 12px;
   margin-left: 6px;
-  display: inline-block;
+  background-size: 12px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .btn.icon-add:after {
-  background: url(../svg/add.svg) 50% 50% no-repeat;
+  background-image: url(../svg/add.svg);
 }
 
 .btn.icon-add.depressed:after {

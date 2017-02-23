@@ -1,27 +1,26 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 import { Button } from './index'
-import '../../../public/workshop/css/button-icons.css'
 
-export class AddToCartButton extends Component {
+export class BuyNowButton extends Component {
 
   state = { 
     depressed: false,
-    buttonText: 'Add'
+    buttonText: 'Buy Now'
   }
 
   onButtonClicked = (e) => {
     this.setState({
-      buttonText: this.state.depressed ? 'Add' : 'Remove',
-      depressed: !this.state.depressed
+      buttonText: 'Confirmed',
+      depressed: true
     })
   }
 
   render () {
     const { buttonText, depressed } = this.state
     const { classNames } = this.props
-    const buttonClassNames = classnames('icon icon-add', classNames)
-    
+    const buttonClassNames = classnames(classNames)
+
     return (
       <Button 
         classNames={buttonClassNames} 

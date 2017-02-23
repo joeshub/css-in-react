@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AddToCartButton } from './Buttons'
+import { AddToCartButton, BuyNowButton, Button } from './Buttons'
 import './app.css'
 
 export default class App extends Component {
@@ -19,29 +19,29 @@ export default class App extends Component {
                 <li className="option_item">
                   <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/steak.jpg" /></figure>
                   <div className="option_item_name">Carne Asada<span className="option_item_price">$3.00</span></div>
-                  <AddToCartButton />
+                  <AddToCartButton classNames="option_add_button" />
                 </li>
                 <li className="option_item">
                   <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/guacamole.jpg" /></figure>
                   <div className="option_item_name">Guacamole<span className="option_item_price">$2.00</span></div>
-                  <AddToCartButton />
+                  <AddToCartButton classNames="option_add_button" />
                 </li>
                 <li className="option_item">
                   <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/fish.jpg" /></figure>
                   <div className="option_item_name">Baja Fish<span className="option_item_price">$1.00</span></div>
-                  <AddToCartButton />
+                  <AddToCartButton classNames="option_add_button" />
                 </li>
                 <li className="option_item">
                   <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/chicken.jpg" /></figure>
                   <div className="option_item_name">Chicken<span className="option_item_price">$0.50</span></div>
-                  <AddToCartButton />
+                  <AddToCartButton classNames="option_add_button" />
                 </li>
               </ul>
             </div>
           </main>
           <aside className="buy">
             <div className="buy_title">Total:<span className="buy_total">$10.50</span></div>
-            <button className="btn buy_button">Buy Now</button>
+            <BuyNowButton classNames="buy_button">Buy Now</BuyNowButton>
           </aside>
         </section>
         <footer className="footer">
