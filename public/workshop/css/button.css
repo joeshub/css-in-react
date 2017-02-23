@@ -10,6 +10,7 @@
   cursor: pointer;
   color: #fff;
   background-color: #ec4800;
+  user-select: none;
   transition: all 120ms;
 }
 
@@ -17,7 +18,14 @@
   background-color: #f98d00;
 }
 
-.btn.depressed {
+.btn.depressed,
+.btn.disabled,
+.btn.disabled:hover {
   color: #848484;
   background-color: #bebebe;
+}
+
+.btn.disabled {
+  cursor: auto;
+  pointer-events: none;
 }

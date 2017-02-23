@@ -19,14 +19,16 @@ export class AddToCartButton extends Component {
 
   render () {
     const { buttonText, depressed } = this.state
-    const { classNames } = this.props
+    const { classNames, ...otherProps } = this.props
     const buttonClassNames = classnames('icon icon-add', classNames)
     
     return (
       <Button 
-        classNames={buttonClassNames} 
-        onClick={this.onButtonClicked}
-        depressed={depressed}>
+        classNames={  buttonClassNames   } 
+        onClick={ this.onButtonClicked }
+        depressed={ depressed }
+        { ...otherProps }
+      >
         { buttonText }
       </Button>
     )

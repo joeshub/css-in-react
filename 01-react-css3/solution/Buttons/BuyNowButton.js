@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import classnames from 'classnames'
 import { Button } from './index'
 
 export class BuyNowButton extends Component {
@@ -12,20 +11,23 @@ export class BuyNowButton extends Component {
   onButtonClicked = (e) => {
     this.setState({
       buttonText: 'Confirmed',
-      depressed: true
+      depressed: true,
+      disabled: true
     })
   }
 
   render () {
-    const { buttonText, depressed } = this.state
-    const { classNames } = this.props
-    const buttonClassNames = classnames(classNames)
+    const { buttonText, depressed, disabled } = this.state
+    const { classNames, ...otherProps } = this.props
 
     return (
       <Button 
-        classNames={buttonClassNames} 
-        onClick={this.onButtonClicked}
-        depressed={depressed}>
+        classNames={ classNames } 
+        onClick={ this.onButtonClicked }
+        depressed={ depressed }
+        disabled={ disabled }
+        { ...otherProps }
+      >
         { buttonText }
       </Button>
     )
