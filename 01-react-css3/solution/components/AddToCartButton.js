@@ -10,7 +10,7 @@ export class AddToCartButton extends Component {
     buttonText: 'Add'
   }
 
-  onButtonClicked = (e) => {
+  onButtonClicked = () => {
     this.props.onClick(!this.state.depressed)
     this.setState({
       buttonText: this.state.depressed ? 'Add' : 'Remove',
@@ -20,13 +20,14 @@ export class AddToCartButton extends Component {
 
   render () {
     const { buttonText, depressed } = this.state
-    const { classNames, onClick, ...otherProps } = this.props
+    const { classNames, onClick, disabled, ...otherProps } = this.props
     const buttonClassNames = classnames('icon icon-add', classNames)
     
     return (
       <Button 
         classNames={ buttonClassNames } 
         depressed={ depressed }
+        disabled={ disabled }
         onClick={ this.onButtonClicked }
         { ...otherProps }
       >

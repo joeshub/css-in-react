@@ -8,7 +8,7 @@ export class BuyNowButton extends Component {
     buttonText: 'Buy Now'
   }
 
-  onButtonClicked = (e) => {
+  onButtonClicked = () => {
     this.props.onClick()
     this.setState({
       buttonText: 'Confirmed',

@@ -146,7 +146,7 @@ body, a {
 
 @media screen and (min-width: 608px) {
   .food_item_photo {
-    width: 100%;
+    height: 100%;
   }
 }
 
@@ -194,6 +194,7 @@ body, a {
   box-sizing: border-box;
   background-color: #EA491C;
   color: #fff;
+  transition: height 300ms ease 60ms;
 }
 
 @media screen and (min-width: 608px) {
@@ -202,10 +203,16 @@ body, a {
     position: inherit;
     bottom: inherit;
     justify-content: center;
+    transition: height 300ms ease 260ms;
   }
 }
 
+.sold.buy {
+  height: 200px;
+}
+
 .buy_title {
+  display: flex;
   flex-grow: 1;
   font-weight: bold;
 }
@@ -215,10 +222,29 @@ body, a {
   }
 }
 
+.sold .buy_title {
+  font-weight: normal;
+  display: block;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (min-width: 608px) {
+  .sold .buy_title {
+    line-height: 2;
+  }
+}
+
 .buy_total {
   padding-left: 10px;
-  padding-right: 30px;
+  padding-right: 10px;
+  min-width: 80px;
   font-weight: normal;
+}
+
+.sold .buy_total {
+  padding-left: 0;
+  min-width: auto;
 }
 
 .buy_button {
@@ -242,4 +268,27 @@ body, a {
   text-align: center;
   padding: 20px;
   font-size: 12px;
+}
+
+/* animate close food list */
+.closefoods-enter {
+  opacity: 0.01;
+  max-height: 0;
+}
+
+.closefoods-enter-active {
+  opacity: 1;
+  max-height: 1000;
+  transition: all 500ms ease-in;
+}
+
+.closefoods-leave {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.closefoods-leave-active {
+  opacity: 0.01;
+  max-height: 0;
+  transition: all 600ms ease;
 }

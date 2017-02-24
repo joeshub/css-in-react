@@ -4,8 +4,5 @@
     "module": "system",
     "experimentalDecorators": true
   },
-  "exclude": [
-    "node_modules",
-    "**/node_modules"
-  ]
+  "exclude": [ "node_modules" ]
 }
