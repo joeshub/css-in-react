@@ -1,9 +1,26 @@
 import React, { Component } from 'react'
 import { AddToCartButton, BuyNowButton, Button } from './Buttons'
+import { FoodOption, BuyStrip } from './Order'
+import numeral from 'numeral'
+
+import { foodList } from './api'
 import './app.css'
 
 export default class App extends Component {
+
+  state = {
+    totalPrice: 0
+  }
+
+  updateTotal (price, inCart) {
+    this.setState({
+      totalPrice: inCart ? this.state.totalPrice + price : this.state.totalPrice - price
+    })
+  }
+
   render () {
+    const { totalPrice } = this.state
+
     return (
       <div>
         <header className="header">
@@ -16,33 +33,21 @@ export default class App extends Component {
             </figure>
             <div className="food_options">
               <ul className="options_list">
-                <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/steak.jpg" /></figure>
-                  <div className="option_item_name">Carne Asada<span className="option_item_price">$3.00</span></div>
-                  <AddToCartButton classNames="option_add_button" />
-                </li>
-                <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/guacamole.jpg" /></figure>
-                  <div className="option_item_name">Guacamole<span className="option_item_price">$2.00</span></div>
-                  <AddToCartButton classNames="option_add_button" />
-                </li>
-                <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/fish.jpg" /></figure>
-                  <div className="option_item_name">Baja Fish<span className="option_item_price">$1.00</span></div>
-                  <AddToCartButton classNames="option_add_button" />
-                </li>
-                <li className="option_item">
-                  <figure className="option_item_image"><img className="option_item_photo" src="../../workshop/img/chicken.jpg" /></figure>
-                  <div className="option_item_name">Chicken<span className="option_item_price">$0.50</span></div>
-                  <AddToCartButton classNames="option_add_button" />
-                </li>
+              {
+                foodList.map( ({ id, name, price, photoPath }) => {
+                  return <FoodOption 
+                    key={ id }
+                    name={ name }
+                    price={ price }
+                    photoPath={ photoPath }
+                    updateTotal= { this.updateTotal.bind(this) }
+                   />
+                })
+              }
               </ul>
             </div>
           </main>
-          <aside className="buy">
-            <div className="buy_title">Total:<span className="buy_total">$10.50</span></div>
-            <BuyNowButton classNames="buy_button">Buy Now</BuyNowButton>
-          </aside>
+          <BuyStrip totalPrice={ numeral(totalPrice).format('$0.00') } />
         </section>
         <footer className="footer">
           123 Narrow Road, San Francisco, CA
@@ -51,4 +56,3 @@ export default class App extends Component {
     )
   }
 }
-

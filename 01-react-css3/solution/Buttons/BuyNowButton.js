@@ -9,6 +9,7 @@ export class BuyNowButton extends Component {
   }
 
   onButtonClicked = (e) => {
+    this.props.onClick()
     this.setState({
       buttonText: 'Confirmed',
       depressed: true,
@@ -18,14 +19,14 @@ export class BuyNowButton extends Component {
 
   render () {
     const { buttonText, depressed, disabled } = this.state
-    const { classNames, ...otherProps } = this.props
+    const { classNames, onClick, ...otherProps } = this.props
 
     return (
       <Button 
         classNames={ classNames } 
-        onClick={ this.onButtonClicked }
         depressed={ depressed }
         disabled={ disabled }
+        onClick={ this.onButtonClicked }
         { ...otherProps }
       >
         { buttonText }
