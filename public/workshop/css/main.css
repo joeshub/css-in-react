@@ -81,17 +81,17 @@ body, a {
   height: 100%;
 }
 
-/* food options */
-.food_options {
+/* foods */
+.food_menu {
   background-color: #fff;
 }
 
-.options_list {
+.food_items {
   transition: 300ms all ease-in;
 }
 
 @media screen and (min-width: 608px) {
-  .options_list {
+  .food_items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -99,7 +99,7 @@ body, a {
   }
 }
 
-.option_item {
+.food_item {
   border-bottom: 1px solid rgba(169, 169, 169, 0.29);
   display: flex;
   height: 82px;
@@ -107,12 +107,12 @@ body, a {
   padding:22px;
   box-sizing: border-box;
 }
-.option_item:last-child {
+.food_item:last-child {
   border-bottom-width: 0;
 }
 
 @media screen and (min-width: 608px) {
-  .option_item {
+  .food_item {
     border: 1px solid rgba(169, 169, 169, 0.29);
     height: auto;
     min-width: 100px;
@@ -123,17 +123,17 @@ body, a {
     padding-top: 100px;
     max-width: 188px;
   }
-  .option_item:last-child {
+  .food_item:last-child {
     border-bottom-width: 1px;
   }
 }
 
-.option_item_image {
+.food_item_image {
   display: none;
 }
 
 @media screen and (min-width: 608px) {
-  .option_item_image {
+  .food_item_image {
     height: 80px;
     width: 100%;
     position: absolute;
@@ -145,18 +145,18 @@ body, a {
 }
 
 @media screen and (min-width: 608px) {
-  .option_item_photo {
+  .food_item_photo {
     width: 100%;
   }
 }
 
-.option_item_name {
+.food_item_name {
   flex-grow: 1;
   font-weight: bold;
 }
 
 @media screen and (min-width: 608px) {
-  .option_item_name {
+  .food_item_name {
     display: flex;
     flex-flow: inherit;
     margin-bottom: 20px;
@@ -166,19 +166,19 @@ body, a {
   }
 }
 
-.option_item_price {
+.food_item_price {
   padding-left: 10px;
   font-weight: normal;
   color: #848484;
 }
 
 @media screen and (min-width: 608px) {
-  .option_item_price {
+  .food_item_price {
     margin-top: 20px;
   }
 }
 
-.option_add_button {
+.food_add_button {
   min-width: 110px;
 }
 

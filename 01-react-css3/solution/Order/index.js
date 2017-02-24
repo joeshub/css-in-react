@@ -1,2 +1,2 @@
-export { FoodOption } from './FoodOption'
+export { FoodItem } from './FoodItem'
 export { BuyStrip } from './BuyStrip'

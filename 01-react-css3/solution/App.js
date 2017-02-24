@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { AddToCartButton, BuyNowButton, Button } from './Buttons'
-import { FoodOption, BuyStrip } from './Order'
+import { FoodItem, BuyStrip } from './Order'
 import numeral from 'numeral'
 
 import { foodList } from './api'
@@ -31,11 +31,11 @@ export default class App extends Component {
             <figure className="food_photo">
               <img className="food_photo_image" src="../../workshop/img/taco.jpg" />
             </figure>
-            <div className="food_options">
-              <ul className="options_list">
+            <div className="food_menu">
+              <ul className="food_items">
               {
                 foodList.map( ({ id, name, price, photoPath }) => {
-                  return <FoodOption 
+                  return <FoodItem 
                     key={ id }
                     name={ name }
                     price={ price }
