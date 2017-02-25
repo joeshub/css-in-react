@@ -28,9 +28,9 @@ export class Button extends Component {
   render () {
     return (
       <StyledButton 
-        onClick={this.onButtonClicked} 
-        depressed={this.state.depressed}
-        {...this.props} 
+        onClick={ this.onButtonClicked } 
+        depressed={ this.state.depressed }
+        { ...this.props } 
       />
     )
   }

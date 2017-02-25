@@ -4,8 +4,9 @@ import '../../../public/workshop/css/buy-now-button.css'
 
 export class BuyNowButton extends Component {
 
-  state = { 
+  state = {
     depressed: false,
+    disabled: false,
     buttonText: 'Buy Now'
   }
 
@@ -23,7 +24,7 @@ export class BuyNowButton extends Component {
   }
 
   render () {
-    const { buttonText, depressed, disabled } = this.state
+    const { depressed, disabled, buttonText } = this.state
     const { onClick, ...otherProps } = this.props
 
     return (

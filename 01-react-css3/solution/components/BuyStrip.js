@@ -5,25 +5,21 @@ import '../../../public/workshop/css/buy-strip.css'
 
 export class BuyStrip extends Component {
 
-  state = {
-    confirmed: false
-  }
-
   static propTypes = {
-    totalPrice: PropTypes.number,
+    totalPrice: PropTypes.number.isRequired,
+    confirmed: PropTypes.bool.isRequired,
     onBuy: PropTypes.func.isRequired
   }
 
   buyNowClicked () {
     this.props.onBuy()
-    this.setState({ confirmed: true })
   }
 
   render () {
-    const { totalPrice } = this.props
+    const { totalPrice, confirmed } = this.props
     const formattedPrice = numeral(totalPrice).format('$0.00')
-    const { confirmed } = this.state
 
+    console.log(confirmed)
     return confirmed ? 
     (
       <aside className="buy sold">

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './button.css'
-import classnames from 'classnames'
 
 @CSSModules(styles, { allowMultiple: true })
 export class Button extends Component {

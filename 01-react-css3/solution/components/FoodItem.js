@@ -24,7 +24,6 @@ export class FoodItem extends Component {
 
   render () {
     const { id, name, price, photoPath, disabled } = this.props
-    const { inCart } = this.state
 
     return (
       <li className="food_item">

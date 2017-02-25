@@ -41,12 +41,12 @@ export class Button extends Component {
     styles.btn.depressed : {}
     return (
       <button 
-        style={{
+        style={ {
           ...styles.btn,
           ...depressedStyles
-        }}
-        onClick={this.onButtonClicked} 
-        {...this.props}>
+        } }
+        onClick={ this.onButtonClicked } 
+        { ...this.props }>
       </button>
     )
   }

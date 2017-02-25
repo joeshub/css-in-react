@@ -5,7 +5,7 @@ import '../../../public/workshop/css/add-to-cart-button.css'
 
 export class AddToCartButton extends Component {
 
-  state = { 
+  state = {
     depressed: false,
     buttonText: 'Add'
   }

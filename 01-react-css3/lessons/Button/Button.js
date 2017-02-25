@@ -16,9 +16,9 @@ export class Button extends Component {
     })
     return (
       <button 
-        className={buttonClassNames} 
-        onClick={this.onButtonClicked} 
-        {...this.props}>
+        className={ buttonClassNames } 
+        onClick={ this.onButtonClicked } 
+        { ...this.props }>
       </button>
     )
   }

@@ -52,7 +52,6 @@ export default class App extends Component {
                     price={ price }
                     photoPath={ photoPath }
                     updateTotal= { this.updateTotal.bind(this) }
-                    disabled={ confirmed }
                    />
                 })
               }
@@ -63,6 +62,7 @@ export default class App extends Component {
           </main>
           <BuyStrip 
             totalPrice={ totalPrice }
+            confirmed={ confirmed }
             onBuy={ this.onBuy.bind(this) }
           />
         </section>
