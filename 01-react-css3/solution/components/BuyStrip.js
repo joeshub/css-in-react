@@ -15,7 +15,6 @@ export class BuyStrip extends Component {
     const { totalPrice, confirmed } = this.props
     const formattedPrice = numeral(totalPrice).format('$0.00')
 
-    console.log(confirmed)
     return confirmed ? 
     (
       <aside className="buy sold">
