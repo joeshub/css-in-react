@@ -1,4 +1,4 @@
-const foodList = [
+const foodListData = [
   {
     id: 1231,
     name: 'Carne Asada',
@@ -25,4 +25,4 @@ const foodList = [
   }
 ]
 
-export { foodList }
+export { foodListData }

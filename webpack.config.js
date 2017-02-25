@@ -22,17 +22,17 @@ var reactHotLoader = 'react-hot-loader/patch'
 var webpackHotMiddleware = 'webpack-hot-middleware/client?reload=1'
 var babelPolyfill = 'babel-polyfill' // core-js ?
 
-var hotEntries = [reactHotLoader, webpackHotMiddleware]
+var hotEntries = [ reactHotLoader, webpackHotMiddleware ]
 
 const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
   if (fs.existsSync(path.join(basePath, currPath, './lessons/entry.js'))) {
-    allEntreis[currPath.substr(3) + '/lessons'] = [...hotEntries, path.join(basePath, currPath, './lessons/entry.js')]
+    allEntreis[currPath.substr(3) + '/lessons'] = [ ...hotEntries, path.join(basePath, currPath, './lessons/entry.js') ]
   }
   if (fs.existsSync(path.join(basePath, currPath, './workshop/entry.js'))) {
-    allEntreis[currPath.substr(3) + '/workshop'] = [...hotEntries, path.join(basePath, currPath, './workshop/entry.js')]
+    allEntreis[currPath.substr(3) + '/workshop'] = [ ...hotEntries, path.join(basePath, currPath, './workshop/entry.js') ]
   }
   if (fs.existsSync(path.join(basePath, currPath, './solution/entry.js'))) {
-    allEntreis[currPath.substr(3) + '/solution'] = [...hotEntries, path.join(basePath, currPath, 'solution/entry.js')]
+    allEntreis[currPath.substr(3) + '/solution'] = [ ...hotEntries, path.join(basePath, currPath, 'solution/entry.js') ]
   }
   return allEntreis
 }, {})
@@ -42,7 +42,7 @@ let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
     inject: true, 
     template: 'templates/app.html', 
     filename: cur + '/index.html',
-    chunks: [cur]
+    chunks: [ cur ]
   }))
   return acc
 }, [])
@@ -69,20 +69,20 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['react-hot-loader/webpack', 'babel-loader?cacheDirectory=true']
+        use: [ 'react-hot-loader/webpack', 'babel-loader?cacheDirectory=true' ]
       },
       {
-        test: /05-react-css-modules\/.*\.css$/,
-        use: ['style-loader','css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]']
+        test: /05-react-css-modules\/.*\.s?css$/,
+        use: [ 'style-loader','css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader' ]
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader'],
+        use: [ 'style-loader','css-loader' ],
         exclude: /05-react-css-modules/,
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: ['file-loader?name=[path][name].[hash].[ext]']
+        use: [ 'file-loader?name=[path][name].[hash].[ext]' ]
       },
       {
         test: /\.json$/,

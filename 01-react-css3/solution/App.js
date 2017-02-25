@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { AddToCartButton, BuyNowButton , FoodItem, BuyStrip } from './components/index'
+import { FoodItem, BuyStrip } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-import { foodList } from './api'
+import { foodListData } from './api'
 import './app.css'
 
 export default class App extends Component {
@@ -34,8 +34,8 @@ export default class App extends Component {
         </header>
         <section className="order">
           <main className="food">
-            <figure className="food_photo">
-              <img className="food_photo_image" src="../../workshop/img/taco.jpg" />
+            <figure className="food_header">
+              <img className="food_header_image" src="../../workshop/img/taco.jpg" />
             </figure>
             <ReactCSSTransitionGroup
               transitionName="closefoods"
@@ -45,7 +45,7 @@ export default class App extends Component {
             <div className="food_menu">
               <ul className="food_items">
               {
-                foodList.map( ({ id, name, price, photoPath }) => {
+                foodListData.map( ({ id, name, price, photoPath }) => {
                   return <FoodItem 
                     key={ id }
                     name={ name }

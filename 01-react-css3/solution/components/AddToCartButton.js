@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
-import classnames from 'classnames'
+import React, { Component, PropTypes } from 'react'
 import { Button } from './index'
 import '../../../public/workshop/css/button-icons.css'
+import '../../../public/workshop/css/add-to-cart-button.css'
 
 export class AddToCartButton extends Component {
 
   state = { 
     depressed: false,
     buttonText: 'Add'
+  }
+
+  static propTypes = {
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func.isRequired
   }
 
   onButtonClicked = () => {
@@ -20,12 +25,11 @@ export class AddToCartButton extends Component {
 
   render () {
     const { buttonText, depressed } = this.state
-    const { classNames, onClick, disabled, ...otherProps } = this.props
-    const buttonClassNames = classnames('icon icon-add', classNames)
+    const { onClick, disabled, ...otherProps } = this.props
     
     return (
       <Button 
-        classNames={ buttonClassNames } 
+        classNames="icon icon-add add_to_cart_button"
         depressed={ depressed }
         disabled={ disabled }
         onClick={ this.onButtonClicked }

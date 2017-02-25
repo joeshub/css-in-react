@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { AddToCartButton } from './index'
 import numeral from 'numeral'
+import '../../../public/workshop/css/food-item.css'
 
 export class FoodItem extends Component {
 
   state = {
     inCart: false
+  }
+
+  static propTypes = {
+    id: PropTypes.number,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    photoPath: PropTypes.string,
+    disabled: PropTypes.bool,
+    updateTotal: PropTypes.func.isRequired
   }
 
   addToCart (inCart) {
@@ -18,11 +28,10 @@ export class FoodItem extends Component {
 
     return (
       <li className="food_item">
-        <figure className="food_item_image"><img className="food_item_photo" src={ photoPath } /></figure>
+        <figure className="food_item_figure"><img className="food_item_image" src={ photoPath } /></figure>
         <div className="food_item_name">{ name }<span className="food_item_price">{ numeral(price).format('$0.00') }</span></div>
         <AddToCartButton 
           onClick={ this.addToCart.bind(this) } 
-          classNames="food_add_button" 
           disabled={ disabled }
         />
       </li>

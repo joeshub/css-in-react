@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules'
 import styles from './button.css'
 import classnames from 'classnames'
 
-@CSSModules(styles, {allowMultiple: true})
+@CSSModules(styles, { allowMultiple: true })
 export class Button extends Component {
 
   state = { depressed: false }
@@ -13,13 +13,11 @@ export class Button extends Component {
   })
 
   render () {
-    const buttonClassNames = classnames('btn', {
-      'depressed': this.state.depressed
-    })
     return (
       <button
-        styleName={buttonClassNames}
-        onClick={this.onButtonClicked}>
+        styleName="btn"
+        className={ this.state.depressed && styles.depressed }
+        onClick={ this.onButtonClicked }>
         {this.props.children}
       </button>
     )

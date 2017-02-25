@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { BuyNowButton } from './index'
 import numeral from 'numeral'
+import '../../../public/workshop/css/buy-strip.css'
 
 export class BuyStrip extends Component {
 
   state = {
     confirmed: false
+  }
+
+  static propTypes = {
+    totalPrice: PropTypes.number,
+    onBuy: PropTypes.func.isRequired
   }
 
   buyNowClicked () {
@@ -28,7 +34,6 @@ export class BuyStrip extends Component {
         <div className="buy_title">Total:<span className="buy_total">{ formattedPrice }</span></div>
         <BuyNowButton 
           onClick={ this.buyNowClicked.bind(this) }
-          classNames="buy_button"
           disabled={ totalPrice === 0 }>
           Buy Now
         </BuyNowButton>
