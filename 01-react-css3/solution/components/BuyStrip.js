@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { BuyNowButton } from './index'
+import { ButtonBuyNow } from './index'
 import numeral from 'numeral'
 import '../../../public/workshop/css/buy-strip.css'
 
@@ -23,11 +23,11 @@ export class BuyStrip extends Component {
     ) : (
       <aside className="buy">
         <div className="buy_title">Total:<span className="buy_total">{ formattedPrice }</span></div>
-        <BuyNowButton 
+        <ButtonBuyNow 
           onClick={ this.props.onBuy }
           disabled={ totalPrice === 0 }>
           Buy Now
-        </BuyNowButton>
+        </ButtonBuyNow>
       </aside>
     )
   }

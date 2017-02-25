@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { AddToCartButton } from './index'
+import { ButtonAddToCart } from './index'
 import numeral from 'numeral'
 import '../../../public/workshop/css/food-item.css'
 
@@ -29,7 +29,7 @@ export class FoodItem extends Component {
       <li className="food_item">
         <figure className="food_item_figure"><img className="food_item_image" src={ photoPath } /></figure>
         <div className="food_item_name">{ name }<span className="food_item_price">{ numeral(price).format('$0.00') }</span></div>
-        <AddToCartButton 
+        <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 
           disabled={ disabled }
         />

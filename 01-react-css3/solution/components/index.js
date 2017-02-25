@@ -1,7 +1,7 @@
 export { Button } from './Button'
 
-export { AddToCartButton } from './AddToCartButton'
-export { BuyNowButton } from './BuyNowButton'
+export { ButtonAddToCart } from './ButtonAddToCart'
+export { ButtonBuyNow } from './ButtonBuyNow'
 
 export { FoodItem } from './FoodItem'
 export { BuyStrip } from './BuyStrip'

@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { Button } from './index'
 import '../../../public/workshop/css/button-icons.css'
-import '../../../public/workshop/css/add-to-cart-button.css'
+import '../../../public/workshop/css/button-add-to-cart.css'
 
-export class AddToCartButton extends Component {
+export class ButtonAddToCart extends Component {
 
   state = {
     depressed: false,
@@ -29,7 +29,7 @@ export class AddToCartButton extends Component {
     
     return (
       <Button 
-        classNames="icon icon-add add_to_cart_button"
+        classNames="icon icon-add button_add_to_cart"
         depressed={ depressed }
         disabled={ disabled }
         onClick={ this.onButtonClicked }

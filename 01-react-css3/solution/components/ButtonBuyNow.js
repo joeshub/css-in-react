@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { Button } from './index'
-import '../../../public/workshop/css/buy-now-button.css'
+import '../../../public/workshop/css/button-buy-now.css'
 
-export class BuyNowButton extends Component {
+export class ButtonBuyNow extends Component {
 
   state = {
     depressed: false,
@@ -29,7 +29,7 @@ export class BuyNowButton extends Component {
 
     return (
       <Button 
-        classNames="buy_now_button"
+        classNames="button_buy_now"
         depressed={ depressed }
         disabled={ disabled }
         onClick={ this.onButtonClicked }
