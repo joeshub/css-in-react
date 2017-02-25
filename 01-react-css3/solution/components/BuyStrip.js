@@ -11,10 +11,6 @@ export class BuyStrip extends Component {
     onBuy: PropTypes.func.isRequired
   }
 
-  buyNowClicked () {
-    this.props.onBuy()
-  }
-
   render () {
     const { totalPrice, confirmed } = this.props
     const formattedPrice = numeral(totalPrice).format('$0.00')
@@ -29,7 +25,7 @@ export class BuyStrip extends Component {
       <aside className="buy">
         <div className="buy_title">Total:<span className="buy_total">{ formattedPrice }</span></div>
         <BuyNowButton 
-          onClick={ this.buyNowClicked.bind(this) }
+          onClick={ this.props.onBuy }
           disabled={ totalPrice === 0 }>
           Buy Now
         </BuyNowButton>

@@ -24,8 +24,8 @@ export class AddToCartButton extends Component {
   }
 
   render () {
-    const { buttonText, depressed } = this.state
-    const { onClick, disabled, ...otherProps } = this.props
+    const { depressed, buttonText } = this.state
+    const { disabled, onClick, ...otherProps } = this.props
     
     return (
       <Button 
