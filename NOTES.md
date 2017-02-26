@@ -110,12 +110,35 @@ http://reactpatterns.com/#Style component - proxy
 - https://github.com/jxnblk/repng
 - https://reactjsnews.com/isomorphic-react-in-real-life
 
-# READ
+# TALKS
+- https://vimeo.com/116209150
+- https://youtu.be/7rDsRXj9-cU?t=1573 
+- https://youtu.be/NoaxsCi13yQ?t=165
+- https://youtu.be/E3jQQsFxUes?t=738
+- https://youtu.be/BXOF_8jDdf8?t=407
+- https://youtu.be/U86-MFPsarQ?t=311
+- https://youtu.be/eHS1Ohybb_k?t=37
+- https://youtu.be/u9LBSeeJzXc?t=116
+- https://youtu.be/5yqJxfb0gVU?t=139
+- https://youtu.be/zR1lOuyQEt8?t=928
+- https://youtu.be/19gqsBc_Cx0?t=951
+- https://youtu.be/gNeavlJ7lNY?t=88
+- https://youtu.be/ERB1TJBn32c?t=190
+- https://youtu.be/qu4U7lwZTRI?t=368
+- https://youtu.be/k3OF4A30jSQ?t=911
+- https://youtu.be/XR6eM_5pAb0?t=866
+- https://youtu.be/DGEFNBYJRps?t=162
+- https://youtu.be/UAVJ6feR2LU?t=1347
+- https://youtu.be/D-ioDiacTm8?t=769
+- https://youtu.be/YpSdBDoPemg?t=96
+- https://youtu.be/vpNKUYSeT7g?t=356
+- https://youtu.be/84VZ1BHMkUA?t=80
+- https://youtu.be/0aBv8dsZs84?t=1060
+
+# READS
 - https://byjoeybaker.com/react-inline-styles
 - https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.t3xylc475
 - https://glenmaddern.com/articles/interoperable-css
-
-# TOREAD
 - https://github.com/websdk/vanilla#2-styling
 - https://github.com/thysultan/dio.js#diocomponentprototypestylesheet
 - https://github.com/zeit/next.js/issues/22#issuecomment-260206661
@@ -131,10 +154,6 @@ http://reactpatterns.com/#Style component - proxy
 - https://medium.com/seek-developers/block-element-modifying-your-javascript-components-d7f99fcab52b#.5eyf-qco7q
 - https://twitter.com/chantastic/status/754495969517985792
 - https://docs.google.com/presentation/d/1pL8e2OC8iDUWCvGkixYB18bRXjiVRmSgwiWoxiQN3vQ/edit#slide=id.p
-- https://www.youtube.com/watch?v=NoaxsCi13yQ
-- https://www.youtube.com/watch?v=E3jQQsFxUes&feature=youtu.be&t=837
-- https://www.youtube.com/watch?v=BXOF_8jDdf8
-- https://www.youtube.com/watch?v=U86-MFPsarQ
 - http://blog.vjeux.com/2015/javascript/react-rally-animated-react-performance-toolbox.html
 - https://css-tricks.com/css-modules-part-1-need/
 - https://github.com/ahfarmer/react-samples/tree/master/css-modules-by-example
