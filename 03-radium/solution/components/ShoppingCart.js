@@ -41,6 +41,7 @@ const styles = {
 
     confirmed: {
       height: '350px',
+      backgroundColor: 'rgba(71, 59, 180, 0.20)',
       '@media (min-width: 608px)': {
         height: '350px'
       },

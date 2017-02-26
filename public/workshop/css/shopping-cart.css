@@ -25,6 +25,7 @@
 
 .confirmed.shopping_cart {
   height: 350px;
+  background-color: rgba(71, 59, 180, 0.20);
 }
 
 .cart_title {

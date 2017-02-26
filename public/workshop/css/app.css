@@ -90,7 +90,7 @@ body, a {
 }
 
 .store_content {
-  background-color: rgba(4, 48, 78, 0.30);
+  background-color: rgba(71, 59, 180, 0.20);
 }
 
 /* video items */
@@ -103,7 +103,7 @@ body, a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 32px;
+    padding: 50px 32px;
   }
 }
 
