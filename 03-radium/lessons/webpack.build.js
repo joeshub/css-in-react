@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: ['babel-polyfill','./entry.js'],
+  entry: [ 'babel-polyfill','./entry.js' ],
   output: {
     path: path.join(__dirname + '/build'),
     filename: 'app.js',
@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader','css-loader']
+        use: [ 'style-loader','css-loader' ]
       },
       {
         test: /\.json$/,
