@@ -1,6 +1,6 @@
 /* buy strip */
 
-.buy {
+.shopping_cart {
   display: flex;
   align-items: center;
   height: 60px;
@@ -9,57 +9,50 @@
   bottom: 0;
   padding:22px;
   box-sizing: border-box;
-  background-color: #EA491C;
+  background-color: #07314d;
   color: #fff;
-  transition: height 300ms ease 60ms;
+  transition: all 350ms ease 250ms;
 }
 
 @media screen and (min-width: 608px) {
-  .buy {
+  .shopping_cart {
     height: 80px;
     position: inherit;
     bottom: inherit;
     justify-content: center;
-    transition: height 300ms ease 260ms;
   }
 }
 
-.sold.buy {
-  height: 200px;
+.confirmed.shopping_cart {
+  height: 350px;
 }
 
-.buy_title {
+.cart_title {
   display: flex;
   flex-grow: 1;
   font-weight: bold;
+  line-height: 2;
 }
 @media screen and (min-width: 608px) {
-  .buy_title {
+  .cart_title {
     flex-grow: 0;
   }
 }
 
-.sold .buy_title {
+.confirmed .cart_title {
   font-weight: normal;
   display: block;
-  line-height: 1.2;
   text-align: center;
 }
 
-@media screen and (min-width: 608px) {
-  .sold .buy_title {
-    line-height: 2;
-  }
-}
-
-.buy_total {
+.cart_total {
   padding-left: 10px;
   padding-right: 10px;
   min-width: 80px;
   font-weight: normal;
 }
 
-.sold .buy_total {
-  padding-left: 0;
+.confirmed .cart_total {
+  padding: 0;
   min-width: auto;
 }

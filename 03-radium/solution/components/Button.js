@@ -11,11 +11,11 @@ const buttonStyles = {
     border: '0',
     cursor: 'pointer',
     color: '#fff',
-    backgroundColor: '#ec4800',
+    backgroundColor: '#07314d',
     userSelect: 'none',
     transition: 'all 120ms',
     ':hover': {
-      backgroundColor: '#f98d00'
+      backgroundColor: '#336086'
     },
     depressed: {
       color: '#848484',

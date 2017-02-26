@@ -4,13 +4,11 @@ import Radium from 'radium'
 
 const customStyles = {
   btn: {
-    backgroundColor: '#fff',
-    color: '#000',
+    backgroundColor: '#ec4800',
     boxShadow: '1px -1px 2px rgba(0, 0, 0, 0.2)',
     width: '110px',
     ':hover': {
-      backgroundColor: '#000',
-      color: '#fff'
+      backgroundColor: '#f98d00',
     },
     depressed: {
       boxShadow: '1px -1px 2px rgba(0, 0, 0, 0)'

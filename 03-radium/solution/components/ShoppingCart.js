@@ -4,7 +4,7 @@ import numeral from 'numeral'
 import { ButtonBuyNow } from './index'
 
 const styles = {
-  buy: {
+  shoppingCart: {
     display: 'flex',
     alignItems: 'center',
     height: '60px',
@@ -13,55 +13,51 @@ const styles = {
     bottom: '0',
     padding: '22px',
     boxSizing: 'border-box',
-    backgroundColor: '#EA491C',
+    backgroundColor: '#07314d',
     color: '#fff',
-    transition: 'height 300ms ease 60ms',
+    transition: 'all 350ms ease 250ms',
     '@media (min-width: 608px)': {
       height: '80px',
       position: 'inherit',
       bottom: 'inherit',
-      justifyContent: 'center',
-      transition: 'height 300ms ease 260ms',
+      justifyContent: 'center'
     },
     
-    buyTitle: {
+    cartTitle: {
       display: 'flex',
       flexGrow: '1',
       fontWeight: 'bold',
+      lineHeight: '2',
       '@media (min-width: 608px)': {
         flexGrow: '0'
       }
     },
-    buyTotal: {
+    cartTotal: {
       paddingLeft: '10px',
       paddingRight: '10px',
       minWidth: '80px',
       fontWeight: 'normal'
     },
 
-    sold: {
-      height: '200px',
+    confirmed: {
+      height: '350px',
       '@media (min-width: 608px)': {
-        height: '200px',
+        height: '350px'
       },
-      buyTitle: {
+      cartTitle: {
         fontWeight: 'normal',
         display: 'block',
-        lineHeight: '1.2',
-        textAlign: 'center',
-        '@media (min-width: 608px)': {
-          lineHeight: '2'
-        }
+        textAlign: 'center'
       },
-      buyTotal: {
-        paddingLeft: '0',
+      cartTotal: {
+        padding: '0',
         minWidth: 'auto'
       }
     }
   }
 }
 
-@Radium export class BuyStrip extends Component {
+@Radium export class ShoppingCart extends Component {
 
   static propTypes = {
     totalPrice: PropTypes.number.isRequired,
@@ -75,17 +71,18 @@ const styles = {
 
     return confirmed ? 
     (
-      <aside style={ [ styles.buy, styles.buy.sold ] }>
-        <div style={ [ styles.buy.sold.buyTitle ] }>
+      <aside style={ [ styles.shoppingCart, styles.shoppingCart.confirmed ] }>
+        <div style={ [ styles.shoppingCart.cartTitle, styles.shoppingCart.confirmed.cartTitle ] }>
           <p>Get Ready to eat!</p> 
-          Your order is confirmed. Your card was charged 
-          <span style={ [ styles.buy.sold.buyTotal ] }>{ formattedPrice }</span>
+          <p>Your order is confirmed. Your card was charged 
+            <span style={ [ styles.shoppingCart.cartTotal, styles.shoppingCart.confirmed.cartTotal ] }> { formattedPrice }</span>
+          </p>
         </div>
       </aside>
     ) : (
-      <aside style={ [ styles.buy ] }>
-        <div style={ [ styles.buy.buyTitle ] }>
-          Total: <span style={ [ styles.buy.buyTotal ] }>{ formattedPrice }</span>
+      <aside style={ [ styles.shoppingCart ] }>
+        <div style={ [ styles.shoppingCart.cartTitle ] }>
+          Total: <span style={ [ styles.shoppingCart.cartTotal ] }>{ formattedPrice }</span>
         </div>
         <ButtonBuyNow 
           onClick={ this.props.onBuy }

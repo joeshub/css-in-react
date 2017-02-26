@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
-import '../../../public/workshop/css/food-item.css'
+import '../../../public/workshop/css/video-item.css'
 
-export class FoodItem extends Component {
+export class VideoItem extends Component {
 
   state = {
     inCart: false
@@ -26,11 +26,11 @@ export class FoodItem extends Component {
     const { id, name, price, photoPath, disabled } = this.props
 
     return (
-      <li className="food_item">
-        <figure className="food_item_figure">
-          <img className="food_item_image" src={ photoPath } />
+      <li className="video_item">
+        <figure className="video_item_figure">
+          <img className="video_item_image" src={ photoPath } />
         </figure>
-        <div className="food_item_name">
+        <div className="video_item_name">
           { name }
           <span className="food_item_price">{ numeral(price).format('$0.00') }</span>
         </div>

@@ -1,27 +1,27 @@
 const foodListData = [
   {
     id: 1231,
-    name: 'Carne Asada',
-    price: 5,
-    photoPath: '/workshop/img/steak.jpg'
+    name: 'The Global Deads',
+    price: 9.99,
+    photoPath: '/workshop/img/show-1.jpg'
   },
   {
     id: 1233,
-    name: 'Fish',
-    price: 5.5,
-    photoPath: '/workshop/img/fish.jpg'
+    name: 'Sep. of Concerns',
+    price: 14.95,
+    photoPath: '/workshop/img/show-2.jpg'
   },
   {
     id: 1234,
-    name: 'Chicken',
-    price: 4.5,
-    photoPath: '/workshop/img/chicken.jpg'
+    name: 'nln STYLES',
+    price: 24.99,
+    photoPath: '/workshop/img/show-3.jpg'
   },
   {
     id: 1232,
-    name: 'Guacamole',
-    price: 3,
-    photoPath: '/workshop/img/guacamole.jpg'
+    name: 'Cascade Flex',
+    price: 19.95,
+    photoPath: '/workshop/img/show-4.jpg'
   }
 ]
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FoodItem, BuyStrip } from './components/index'
+import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { foodListData } from '../../public/API'
 import './app.css'
@@ -29,44 +29,40 @@ export default class App extends Component {
     return (
       <div>
         <header className="header">
-          <h1 className="logo"><span>Taco Shack</span></h1>
+          <h1 className="header_logo"><span>Festival Store</span></h1>
+          <h2 className="header_title">New in the Festival Store Today</h2>
         </header>
-        <section className="order">
-          <main className="food">
-            <figure className="food_header">
-              <img className="food_header_image" src="../../workshop/img/taco.jpg" />
-            </figure>
+        <section className="store">
+          <main className="store_content">
             <ReactCSSTransitionGroup
-              transitionName="closefoods"
+              transitionName="closeStoreContent"
               transitionEnterTimeout={ 500 }
-              transitionLeaveTimeout={ 600 }>
+              transitionLeaveTimeout={ 500 }>
             { !confirmed &&
-            <div className="food_menu">
-              <ul className="food_items">
-              {
-                foodListData.map( ({ id, name, price, photoPath }) => {
-                  return <FoodItem 
-                    key={ id }
-                    name={ name }
-                    price={ price }
-                    photoPath={ photoPath }
-                    updateTotal= { this.updateTotal.bind(this) }
-                   />
-                })
-              }
-              </ul>
-            </div>
+            <ul className="video_items">
+            {
+              foodListData.map( ({ id, name, price, photoPath }) => {
+                return <VideoItem 
+                  key={ id }
+                  name={ name }
+                  price={ price }
+                  photoPath={ photoPath }
+                  updateTotal= { this.updateTotal.bind(this) }
+                  />
+              })
+            }
+            </ul>
           }
           </ReactCSSTransitionGroup>
           </main>
-          <BuyStrip 
+          <ShoppingCart 
             totalPrice={ totalPrice }
             confirmed={ confirmed }
             onBuy={ this.onBuy.bind(this) }
           />
         </section>
         <footer className="footer">
-          123 Narrow Road, San Francisco, CA
+          Festival Store - 123 Lorem ipsum dolor sit amet, consectetur adipiscing elit, San Francisco, CA
         </footer>
       </div>
     )

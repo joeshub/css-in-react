@@ -74,9 +74,9 @@ const markup = ReactDOMServer.renderToStaticMarkup(
           )
         }),
         
-        React.createElement('li', { key: 'tacoshack' },
+        React.createElement('li', { key: 'festivalstore' },
           React.createElement('span', {}, 'design - '),
-          React.createElement('a', { href: '/workshop/' }, 'Taco Shack')
+          React.createElement('a', { href: '/workshop/' }, 'Festival Store')
         )
 
       )

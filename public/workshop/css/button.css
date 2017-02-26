@@ -9,13 +9,13 @@
   border: 0;
   cursor: pointer;
   color: #fff;
-  background-color: #ec4800;
+  background-color: #07314d;
   user-select: none;
   transition: all 120ms;
 }
 
 .btn:hover {
-  background-color: #f98d00;
+  background-color: #336086;
 }
 
 .btn.depressed,

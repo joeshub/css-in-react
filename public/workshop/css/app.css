@@ -1,8 +1,14 @@
 /* app specific */
 
 body {
-  background-color: #E1E1E1;
+  background-color: #050c0e;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 0;
+  background-size: cover;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 608px) {
@@ -16,7 +22,7 @@ body, input, button {
 }
 
 body, a {
-  color: #222324;
+  color: #788084;
 }
 
 .app {
@@ -30,75 +36,70 @@ body, a {
   margin: 0 auto;
   position: relative;
   justify-content: center;
-  height: 70px;
+  height: 100px;
   align-items: center;
-  background-color: #02573A;
   color: #fff;
+  flex-direction: column;
+}
+@media screen and (min-width: 608px) {
+  .header {
+    height: 166px;
+  }
 }
 
-.logo {
+.header_logo {
   background-image: url(../img/logo.png);
-  width: 800px;
-  height: 54px;
+  width: 264px;
+  height: 42px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 80%;
+  background-size: 75%;
+  transition: all 300ms ease;
 }
 
 @media screen and (min-width: 608px) {
-  .logo {
+  .header_logo {
+    width: 526px;
     background-size: 50%;
   }
 }
 
-.logo span {
+.header_logo span {
   display: none;
+}
+
+.header_title {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 608px) {
+  .header_title {
+    margin-top: 12px;
+    font-size: initial;
+  }
 }
 
 /* order section */
 
 @media screen and (min-width: 608px) {
-  .order {
+  .store {
     max-width: 900px;
-    margin: 30px auto 0;
+    margin: 0 auto;
   }
 }
 
-/* order food header */
-
-.order .food .food_header {
-  max-width: 100%;
-  max-height: 224px;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-@media screen and (min-width: 608px) {
-  .order .food .food_header {
-    max-height: 226px;
-  }
-}
-
-.order .food .food_header .food_header_image {
-  display: block;
-  width: 100%;
-  height: 100%;
+.store_content {
+  background-color: rgba(4, 48, 78, 0.30);
 }
 
 /* order food menu */
-
-.food_menu {
-  background-color: #fff;
-}
-
-.food_items {
-  transition: 300ms all ease-in;
+.video_items {
+  transition: all 600ms ease;
 }
 
 @media screen and (min-width: 608px) {
-  .food_items {
+  .video_items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -107,32 +108,39 @@ body, a {
 }
 
 /* animate close food list */
-.closefoods-enter {
+.closeStoreContent-enter {
   opacity: 0.01;
   max-height: 0;
 }
 
-.closefoods-enter-active {
+.closeStoreContent-enter-active {
   opacity: 1;
   max-height: 1000;
-  transition: all 500ms ease-in;
+  transition: all 500ms ease;
 }
 
-.closefoods-leave {
+.closeStoreContent-leave {
   max-height: 1000px;
   opacity: 1;
 }
 
-.closefoods-leave-active {
-  opacity: 0.01;
+@media screen and (min-width: 608px) {
+  .closeStoreContent-leave {
+    padding: 32px;
+  }
+}
+
+.closeStoreContent-leave-active {
   max-height: 0;
-  transition: all 600ms ease;
+  opacity: 0.01;
+  padding: 0;
+  transition: all 500ms ease;
 }
 
 /* footer section */
 
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 40px 0 80px;
   font-size: 12px;
 }

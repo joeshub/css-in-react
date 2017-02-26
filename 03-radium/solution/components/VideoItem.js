@@ -5,44 +5,56 @@ import { ButtonAddToCart } from './index'
 
 const styles = {
   foodItem: {
-    borderBottom: '1px solid rgba(169, 169, 169, 0.29)',
+    backgroundColor: '#fff',
+    borderBottom: '1px solid #E8E8E7',
     display: 'flex',
     height: '82px',
     alignItems: 'center',
-    padding: '22px',
     boxSizing: 'border-box',
+    paddingRight: '20px',
     '@media (min-width: 608px)': {
-      border: '1px solid rgba(169, 169, 169, 0.29)',
+      border: '0',
       height: 'auto',
       minWidth: '100px',
       flexFlow: 'column',
       width: '23%',
       flexShrink: '1',
       position: 'relative',
-      paddingTop: '100px',
-      maxWidth: '188px',
+      padding: '150px 22px 22px',
+      maxWidth: '188px'
     }
   },
   foodItemFigure: {
-    display: 'none',
+    height: '82px',
+    width: '50px',
+    overflow: 'hidden',
+    marginRight: '20px',
     '@media screen and (min-width: 608px)': {
-      height: '80px',
+      height: '130px',
       width: '100%',
       position: 'absolute',
       left: '0',
       top: '0',
       display: 'block',
       overflow: 'hidden',
+      marginRight: '0'
     },
   },
   foodItemImage: {
+    height: '100%',
+    marginLeft: '-50%',
     '@media screen and (min-width: 608px)': {
-      height: '100%'
+      marginLeft: 'initial'
     }
   },
   foodItemName: {
     flexGrow: '1',
     fontWeight: 'bold',
+    fontSize: '12px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'left',
     '@media screen and (min-width: 608px)': {
       display: 'flex',
       flexFlow: 'inherit',
@@ -50,10 +62,11 @@ const styles = {
       alignItems: 'center',
       textAlign: 'center',
       justifyContent: 'flex-end',
+      fontSize: 'inherit'
     },
   },
   foodItemPrice: {
-    paddingLeft: '10px',
+    paddingTop: '6px',
     fontWeight: 'normal',
     color: '#848484',
     '@media screen and (min-width: 608px)': {
@@ -62,7 +75,7 @@ const styles = {
   }
 }
 
-@Radium export class FoodItem extends Component {
+@Radium export class VideoItem extends Component {
 
   state = {
     inCart: false

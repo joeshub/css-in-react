@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import numeral from 'numeral'
 import { ButtonBuyNow } from './index'
-import '../../../public/workshop/css/buy-strip.css'
+import '../../../public/workshop/css/shopping-cart.css'
 
-export class BuyStrip extends Component {
+export class ShoppingCart extends Component {
 
   static propTypes = {
     totalPrice: PropTypes.number.isRequired,
@@ -17,17 +17,18 @@ export class BuyStrip extends Component {
 
     return confirmed ? 
     (
-      <aside className="buy sold">
-        <div className="buy_title">
+      <aside className="shopping_cart confirmed">
+        <div className="cart_title">
           <p>Get Ready to eat!</p> 
-          Your order is confirmed. Your card was charged 
-          <span className="buy_total">{ formattedPrice }</span>
+          <p>Your order is confirmed. Your card was charged
+            <span className="cart_total"> { formattedPrice }</span>
+          </p>
         </div>
       </aside>
     ) : (
-      <aside className="buy">
-        <div className="buy_title">
-          Total: <span className="buy_total">{ formattedPrice }</span>
+      <aside className="shopping_cart">
+        <div className="cart_title">
+          Total: <span className="cart_total">{ formattedPrice }</span>
         </div>
         <ButtonBuyNow 
           onClick={ this.props.onBuy }
