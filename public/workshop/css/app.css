@@ -22,7 +22,7 @@ body, input, button {
 }
 
 body, a {
-  color: #788084;
+  color: #000;
 }
 
 .app {
@@ -93,7 +93,7 @@ body, a {
   background-color: rgba(4, 48, 78, 0.30);
 }
 
-/* order food menu */
+/* video items */
 .video_items {
   transition: all 600ms ease;
 }
@@ -107,7 +107,7 @@ body, a {
   }
 }
 
-/* animate close food list */
+/* animate removing store content */
 .closeStoreContent-enter {
   opacity: 0.01;
   max-height: 0;
@@ -143,4 +143,5 @@ body, a {
   text-align: center;
   padding: 40px 0 80px;
   font-size: 12px;
+  color: #264153;
 }

@@ -83,14 +83,14 @@
   }
 }
 
-.food_item_price {
+.video_item_price {
   font-weight: normal;
   color: #848484;
   padding-top: 6px;
 }
 
 @media screen and (min-width: 608px) {
-  .food_item_price {
-    margin-top: 20px;
+  .video_item_price {
+    margin-top: 4px;
   }
 }

@@ -32,7 +32,7 @@ export class VideoItem extends Component {
         </figure>
         <div className="video_item_name">
           { name }
-          <span className="food_item_price">{ numeral(price).format('$0.00') }</span>
+          <span className="video_item_price">{ numeral(price).format('$0.00') }</span>
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 

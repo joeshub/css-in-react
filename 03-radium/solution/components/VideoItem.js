@@ -65,12 +65,12 @@ const styles = {
       fontSize: 'inherit'
     },
   },
-  foodItemPrice: {
+  videoItemPrice: {
     paddingTop: '6px',
     fontWeight: 'normal',
     color: '#848484',
     '@media screen and (min-width: 608px)': {
-      marginTop: '20px'
+      marginTop: '4px'
     }
   }
 }
@@ -104,7 +104,7 @@ const styles = {
         </figure>
         <div style={ [ styles.foodItemName ] }>
           { name }
-          <span style={ [ styles.foodItemPrice ] }>{ numeral(price).format('$0.00') }</span>
+          <span style={ [ styles.videoItemPrice ] }>{ numeral(price).format('$0.00') }</span>
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 
