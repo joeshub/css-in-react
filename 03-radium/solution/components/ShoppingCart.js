@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import numeral from 'numeral'
-import { ButtonBuyNow } from './index'
+import { ButtonBuyNow, ButtonPlayNow } from './index'
 
 const styles = {
   shoppingCart: {
@@ -50,8 +50,14 @@ const styles = {
         textAlign: 'center'
       },
       cartTotal: {
-        padding: '0',
+        paddingLeft: '0',
+        paddingRight: '0',
         minWidth: 'auto'
+      },
+      playTitle: {
+        margin: '20px auto',
+        fontWeight: 'bold',
+        fontSize: '20px'
       }
     }
   }
@@ -73,10 +79,12 @@ const styles = {
     (
       <aside style={ [ styles.shoppingCart, styles.shoppingCart.confirmed ] }>
         <div style={ [ styles.shoppingCart.cartTitle, styles.shoppingCart.confirmed.cartTitle ] }>
-          <p>Get Ready to eat!</p> 
+          <p>Thank you!</p> 
           <p>Your order is confirmed. Your card was charged 
             <span style={ [ styles.shoppingCart.cartTotal, styles.shoppingCart.confirmed.cartTotal ] }> { formattedPrice }</span>
           </p>
+          <h3 style={ [ styles.shoppingCart.confirmed.playTitle ] }>Start Watching Now</h3>
+          <ButtonPlayNow>Play</ButtonPlayNow>
         </div>
       </aside>
     ) : (

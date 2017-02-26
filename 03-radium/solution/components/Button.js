@@ -48,6 +48,9 @@ const buttonStyles = {
     },
     'icon-add': {
       backgroundImage: 'url(/workshop/svg/add.svg)'
+    },
+    'icon-play': {
+      backgroundImage: 'url(/workshop/svg/play.svg)'
     }
   }
 }
@@ -55,7 +58,7 @@ const buttonStyles = {
 const Button = ({
   icon,
   classNames,
-  customStyles,
+  customStyles = {},
   depressed,
   disabled,
   onClick,

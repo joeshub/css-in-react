@@ -21,6 +21,10 @@
   background-image: url(/workshop/svg/add.svg);
 }
 
+.btn.icon-play:after {
+  background-image: url(/workshop/svg/play.svg);
+}
+
 .btn.icon-add.depressed:after {
   display: none;
 }

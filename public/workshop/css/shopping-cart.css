@@ -41,8 +41,8 @@
 
 .confirmed .cart_title {
   font-weight: normal;
-  display: block;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cart_total {
@@ -55,4 +55,10 @@
 .confirmed .cart_total {
   padding: 0;
   min-width: auto;
+}
+
+.confirmed .play_title {
+  margin: 20px auto;
+  font-weight: bold;
+  font-size: 20px;
 }

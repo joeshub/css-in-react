@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import numeral from 'numeral'
-import { ButtonBuyNow } from './index'
+import { ButtonBuyNow, ButtonPlayNow } from './index'
 import '../../../public/workshop/css/shopping-cart.css'
 
 export class ShoppingCart extends Component {
@@ -19,10 +19,12 @@ export class ShoppingCart extends Component {
     (
       <aside className="shopping_cart confirmed">
         <div className="cart_title">
-          <p>Get Ready to eat!</p> 
+          <p>Thank you!</p> 
           <p>Your order is confirmed. Your card was charged
             <span className="cart_total"> { formattedPrice }</span>
           </p>
+          <h3 className="play_title">Start Watching Now</h3>
+          <ButtonPlayNow>Play</ButtonPlayNow>
         </div>
       </aside>
     ) : (
