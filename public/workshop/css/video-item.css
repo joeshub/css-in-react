@@ -57,7 +57,11 @@
 
 @media screen and (min-width: 608px) {
   .video_item_image {
+    transition: transform 300ms ease;
     margin-left: initial;
+  }
+  .video_item_image:hover {
+    transform: scale(1.1);
   }
 }
 

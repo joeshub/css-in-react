@@ -44,7 +44,11 @@ const styles = {
     height: '100%',
     marginLeft: '-50%',
     '@media screen and (min-width: 608px)': {
-      marginLeft: 'initial'
+      transition: 'transform 300ms ease',
+      marginLeft: 'initial',
+      ':hover': {
+        transform: 'scale(1.1)',
+      }
     }
   },
   foodItemName: {
