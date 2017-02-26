@@ -17,7 +17,7 @@ Learn the top techniques for using CSS in React
 03. [Radium](https://github.com/FormidableLabs/radium) in React
 04. [Aphrodite](https://github.com/Khan/aphrodite) in React
 05. [React-css-modules](https://github.com/gajus/react-css-modules) in React
-06. [Styletron](https://github.com/rtsao/styletron) in React (coming soon)
+06. [Styletron](https://github.com/rtsao/styletron) in React
 07. [Styled Components](https://github.com/styled-components/styled-components) in React
 
 ## How this project is organized
