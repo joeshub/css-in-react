@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import classnames from 'classnames'
 import '../../../public/workshop/css/button.css'
+import '../../../public/workshop/css/button-icons.css'
 
 export const Button = ({
+  icon,
   classNames, 
   depressed, 
   disabled,
@@ -11,8 +13,9 @@ export const Button = ({
   ...otherProps
 }) => {
 
-  const buttonClassNames = classnames('btn', classNames, 
-    { 
+  const buttonClassNames = classnames('btn', classNames,
+    {
+      [`icon icon-${icon}`]: icon,
       'depressed': depressed, 
       'disabled': disabled
     }
