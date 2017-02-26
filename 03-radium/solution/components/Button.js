@@ -24,6 +24,15 @@ const buttonStyles = {
         backgroundColor: '#bebebe'
       }
     },
+    disabled: {
+      cursor: 'auto',
+      pointerEvents: 'none',
+      color: '#848484',
+      backgroundColor: '#bebebe',
+      ':hover': {
+        backgroundColor: '#bebebe'
+      }
+    },
     icon: {
       content: '',
       display: 'inline-block',
@@ -47,7 +56,7 @@ const Button = ({
   icon,
   classNames,
   customStyles,
-  depressed, 
+  depressed,
   disabled,
   onClick,
   children,
@@ -59,7 +68,10 @@ const Button = ({
       style={ [
         buttonStyles.btn,
         depressed && buttonStyles.btn.depressed,
-        customStyles.btn
+        disabled && buttonStyles.btn.disabled,
+        customStyles.btn && customStyles.btn,
+        depressed && customStyles.btn && customStyles.btn.depressed && customStyles.btn.depressed,
+        disabled && customStyles.btn &&customStyles.btn.depressed && customStyles.btn.disabled,
       ] }
       className={ classNames } 
       onClick={ onClick }
@@ -69,7 +81,7 @@ const Button = ({
       {
         <span style={ [
           icon && buttonStyles.btn.icon,
-          icon && buttonStyles.btn['icon-'+icon],
+          icon && buttonStyles.btn['icon-' + icon],
           depressed && buttonStyles.btn.icon.depressed
         ] }></span>
       }

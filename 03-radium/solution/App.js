@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import { StyleRoot } from 'radium'
 import { FoodItem, BuyStrip } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-
 import { foodListData } from '../../public/API'
 import './app.css'
 
@@ -28,7 +28,7 @@ export default class App extends Component {
     const { totalPrice, confirmed } = this.state
 
     return (
-      <div>
+      <StyleRoot>
         <header className="header">
           <h1 className="logo"><span>Taco Shack</span></h1>
         </header>
@@ -69,7 +69,7 @@ export default class App extends Component {
         <footer className="footer">
           123 Narrow Road, San Francisco, CA
         </footer>
-      </div>
+      </StyleRoot>
     )
   }
 }

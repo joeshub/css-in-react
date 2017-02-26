@@ -72,6 +72,9 @@
         - There’s no tradeoff in power. Instead, we gain the power of simpler composition and usage of JavaScript expressions.
         - Compiling regular CSS files would be counter-productive to some of our goals. Some of these are listed below.
         - Please note: we are very interested in supporting regular CSS, since it's so much easier to write and already familiar. To that end, we're currently exploring the possibility of leveraging Shadow DOM to avoid the entire CSS parsing and mangling step [#22]
+- Server side rendering
+- Animation
+- Component state vs Functional Components
 
 # Frameworks
 https://github.com/rtsao/styletron
@@ -88,8 +91,10 @@ https://github.com/ReactTraining/react-media - MJ - media queries
 https://github.com/tachyons-css/react-native-style-tachyons
 https://github.com/Wildhoney/Interpose
 http://reactpatterns.com/#Style component - proxy
-
-# TODO
+https://github.com/typestyle/typestyle
+http://kyleamathews.github.io/typography.js/
+- fela
+- jss
 - csjs, glamor
 - css modules
 - postcss and css next http://cssnext.io/
@@ -103,10 +108,6 @@ http://reactpatterns.com/#Style component - proxy
 - https://github.com/FormidableLabs/radium/tree/master/docs/comparison
 - PostCSS http://cssnext.io/usage/
 - Aphrodite https://github.com/Khan/aphrodite
-- Server side rendering
-- Animation
-- Component state
-- sass resource loader https://github.com/shakacode/sass-resources-loader
 - https://github.com/jxnblk/repng
 - https://reactjsnews.com/isomorphic-react-in-real-life
 
@@ -136,6 +137,9 @@ http://reactpatterns.com/#Style component - proxy
 - https://youtu.be/0aBv8dsZs84?t=1060
 
 # READS
+- https://github.com/FormidableLabs/radium/issues/389
+- https://github.com/FormidableLabs/radium/issues/788
+- https://medium.com/@steida/css-in-js-the-argument-refined-471c7eb83955#.zi7a2jqjp
 - https://byjoeybaker.com/react-inline-styles
 - https://medium.com/@jviereck/modularise-css-the-react-way-1e817b317b04#.t3xylc475
 - https://glenmaddern.com/articles/interoperable-css
@@ -204,17 +208,13 @@ http://reactpatterns.com/#Style component - proxy
 - https://github.com/webyak/react-static-plate
 
 # Animation libraries
-https://github.com/joshwcomeau/react-flip-move
-
-# Slideshow frameworks
-https://github.com/FormidableLabs/spectacle-boilerplate
-https://github.com/thejameskyle/spectacle-code-slide
+- https://github.com/joshwcomeau/react-flip-move
 
 # Tools
 http://staxmanade.com/CssToReact/
 https://babeljs.io/repl/
 
-# Talks
+# My Talks
 ReactJS at Trulia!
 - http://www.meetup.com/ReactJS-San-Francisco/events/231925171/
 

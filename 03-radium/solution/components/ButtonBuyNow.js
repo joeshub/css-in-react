@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { Button } from './index'
-// import '../../../public/workshop/css/button-buy-now.css'
 import Radium from 'radium'
 
 const customStyles = {
@@ -15,6 +14,15 @@ const customStyles = {
     },
     depressed: {
       boxShadow: '1px -1px 2px rgba(0, 0, 0, 0)'
+    },
+    disabled: {
+      cursor: 'auto',
+      pointerEvents: 'none',
+      color: '#848484',
+      backgroundColor: '#bebebe',
+      ':hover': {
+        backgroundColor: '#bebebe'
+      }
     }
   }
 }

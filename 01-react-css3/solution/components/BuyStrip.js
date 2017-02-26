@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import { ButtonBuyNow } from './index'
 import numeral from 'numeral'
+import { ButtonBuyNow } from './index'
 import '../../../public/workshop/css/buy-strip.css'
 
 export class BuyStrip extends Component {
@@ -18,11 +18,17 @@ export class BuyStrip extends Component {
     return confirmed ? 
     (
       <aside className="buy sold">
-        <div className="buy_title"><p>Get Ready to eat!</p> Your order is confirmed. Your card was charged <span className="buy_total">{ formattedPrice }</span></div>
+        <div className="buy_title">
+          <p>Get Ready to eat!</p> 
+          Your order is confirmed. Your card was charged 
+          <span className="buy_total">{ formattedPrice }</span>
+        </div>
       </aside>
     ) : (
       <aside className="buy">
-        <div className="buy_title">Total:<span className="buy_total">{ formattedPrice }</span></div>
+        <div className="buy_title">
+          Total: <span className="buy_total">{ formattedPrice }</span>
+        </div>
         <ButtonBuyNow 
           onClick={ this.props.onBuy }
           disabled={ totalPrice === 0 }>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { FoodItem, BuyStrip } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-
 import { foodListData } from '../../public/API'
 import './app.css'
 
