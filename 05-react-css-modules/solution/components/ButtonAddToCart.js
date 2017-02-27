@@ -22,7 +22,7 @@ export class ButtonAddToCart extends Component {
   onButtonClicked = () => {    
     this.props.onClick(!this.state.depressed)
     this.setState({
-      buttonText: this.state.depressed ? 'Add' : 'Remove',
+      buttonText: this.state.depressed ? 'Add' : 'In Cart',
       depressed: !this.state.depressed
     })
   }
