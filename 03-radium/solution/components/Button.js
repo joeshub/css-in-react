@@ -32,26 +32,26 @@ const buttonStyles = {
       ':hover': {
         backgroundColor: '#bebebe'
       }
-    },
-    icon: {
-      content: '',
-      display: 'inline-block',
-      width: '12px',
-      height: '12px',
-      marginLeft: '6px',
-      backgroundSize: '12px',
-      backgroundPosition: '50% 50%',
-      backgroundRepeat: 'no-repeat',
-      depressed: {
-        display: 'none'
-      }
-    },
-    'icon-add': {
-      backgroundImage: 'url(/workshop/svg/add.svg)'
-    },
-    'icon-play': {
-      backgroundImage: 'url(/workshop/svg/play.svg)'
     }
+  },
+  icon: {
+    content: '',
+    display: 'inline-block',
+    width: '12px',
+    height: '12px',
+    marginLeft: '6px',
+    backgroundSize: '12px',
+    backgroundPosition: '50% 50%',
+    backgroundRepeat: 'no-repeat',
+    depressed: {
+      display: 'none'
+    }
+  },
+  'icon-add': {
+    backgroundImage: 'url(/workshop/svg/add.svg)'
+  },
+  'icon-play': {
+    backgroundImage: 'url(/workshop/svg/play.svg)'
   }
 }
 
@@ -83,9 +83,9 @@ const Button = ({
       { children }
       {
         <span style={ [
-          icon && buttonStyles.btn.icon,
-          icon && buttonStyles.btn['icon-' + icon],
-          depressed && buttonStyles.btn.icon.depressed
+          icon && buttonStyles.icon,
+          icon && buttonStyles['icon-' + icon],
+          depressed && buttonStyles.icon.depressed
         ] }></span>
       }
     </button>

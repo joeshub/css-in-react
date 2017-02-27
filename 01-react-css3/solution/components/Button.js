@@ -16,7 +16,8 @@ export const Button = ({
   const buttonClassNames = classnames('btn', classNames,
     {
       [`icon icon-${icon}`]: icon,
-      'depressed': depressed, 
+      'depressed': depressed,
+      'depressed-icon': depressed,
       'disabled': disabled
     }
   )
