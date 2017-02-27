@@ -1,0 +1,50 @@
+import React, { Component, PropTypes } from 'react'
+import CSSModules from 'react-css-modules'
+import numeral from 'numeral'
+import { ButtonAddToCart } from './index'
+import { videoItem } from '../css-modules'
+
+let styles = {}
+Object.assign(styles, videoItem)
+
+@CSSModules(styles, { allowMultiple: true })
+export class VideoItem extends Component {
+
+  state = {
+    inCart: false
+  }
+
+  static propTypes = {
+    id: PropTypes.number,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    photoPath: PropTypes.string,
+    disabled: PropTypes.bool,
+    updateTotal: PropTypes.func.isRequired
+  }
+
+  addToCart (inCart) {
+    this.props.updateTotal(this.props.price, inCart)
+  }
+
+  render () {
+    const { id, name, price, photoPath, disabled } = this.props
+
+    return (
+      <li styleName="video_item">
+        <figure styleName="video_item_figure">
+          <img styleName="video_item_image" src={ photoPath } />
+        </figure>
+        <div styleName="video_item_name">
+          { name }
+          <span styleName="video_item_price">{ numeral(price).format('$0.00') }</span>
+        </div>
+        <ButtonAddToCart 
+          onClick={ this.addToCart.bind(this) } 
+          disabled={ disabled }
+        />
+      </li>
+    )
+  }
+
+}

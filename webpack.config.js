@@ -1,15 +1,16 @@
 const fs = require('fs')
 const path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var settings = require('./scripts/settings.js')
-var devServer = settings.devServer
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const settings = require('./scripts/settings.js')
+
+const devServer = settings.devServer
+const basePath = path.join(__dirname)
+const cssModulesPath = path.resolve(__dirname, '05-react-css-modules')
 
 function isDirectory (dir) {
   return fs.lstatSync(dir).isDirectory()
 }
-
-const basePath = path.join(__dirname)
 
 const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
   if(projdDir.startsWith('0') && projdDir.indexOf('-') === 2) {
@@ -18,11 +19,11 @@ const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
 })
 
 // HMR using react-hot-loader 3 & webpack-hot-middleware
-var reactHotLoader = 'react-hot-loader/patch'
-var webpackHotMiddleware = 'webpack-hot-middleware/client?reload=1'
-var babelPolyfill = 'babel-polyfill' // core-js ?
+const reactHotLoader = 'react-hot-loader/patch'
+const webpackHotMiddleware = 'webpack-hot-middleware/client?reload=1'
+const babelPolyfill = 'babel-polyfill' // core-js ?
 
-var hotEntries = [ reactHotLoader, webpackHotMiddleware ]
+const hotEntries = [ reactHotLoader, webpackHotMiddleware ]
 
 const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
   if (fs.existsSync(path.join(basePath, currPath, './lessons/entry.js'))) {
@@ -64,21 +65,37 @@ module.exports = {
     chunkFilename: '[id].chunk.js',
     publicPath: 'http://' + devServer.host  + ':' + devServer.port + '/',
   },
+  resolve: {
+    alias: {
+      CSS3: path.resolve(__dirname, 'public/workshop/css')
+    }
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [ 'react-hot-loader/webpack', 'babel-loader?cacheDirectory=true' ]
+        use: [ 
+          'react-hot-loader/webpack', 
+          'babel-loader?cacheDirectory=true' 
+        ]
       },
       {
-        test: /05-react-css-modules\/.*\.s?css$/,
-        use: [ 'style-loader','css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader' ]
+        test: /\.s?css$/,
+        include: [ cssModulesPath ],
+        use: [
+          'style-loader',
+          'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]', 
+          'sass-loader'
+        ]
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader','css-loader' ],
-        exclude: /05-react-css-modules/,
+        use: [ 
+          'style-loader',
+          'css-loader' 
+        ],
+        exclude: [ cssModulesPath ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
