@@ -16,7 +16,7 @@ const Button = ({
   ...otherProps
 }) => {
 
-  const buttonStyleNames = classnames(styles['btn'], classNames,
+  const buttonClassNames = classnames(styles['btn'], classNames,
     {
       [styles['icon']]: icon,
       [styles[`icon-${icon}`]]: icon,
@@ -28,7 +28,7 @@ const Button = ({
 
   return (
     <button 
-      className={ buttonStyleNames } 
+      className={ buttonClassNames } 
       onClick={ onClick }
       { ...otherProps }
     >
