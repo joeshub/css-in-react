@@ -1,4 +1,4 @@
-const foodListData = [
+const videoListData = [
   {
     id: 1231,
     name: 'The Global Deads',
@@ -25,4 +25,4 @@ const foodListData = [
   }
 ]
 
-export { foodListData }
+export { videoListData }

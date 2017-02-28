@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { foodListData } from '../../public/API'
+import { videoListData } from '../../public/API'
 
 import '../../public/workshop/css/reset.css'
 import '../../public/workshop/css/app.css'
@@ -43,7 +43,7 @@ export default class App extends Component {
             { !confirmed &&
             <ul className="video_items">
             {
-              foodListData.map( ({ id, name, price, photoPath }) => {
+              videoListData.map( ({ id, name, price, photoPath }) => {
                 return <VideoItem 
                   key={ id }
                   name={ name }
