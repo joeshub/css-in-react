@@ -17,6 +17,11 @@ const buttonStyles = {
     ':hover': {
       backgroundColor: '#336086'
     },
+    withIcon: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
     depressed: {
       color: '#848484',
       backgroundColor: '#bebebe',
@@ -70,6 +75,7 @@ const Button = ({
     <button 
       style={ [
         buttonStyles.btn,
+        icon && buttonStyles.btn.withIcon,
         depressed && buttonStyles.btn.depressed,
         disabled && buttonStyles.btn.disabled,
         customStyles.btn && customStyles.btn,

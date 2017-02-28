@@ -31,7 +31,7 @@ export default class App extends Component {
       <StyleRoot>
         <header className="header">
           <h1 className="header_logo"><span>Festival Store</span></h1>
-          <h2 className="header_title">New in the Festival Store Today</h2>
+          <h2 className="header_title">New Videos This Week</h2>
         </header>
         <section className="store">
           <main className="store_content">
@@ -42,12 +42,15 @@ export default class App extends Component {
             { !confirmed &&
             <ul className="video_items">
             {
-              videoListData.map( ({ id, name, price, photoPath }) => {
+              videoListData.map( ({ id, name, price, photoPath, length, filesize, format }) => {
                 return <VideoItem 
                   key={ id }
                   name={ name }
                   price={ price }
                   photoPath={ photoPath }
+                  length={ length }
+                  filesize={ filesize }
+                  format={ format }
                   updateTotal= { this.updateTotal.bind(this) }
                   />
               })
@@ -63,7 +66,7 @@ export default class App extends Component {
           />
         </section>
         <footer className="footer">
-          123 Narrow Road, San Francisco, CA
+          Festival Store - 123 Lorem ipsum dolor sit amet, consectetur adipiscing elit, San Francisco, CA
         </footer>
       </StyleRoot>
     )

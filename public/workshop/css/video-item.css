@@ -13,11 +13,10 @@
   border-bottom-width: 0;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .video_item {
     border: 0;
     height: auto;
-    min-width: 100px;
     flex-flow: column;
     width: 23%;
     flex-shrink: 1;
@@ -37,7 +36,7 @@
   margin-right: 20px;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .video_item_figure {
     height: 130px;
     width: 100%;
@@ -55,7 +54,7 @@
   margin-left: -50%;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .video_item_image {
     transition: transform 300ms ease;
     margin-left: initial;
@@ -65,7 +64,7 @@
   }
 }
 
-.video_item_name {
+.video_item_details {
   flex-grow: 1;
   font-weight: bold;
   font-size: 12px;
@@ -75,8 +74,8 @@
   text-align: left;
 }
 
-@media screen and (min-width: 608px) {
-  .video_item_name {
+@media screen and (min-width: 700px) {
+  .video_item_details {
     display: flex;
     flex-flow: inherit;
     margin-bottom: 20px;
@@ -88,13 +87,25 @@
 }
 
 .video_item_price {
-  font-weight: normal;
   color: #848484;
   padding-top: 6px;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .video_item_price {
     margin-top: 4px;
+  }
+}
+
+.video_item_meta {
+  font-size: 11px;
+  font-weight: normal;
+  color: #ccc;
+  padding-top: 6px;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_meta {
+    padding-top: 10px;
   }
 }

@@ -14,6 +14,9 @@ export class VideoItem extends Component {
     name: PropTypes.string,
     price: PropTypes.number,
     photoPath: PropTypes.string,
+    length: PropTypes.string,
+    filesize: PropTypes.string,
+    format: PropTypes.string,
     disabled: PropTypes.bool,
     updateTotal: PropTypes.func.isRequired
   }
@@ -23,16 +26,17 @@ export class VideoItem extends Component {
   }
 
   render () {
-    const { id, name, price, photoPath, disabled } = this.props
+    const { id, name, price, photoPath, length, filesize, format, disabled } = this.props
 
     return (
       <li className="video_item">
         <figure className="video_item_figure">
           <img className="video_item_image" src={ photoPath } />
         </figure>
-        <div className="video_item_name">
+        <div className="video_item_details">
           { name }
           <span className="video_item_price">{ numeral(price).format('$0.00') }</span>
+          <span className="video_item_meta">{ length }<br />{ filesize } { format }</span>
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 

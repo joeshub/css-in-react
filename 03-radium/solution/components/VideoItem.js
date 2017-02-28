@@ -4,7 +4,7 @@ import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
 
 const styles = {
-  foodItem: {
+  videoItem: {
     backgroundColor: '#fff',
     borderBottom: '1px solid #E8E8E7',
     display: 'flex',
@@ -12,7 +12,7 @@ const styles = {
     alignItems: 'center',
     boxSizing: 'border-box',
     paddingRight: '20px',
-    '@media (min-width: 608px)': {
+    '@media (min-width: 700px)': {
       border: '0',
       height: 'auto',
       minWidth: '100px',
@@ -24,12 +24,12 @@ const styles = {
       maxWidth: '188px'
     }
   },
-  foodItemFigure: {
+  videoItemFigure: {
     height: '82px',
     width: '50px',
     overflow: 'hidden',
     marginRight: '20px',
-    '@media screen and (min-width: 608px)': {
+    '@media screen and (min-width: 700px)': {
       height: '130px',
       width: '100%',
       position: 'absolute',
@@ -40,10 +40,10 @@ const styles = {
       marginRight: '0'
     },
   },
-  foodItemImage: {
+  videoItemImage: {
     height: '100%',
     marginLeft: '-50%',
-    '@media screen and (min-width: 608px)': {
+    '@media screen and (min-width: 700px)': {
       transition: 'transform 300ms ease',
       marginLeft: 'initial',
       ':hover': {
@@ -51,7 +51,7 @@ const styles = {
       }
     }
   },
-  foodItemName: {
+  videoItemDetails: {
     flexGrow: '1',
     fontWeight: 'bold',
     fontSize: '12px',
@@ -59,7 +59,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     textAlign: 'left',
-    '@media screen and (min-width: 608px)': {
+    '@media screen and (min-width: 700px)': {
       display: 'flex',
       flexFlow: 'inherit',
       marginBottom: '20px',
@@ -70,11 +70,19 @@ const styles = {
     },
   },
   videoItemPrice: {
-    paddingTop: '6px',
-    fontWeight: 'normal',
     color: '#848484',
-    '@media screen and (min-width: 608px)': {
+    paddingTop: '6px',
+    '@media screen and (min-width: 700px)': {
       marginTop: '4px'
+    }
+  },
+  videoItemMeta: {
+    fontSize: '11px',
+    fontWeight: 'normal',
+    color: '#ccc',
+    paddingTop: '6px',
+    '@media screen and (min-width: 700px)': {
+      paddingTop: '10px'
     }
   }
 }
@@ -90,6 +98,9 @@ const styles = {
     name: PropTypes.string,
     price: PropTypes.number,
     photoPath: PropTypes.string,
+    length: PropTypes.string,
+    filesize: PropTypes.string,
+    format: PropTypes.string,
     disabled: PropTypes.bool,
     updateTotal: PropTypes.func.isRequired
   }
@@ -99,16 +110,17 @@ const styles = {
   }
 
   render () {
-    const { id, name, price, photoPath, disabled } = this.props
+    const { id, name, price, photoPath, length, filesize, format, disabled } = this.props
 
     return (
-      <li style={ [ styles.foodItem ] }>
-        <figure style={ [ styles.foodItemFigure ] }>
-          <img style={ [ styles.foodItemImage ] } src={ photoPath } />
+      <li style={ [ styles.videoItem ] }>
+        <figure style={ [ styles.videoItemFigure ] }>
+          <img style={ [ styles.videoItemImage ] } src={ photoPath } />
         </figure>
-        <div style={ [ styles.foodItemName ] }>
+        <div style={ [ styles.videoItemDetails ] }>
           { name }
           <span style={ [ styles.videoItemPrice ] }>{ numeral(price).format('$0.00') }</span>
+          <span style={ [ styles.videoItemMeta ] }>{ length }<br />{ filesize } { format }</span>
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 

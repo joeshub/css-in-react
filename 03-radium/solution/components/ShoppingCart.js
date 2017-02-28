@@ -16,7 +16,7 @@ const styles = {
     backgroundColor: '#07314d',
     color: '#fff',
     transition: 'all 350ms ease 250ms',
-    '@media (min-width: 608px)': {
+    '@media (min-width: 700px)': {
       height: '80px',
       position: 'inherit',
       bottom: 'inherit',
@@ -28,7 +28,7 @@ const styles = {
       flexGrow: '1',
       fontWeight: 'bold',
       lineHeight: '2',
-      '@media (min-width: 608px)': {
+      '@media (min-width: 700px)': {
         flexGrow: '0'
       }
     },
@@ -42,13 +42,13 @@ const styles = {
     confirmed: {
       height: '350px',
       backgroundColor: 'rgba(71, 59, 180, 0.20)',
-      '@media (min-width: 608px)': {
+      '@media (min-width: 700px)': {
         height: '350px'
       },
       cartTitle: {
         fontWeight: 'normal',
-        display: 'block',
-        textAlign: 'center'
+        flexDirection: 'column',
+        alignItems: 'center'
       },
       cartTotal: {
         paddingLeft: '0',

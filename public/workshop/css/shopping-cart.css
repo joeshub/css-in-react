@@ -14,7 +14,7 @@
   transition: all 350ms ease 250ms;
 }
 
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .shopping_cart {
     height: 80px;
     position: inherit;
@@ -34,7 +34,7 @@
   font-weight: bold;
   line-height: 2;
 }
-@media screen and (min-width: 608px) {
+@media screen and (min-width: 700px) {
   .cart_title {
     flex-grow: 0;
   }
