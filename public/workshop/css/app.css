@@ -2,7 +2,7 @@
 
 body {
   background-color: #050c0e;
-  background-image: url(../img/bg.jpg);
+  background-image: url(/workshop/img/bg.jpg);
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 0;
@@ -48,7 +48,7 @@ body, a {
 }
 
 .header_logo {
-  background-image: url(../img/logo.png);
+  background-image: url(/workshop/img/logo.png);
   width: 264px;
   height: 42px;
   background-repeat: no-repeat;
