@@ -18,7 +18,7 @@ server.use(require('webpack-dev-middleware')(compiler, {
 server.use(require('webpack-hot-middleware')(compiler))
 
 server.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../templates/app.html'))
+  res.sendFile(path.join(__dirname, '../templates/app.ejs'))
 })
 
 server.listen(config.devServer.port, config.devServer.host , function (err) {

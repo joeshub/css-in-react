@@ -19,7 +19,7 @@ module.exports = {
     publicPath: 'http://' + devServer.host  + ':' + devServer.port + '/',
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: '../../templates/app.html' }),
+    new HtmlWebpackPlugin({ inject: true, template: '../../templates/app.ejs' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],

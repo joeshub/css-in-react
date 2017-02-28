@@ -32,7 +32,7 @@ server.use(require('webpack-hot-middleware')(compiler))
 server.use('/', serveStatic(path.join(__dirname, '../public')))
 
 server.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../templates/app.html'))
+  res.sendFile(path.join(__dirname, '../templates/app.ejs'))
 })
 
 server.listen(config.devServer.port, config.devServer.host , function (err) {

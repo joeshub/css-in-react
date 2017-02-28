@@ -41,7 +41,8 @@ const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
 let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
   acc.push(new HtmlWebpackPlugin({
     inject: true, 
-    template: 'templates/app.html', 
+    template: 'templates/app.ejs', 
+    title: cur,
     filename: cur + '/index.html',
     chunks: [ cur ]
   }))

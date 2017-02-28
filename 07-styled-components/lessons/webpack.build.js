@@ -10,7 +10,7 @@ module.exports = {
     publicPath: ''
   },
   plugins: [
-    new HtmlWebpackPlugin({ inject: true, template: '../../templates/app.html' }),
+    new HtmlWebpackPlugin({ inject: true, template: '../../templates/app.ejs' }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
