@@ -13,7 +13,7 @@ export class ButtonPlayNow extends Component {
     return (
       <Button 
         icon="play"
-        styleName="button_play_now"
+        classNames={ styles['button_play_now'] }
         { ...this.props }
       >
       </Button>
