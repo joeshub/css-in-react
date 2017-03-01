@@ -92,6 +92,7 @@ const ItemMeta = styled.span`
   padding-top: 6px;
   @media screen and (min-width: 700px) {
     padding-top: 10px;
+    line-height: 1.3;
   }
 `
 

@@ -82,7 +82,8 @@ const styles = {
     color: '#ccc',
     paddingTop: '6px',
     '@media screen and (min-width: 700px)': {
-      paddingTop: '10px'
+      paddingTop: '10px',
+      lineHeight: '1.3'
     }
   }
 }
