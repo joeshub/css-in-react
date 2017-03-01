@@ -48,7 +48,8 @@ const styles = {
       cartTitle: {
         fontWeight: 'normal',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        textAlign: 'center'
       },
       cartTotal: {
         paddingLeft: '0',

@@ -29,6 +29,7 @@ const CartTitle = styled.div`
   flex-direction: ${props => props.confirmed ? 'column' : 'row'};
   font-weight: ${props => props.confirmed ? 'normal' : 'bold'};
   align-items: ${props => props.confirmed ? 'center' : 'auto'};
+  text-align: ${props => props.confirmed ? 'center' : 'auto'};
   line-height: 2;
   @media screen and (min-width: 700px) {
     flex-grow: 0;
