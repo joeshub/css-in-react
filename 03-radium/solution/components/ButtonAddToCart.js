@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import { Button } from './index'
 import Radium from 'radium'
+import { Button } from './index'
 
 const customStyles = {
   btn: { 
