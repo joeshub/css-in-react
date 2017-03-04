@@ -78,10 +78,16 @@ const ItemDetails = styled.div`
 `
 
 const ItemPrice = styled.span`
-  color: #848484;
-  padding-top: 6px;
+  margin-top: 6px;
+  color: #f98d00;
+  font-weight: normal;
   @media screen and (min-width: 700px) {
-    margin-top: 4px;
+    margin-top: 12px;
+    padding: 5px;
+    border: 1px solid #f98d00;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
   }
 `
 

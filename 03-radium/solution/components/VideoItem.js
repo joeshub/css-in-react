@@ -70,10 +70,16 @@ const styles = {
     },
   },
   videoItemPrice: {
-    color: '#848484',
-    paddingTop: '6px',
+    color: '#f98d00',
+    marginTop: '6px',
+    fontWeight: 'normal',
     '@media screen and (min-width: 700px)': {
-      marginTop: '4px'
+      marginTop: '12px',
+      padding: '5px',
+      border: '1px solid #f98d00',
+      borderRadius: '6px',
+      fontSize: '14px',
+      fontWeight: 'bold'
     }
   },
   videoItemMeta: {
