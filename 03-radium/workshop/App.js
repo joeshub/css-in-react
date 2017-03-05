@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleRoot } from 'radium'
+// import StyleRoot here
 import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
@@ -28,7 +28,7 @@ export default class App extends Component {
     const { totalPrice, confirmed } = this.state
 
     return (
-      <StyleRoot>
+      <div> {/* use StyleRoot here */}
         <header className="header">
           <h1 className="header_logo"><span>Festival Store</span></h1>
           <h2 className="header_title">New Videos This Week</h2>
@@ -68,7 +68,7 @@ export default class App extends Component {
         <footer className="footer">
           Festival Store - 123 Lorem ipsum dolor sit amet, consectetur adipiscing elit, San Francisco, CA
         </footer>
-      </StyleRoot>
+      </div>
     )
   }
 }

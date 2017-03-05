@@ -3,9 +3,7 @@ import Radium from 'radium'
 import { Button } from './index'
 
 const customStyles = {
-  btn: { 
-    minWidth: '110px' 
-  }
+  minWidth: '110px' 
 }
 
 export class ButtonAddToCart extends Component {

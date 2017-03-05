@@ -4,14 +4,12 @@ import { Button } from './index'
 
 // insert custom button styles here
 const customStyles = {
-  btn: {}
 }
 
 export class ButtonBuyNow extends Component {
 
   state = {
     depressed: false,
-    disabled: false,
     buttonText: 'Buy Now'
   }
 
@@ -20,23 +18,21 @@ export class ButtonBuyNow extends Component {
   }
 
   onButtonClicked = () => {
-    this.props.onClick()
+    this.props.onClick && this.props.onClick()
     this.setState({
       buttonText: 'Confirmed',
-      depressed: true,
-      disabled: true
+      depressed: true
     })
   }
 
   render () {
-    const { depressed, disabled, buttonText } = this.state
+    const { depressed, buttonText } = this.state
     const { onClick, ...otherProps } = this.props
 
     return (
       <Button 
-        // customStyles={ customStyles }
-        // depressed={ depressed }
-        // disabled={ disabled }
+        customStyles={ customStyles }
+        depressed={ depressed }
         onClick={ this.onButtonClicked }
         { ...otherProps }
       >
