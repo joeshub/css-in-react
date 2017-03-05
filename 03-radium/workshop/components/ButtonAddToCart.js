@@ -16,7 +16,6 @@ export class ButtonAddToCart extends Component {
   }
 
   static propTypes = {
-    disabled: PropTypes.bool,
     onClick: PropTypes.func.isRequired
   }
 
@@ -30,14 +29,13 @@ export class ButtonAddToCart extends Component {
 
   render () {
     const { depressed, buttonText } = this.state
-    const { disabled, onClick, ...otherProps } = this.props
-    
+    const { onClick, ...otherProps } = this.props
+
     return (
       <Button 
         icon="add"
         customStyles={ customStyles }
         depressed={ depressed }
-        disabled={ disabled }
         onClick={ this.onButtonClicked }
         { ...otherProps }
       >

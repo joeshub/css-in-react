@@ -17,11 +17,6 @@ const buttonStyles = {
     ':hover': {
       backgroundColor: '#336086'
     },
-    withIcon: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    },
     depressed: {
       color: '#848484',
       backgroundColor: '#bebebe',
@@ -71,17 +66,15 @@ const Button = ({
   ...otherProps
 }) => {
 
-  console.log(disabled)
   return (
     <button 
       style={ [
         buttonStyles.btn,
-        icon && buttonStyles.btn.withIcon,
         depressed && buttonStyles.btn.depressed,
         disabled && buttonStyles.btn.disabled,
         customStyles.btn && customStyles.btn,
-        depressed && customStyles.btn && customStyles.btn.depressed && customStyles.btn.depressed,
-        disabled && customStyles.btn &&customStyles.btn.depressed && customStyles.btn.disabled,
+        depressed ? customStyles.btn && customStyles.btn.depressed ? customStyles.btn.depressed : buttonStyles.btn.depressed : undefined,
+        disabled ? customStyles.btn && customStyles.btn.disabled ? customStyles.btn.disabled : buttonStyles.btn.disabled : undefined
       ] }
       className={ classNames } 
       onClick={ onClick }
