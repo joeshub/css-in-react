@@ -1,0 +1,31 @@
+/* button */
+
+.btn {
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font: bold 15px helvetica;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background-color: #07314d;
+  user-select: none;
+  transition: all 120ms;
+}
+
+.btn:hover {
+  background-color: #336086;
+}
+
+.btn.depressed,
+.btn.disabled,
+.btn.disabled:hover {
+  color: #848484;
+  background-color: #bebebe;
+}
+
+.btn.disabled {
+  cursor: auto;
+  pointer-events: none;
+}

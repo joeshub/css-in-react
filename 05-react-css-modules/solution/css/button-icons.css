@@ -1,0 +1,24 @@
+/* icons for buttons */
+
+.icon:after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  background-size: 12px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.icon-add:after {
+  background-image: url(/workshop/svg/add.svg);
+}
+
+.icon-play:after {
+  background-image: url(/workshop/svg/play.svg);
+}
+
+.icon.depressed-icon:after {
+  display: none;
+}

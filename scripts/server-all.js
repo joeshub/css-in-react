@@ -10,12 +10,12 @@ const compiler = webpack(config)
 const publicStylesPath = path.resolve(__dirname, '../public/workshop/css')
 const cssModulesPath = path.resolve(__dirname, '../05-react-css-modules/css')
 
-try {
-  fs.copySync(publicStylesPath, cssModulesPath)
-  console.log('CSS files copied from ' + publicStylesPath + ' to ' + cssModulesPath)
-} catch (err) {
-  console.error(err)
-}
+// try {
+//   fs.copySync(publicStylesPath, cssModulesPath)
+//   console.log('CSS files copied from ' + publicStylesPath + ' to ' + cssModulesPath)
+// } catch (err) {
+//   console.error(err)
+// }
 
 server.use(require('webpack-dev-middleware')(compiler, { 
   publicPath: config.output.publicPath,
