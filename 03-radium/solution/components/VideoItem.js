@@ -108,7 +108,6 @@ const styles = {
     length: PropTypes.string,
     filesize: PropTypes.string,
     format: PropTypes.string,
-    disabled: PropTypes.bool,
     updateTotal: PropTypes.func.isRequired
   }
 
@@ -117,7 +116,7 @@ const styles = {
   }
 
   render () {
-    const { id, name, price, photoPath, length, filesize, format, disabled } = this.props
+    const { id, name, price, photoPath, length, filesize, format } = this.props
 
     return (
       <li style={ [ styles.videoItem ] }>
@@ -131,7 +130,6 @@ const styles = {
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 
-          disabled={ disabled }
         />
       </li>
     )

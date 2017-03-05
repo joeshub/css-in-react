@@ -12,15 +12,6 @@ const customStyles = {
     },
     depressed: {
       boxShadow: '1px -1px 2px rgba(0, 0, 0, 0)'
-    },
-    disabled: {
-      cursor: 'auto',
-      pointerEvents: 'none',
-      color: '#848484',
-      backgroundColor: '#bebebe',
-      ':hover': {
-        backgroundColor: '#bebebe'
-      }
     }
   }
 }
@@ -41,20 +32,18 @@ export class ButtonBuyNow extends Component {
     this.props.onClick()
     this.setState({
       buttonText: 'Confirmed',
-      depressed: true,
-      disabled: true
+      depressed: true
     })
   }
 
   render () {
-    const { depressed, disabled, buttonText } = this.state
+    const { depressed, buttonText } = this.state
     const { onClick, ...otherProps } = this.props
 
     return (
       <Button 
         customStyles={ customStyles }
         depressed={ depressed }
-        disabled={ disabled }
         onClick={ this.onButtonClicked }
         { ...otherProps }
       >

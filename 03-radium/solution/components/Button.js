@@ -79,8 +79,8 @@ const Button = ({
         depressed && buttonStyles.btn.depressed,
         disabled && buttonStyles.btn.disabled,
         customStyles.btn && customStyles.btn,
-        depressed && customStyles.btn && customStyles.btn.depressed && customStyles.btn.depressed,
-        disabled && customStyles.btn &&customStyles.btn.depressed && customStyles.btn.disabled,
+        depressed ? customStyles.btn && customStyles.btn.depressed ? customStyles.btn.depressed : buttonStyles.btn.depressed : undefined,
+        disabled ? customStyles.btn && customStyles.btn.disabled ? customStyles.btn.disabled : buttonStyles.btn.disabled : undefined
       ] }
       className={ classNames } 
       onClick={ onClick }
