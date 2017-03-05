@@ -14,7 +14,6 @@ export class ButtonBuyNow extends Component {
 
   state = {
     depressed: false,
-    disabled: false,
     buttonText: 'Buy Now'
   }
 
