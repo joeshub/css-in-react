@@ -9,9 +9,6 @@ const customStyles = {
     width: '110px',
     ':hover': {
       backgroundColor: '#f98d00',
-    },
-    depressed: {
-      boxShadow: '1px -1px 2px rgba(0, 0, 0, 0)'
     }
   }
 }

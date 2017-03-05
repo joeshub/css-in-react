@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { Button } from './index'
 
 const StyledButtonBuyNow = styled(Button)`
-  background-color: ${props => props.disabled || props.depressed ? '#bebebe' : '#ec4800'};
-  box-shadow: ${props => props.disabled || props.depressed ? '1px -1px 2px rgba(0, 0, 0, 0)' : '1px -1px 2px rgba(0, 0, 0, .2)'};
+  background-color: ${props => props.disabled ? '#bebebe' : '#ec4800'};
+  box-shadow: ${props => props.disabled ? '1px -1px 2px rgba(0, 0, 0, 0)' : '1px -1px 2px rgba(0, 0, 0, .2)'};
   width: 110px;
   &:hover {
     background-color: #f98d00;
