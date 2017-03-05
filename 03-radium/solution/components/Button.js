@@ -1,6 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 
+const depressedStyles = {
+  color: '#848484',
+  backgroundColor: '#bebebe',
+  ':hover': {
+    backgroundColor: '#bebebe'
+  }
+}
+
 const buttonStyles = {
   btn: {
     display: 'inline-block',
@@ -17,21 +25,11 @@ const buttonStyles = {
     ':hover': {
       backgroundColor: '#336086'
     },
-    depressed: {
-      color: '#848484',
-      backgroundColor: '#bebebe',
-      ':hover': {
-        backgroundColor: '#bebebe'
-      }
-    },
+    depressed: depressedStyles,
     disabled: {
       cursor: 'auto',
       pointerEvents: 'none',
-      color: '#848484',
-      backgroundColor: '#bebebe',
-      ':hover': {
-        backgroundColor: '#bebebe'
-      }
+      ...depressedStyles
     }
   },
   icon: {
