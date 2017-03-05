@@ -20,11 +20,11 @@ export class ButtonBuyNow extends Component {
   }
 
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func
   }
 
   onButtonClicked = () => {
-    this.props.onClick()
+    this.props.onClick && this.props.onClick()
     this.setState({
       buttonText: 'Confirmed',
       depressed: true,
