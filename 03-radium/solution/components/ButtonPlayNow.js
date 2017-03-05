@@ -3,12 +3,10 @@ import Radium from 'radium'
 import { Button } from './index'
 
 const customStyles = {
-  btn: {
-    backgroundColor: '#ec4800',
-    width: '110px',
-    ':hover': {
-      backgroundColor: '#f98d00'
-    }
+  backgroundColor: '#ec4800',
+  width: '110px',
+  ':hover': {
+    backgroundColor: '#f98d00'
   }
 }
 
