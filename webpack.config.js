@@ -23,7 +23,7 @@ const reactHotLoader = 'react-hot-loader/patch'
 const webpackHotMiddleware = 'webpack-hot-middleware/client?reload=1'
 const babelPolyfill = 'babel-polyfill' // core-js ?
 
-const hotEntries = [ reactHotLoader, webpackHotMiddleware ]
+const hotEntries = [ babelPolyfill, reactHotLoader, webpackHotMiddleware ]
 
 const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
   if (fs.existsSync(path.join(basePath, currPath, './lessons/entry.js'))) {
