@@ -15,22 +15,13 @@ const StyledIcon = styled.div`
 
 export const Icon = ({
   name,
-  classNames,
-  customStyles = {},
-  depressed,
-  disabled,
-  onClick,
   children,
   ...otherProps
 }) => {
 
   return (
     <StyledIcon 
-      disabled={ disabled }
-      depressed={ depressed }
-      className={ classNames }
       name={ name }
-      onClick={ onClick }
       { ...otherProps }
     >
     </StyledIcon>
