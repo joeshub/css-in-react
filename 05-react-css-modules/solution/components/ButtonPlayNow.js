@@ -3,8 +3,7 @@ import CSSModules from 'react-css-modules'
 import { Button } from './index'
 import { buttonPlayNow } from '../css-modules'
 
-let styles = {}
-Object.assign(styles, buttonPlayNow)
+let styles = { ...styles, ...buttonPlayNow }
 
 @CSSModules(styles, { allowMultiple: true })
 export class ButtonPlayNow extends Component {

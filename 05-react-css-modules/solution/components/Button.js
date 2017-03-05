@@ -3,8 +3,7 @@ import CSSModules from 'react-css-modules'
 import classnames from 'classnames'
 import { button, buttonIcons } from '../css-modules'
 
-let styles = {}
-Object.assign(styles, button, buttonIcons)
+let styles = { ...button, ...buttonIcons }
 
 const Button = ({
   icon,

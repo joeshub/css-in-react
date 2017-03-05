@@ -4,8 +4,7 @@ import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
 import { videoItem } from '../css-modules'
 
-let styles = {}
-Object.assign(styles, videoItem)
+let styles = { ...styles, ...videoItem }
 
 @CSSModules(styles, { allowMultiple: true })
 export class VideoItem extends Component {
@@ -22,7 +21,6 @@ export class VideoItem extends Component {
     length: PropTypes.string,
     filesize: PropTypes.string,
     format: PropTypes.string,
-    disabled: PropTypes.bool,
     updateTotal: PropTypes.func.isRequired
   }
 
@@ -31,7 +29,7 @@ export class VideoItem extends Component {
   }
 
   render () {
-    const { id, name, price, photoPath, length, filesize, format, disabled } = this.props
+    const { id, name, price, photoPath, length, filesize, format } = this.props
 
     return (
       <li styleName="video_item">
@@ -45,7 +43,6 @@ export class VideoItem extends Component {
         </div>
         <ButtonAddToCart 
           onClick={ this.addToCart.bind(this) } 
-          disabled={ disabled }
         />
       </li>
     )

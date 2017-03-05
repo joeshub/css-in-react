@@ -4,8 +4,7 @@ import numeral from 'numeral'
 import { ButtonBuyNow, ButtonPlayNow } from './index'
 import { shoppingCart } from '../css-modules'
 
-let styles = {}
-Object.assign(styles, shoppingCart)
+let styles = { ...styles, ...shoppingCart }
 
 @CSSModules(styles, { allowMultiple: true })
 export class ShoppingCart extends Component {
@@ -39,7 +38,8 @@ export class ShoppingCart extends Component {
         </div>
         <ButtonBuyNow 
           onClick={ this.props.onBuy }
-          disabled={ totalPrice === 0 }>
+          disabled={ totalPrice === 0 }
+        >
           Buy Now
         </ButtonBuyNow>
       </aside>

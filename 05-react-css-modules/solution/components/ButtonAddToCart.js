@@ -3,8 +3,7 @@ import CSSModules from 'react-css-modules'
 import { Button } from './index'
 import { buttonAddToCart } from '../css-modules'
 
-let styles = {}
-Object.assign(styles, buttonAddToCart)
+let styles = { ...styles, ...buttonAddToCart }
 
 @CSSModules(styles, { allowMultiple: true })
 export class ButtonAddToCart extends Component {
@@ -15,7 +14,6 @@ export class ButtonAddToCart extends Component {
   }
 
   static propTypes = {
-    disabled: PropTypes.bool,
     onClick: PropTypes.func.isRequired
   }
 
@@ -29,14 +27,13 @@ export class ButtonAddToCart extends Component {
 
   render () {
     const { depressed, buttonText } = this.state
-    const { disabled, onClick, ...otherProps } = this.props
+    const { onClick, ...otherProps } = this.props
     
     return (
       <Button 
         icon="add"
         classNames={ styles['button_add_to_cart'] }
         depressed={ depressed }
-        disabled={ disabled }
         onClick={ this.onButtonClicked }
         { ...otherProps }
       >
