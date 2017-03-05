@@ -36,7 +36,7 @@ const ItemFigure = styled.figure`
   margin-right: 20px;
   @media screen and (min-width: 700px) {
     height: 130px;
-    width: 100%;
+    width: 100.2%;
     position: absolute;
     left: 0;
     top: 0;
@@ -50,10 +50,10 @@ const ItemImage = styled.img`
   height: 100%;
   margin-left: -50%;
   @media screen and (min-width: 700px) {
-    transition: transform 300ms ease;
-    margin-left: initial;
+    transition: transform 180ms ease;
+    margin-left: 0;
     &:hover {
-      transform: scale(1.1);
+      transform: scale3d(1.1, 1.1, 1);
     }
   }
 `
