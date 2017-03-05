@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
+import { Icon } from './index'
 
 const depressedStyles = {
   color: '#848484',
@@ -10,46 +11,25 @@ const depressedStyles = {
 }
 
 const buttonStyles = {
-  btn: {
-    display: 'inline-block',
-    outline: 'none',
-    textAlign: 'center',
-    font: 'bold 15px helvetica',
-    padding: '10px',
-    border: '0',
-    cursor: 'pointer',
-    color: '#fff',
-    backgroundColor: '#07314d',
-    userSelect: 'none',
-    transition: 'all 120ms',
-    ':hover': {
-      backgroundColor: '#336086'
-    },
-    depressed: depressedStyles,
-    disabled: {
-      cursor: 'auto',
-      pointerEvents: 'none',
-      ...depressedStyles
-    }
+  display: 'inline-block',
+  outline: 'none',
+  textAlign: 'center',
+  font: 'bold 15px helvetica',
+  padding: '10px',
+  border: '0',
+  cursor: 'pointer',
+  color: '#fff',
+  backgroundColor: '#07314d',
+  userSelect: 'none',
+  transition: 'all 120ms',
+  ':hover': {
+    backgroundColor: '#336086'
   },
-  icon: {
-    content: '',
-    display: 'inline-block',
-    width: '12px',
-    height: '12px',
-    marginLeft: '6px',
-    backgroundSize: '12px',
-    backgroundPosition: '50% 50%',
-    backgroundRepeat: 'no-repeat',
-    depressed: {
-      display: 'none'
-    }
-  },
-  'icon-add': {
-    backgroundImage: 'url(/workshop/svg/add.svg)'
-  },
-  'icon-play': {
-    backgroundImage: 'url(/workshop/svg/play.svg)'
+  depressed: depressedStyles,
+  disabled: {
+    cursor: 'auto',
+    pointerEvents: 'none',
+    ...depressedStyles
   }
 }
 
@@ -67,25 +47,19 @@ const Button = ({
   return (
     <button 
       style={ [
-        buttonStyles.btn,
-        depressed && buttonStyles.btn.depressed,
-        disabled && buttonStyles.btn.disabled,
-        customStyles.btn && customStyles.btn,
-        depressed ? customStyles.btn && customStyles.btn.depressed ? customStyles.btn.depressed : buttonStyles.btn.depressed : undefined,
-        disabled ? customStyles.btn && customStyles.btn.disabled ? customStyles.btn.disabled : buttonStyles.btn.disabled : undefined
+        buttonStyles,
+        depressed && buttonStyles.depressed,
+        disabled && buttonStyles.disabled,
+        customStyles && customStyles,
+        depressed ? customStyles && customStyles.depressed ? customStyles.depressed : buttonStyles.depressed : undefined,
+        disabled ? customStyles && customStyles.disabled ? customStyles.disabled : buttonStyles.disabled : undefined
       ] }
       className={ classNames } 
       onClick={ onClick }
       { ...otherProps }
     >
       { children }
-      {
-        <span style={ [
-          icon && buttonStyles.icon,
-          icon && buttonStyles['icon-' + icon],
-          depressed && buttonStyles.icon.depressed
-        ] }></span>
-      }
+      {!depressed && <Icon name={ icon } /> }
     </button>
   )
 
