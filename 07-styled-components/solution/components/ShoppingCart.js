@@ -80,9 +80,8 @@ export class ShoppingCart extends Component {
         </CartTitle>
         <ButtonBuyNow 
           onClick={ this.props.onBuy }
-          disabled={ totalPrice === 0 }>
-          Buy Now
-        </ButtonBuyNow>
+          disabled={ totalPrice === 0 }
+        />
       </Cart>
     )
   }

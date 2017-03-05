@@ -97,9 +97,7 @@ const styles = {
         <ButtonBuyNow 
           onClick={ this.props.onBuy }
           disabled={ totalPrice === 0 }
-        >
-          Buy Now
-        </ButtonBuyNow>
+        />
       </aside>
     )
   }
