@@ -1,11 +1,5 @@
 /* icons for buttons */
 
-.icon {
-  display: flex;
-  align-items: center; /* cross axis */
-  justify-content: center; /* main axis */
-}
-
 .icon:after {
   content: '';
   display: inline-block;

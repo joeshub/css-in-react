@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Icon } from './Icon'
 
 export const StyledButton = styled.button`
-  display: ${props => props.icon ? 'flex' : 'inline-block'};
+  display: inline-block;
   align-items: ${props => props.icon ? 'center' : 'initial'};
   justify-content: ${props => props.icon ? 'center' : 'initial'};
   outline: none;
