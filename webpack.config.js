@@ -64,7 +64,7 @@ module.exports = {
     path: path.join(__dirname),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: 'http://' + devServer.host  + ':' + devServer.port + '/',
+    publicPath: '/',
   },
   resolve: {
     alias: {
