@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Radium from 'radium'
 import numeral from 'numeral'
-import { ButtonBuyNow, ButtonPlayNow } from './index'
+import { ButtonPlayNow } from './index'
 
 const styles = {
   shoppingCart: {
@@ -15,7 +15,7 @@ const styles = {
     boxSizing: 'border-box',
     backgroundColor: '#07314d',
     color: '#fff',
-    transition: 'all 350ms ease 250ms',
+    transition: 'all 300ms ease 200ms',
     '@media (min-width: 700px)': {
       height: '80px',
       position: 'inherit',
@@ -94,12 +94,7 @@ const styles = {
         <div style={ [ styles.shoppingCart.cartTitle ] }>
           Total: <span style={ [ styles.shoppingCart.cartTotal ] }>{ formattedPrice }</span>
         </div>
-        <ButtonBuyNow 
-          // onClick={ this.props.onBuy }
-          // disabled={ totalPrice === 0 }
-          >
-          Buy Now
-        </ButtonBuyNow>
+        { /* render buy now button here */ }
       </aside>
     )
   }

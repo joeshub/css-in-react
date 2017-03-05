@@ -111,18 +111,18 @@ body, a {
 
 .closeStoreContent-enter-active {
   opacity: 1;
-  max-height: 1000;
+  max-height: 420px;
   transition: all 500ms ease;
 }
 
 .closeStoreContent-leave {
-  max-height: 1000px;
+  max-height: 420px;
   opacity: 1;
 }
 
 @media screen and (min-width: 700px) {
   .closeStoreContent-leave {
-    padding: 32px;
+    padding: 50px 32px;
   }
 }
 

@@ -14,7 +14,7 @@ const Cart = styled.aside`
   box-sizing: border-box;
   background-color: ${props => props.confirmed ? 'rgba(71, 59, 180, 0.20)' : '#07314d'};
   color: #fff;
-  transition: all 350ms ease 250ms;
+  transition: all 300ms ease 200ms;
   @media screen and (min-width: 700px) {
     height: ${props => props.confirmed ? '350px' : '80px'};
     position: inherit;

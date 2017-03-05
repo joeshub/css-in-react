@@ -11,7 +11,7 @@
   box-sizing: border-box;
   background-color: #07314d;
   color: #fff;
-  transition: all 350ms ease 250ms;
+  transition: all 300ms ease 200ms;
 }
 
 @media screen and (min-width: 700px) {

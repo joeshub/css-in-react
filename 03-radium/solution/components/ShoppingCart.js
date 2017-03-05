@@ -15,7 +15,7 @@ const styles = {
     boxSizing: 'border-box',
     backgroundColor: '#07314d',
     color: '#fff',
-    transition: 'all 350ms ease 250ms',
+    transition: 'all 300ms ease 200ms',
     '@media (min-width: 700px)': {
       height: '80px',
       position: 'inherit',
