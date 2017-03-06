@@ -106,6 +106,7 @@ http://cssnext.io/
 - PostCSS http://cssnext.io/usage/
 - https://github.com/jxnblk/repng
 - https://reactjsnews.com/isomorphic-react-in-real-life
+- http://immutablecss.com/
 
 # TALKS
 - https://vimeo.com/116209150
@@ -178,6 +179,10 @@ http://cssnext.io/
 - https://drafts.csswg.org/css-contain/
 - https://www.webdirections.org/blog/happy-17th-birthday-css/
 - https://github.com/FormidableLabs/radium/issues/524
+- https://danielgreene.com/1996/08/01/style-sheets-demo-page/
+- https://www.w3.org/People/Raggett/book4/ch02.html
+- https://www.viget.com/articles/css-squareoff
+- http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf
 
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint
