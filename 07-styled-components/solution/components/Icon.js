@@ -10,7 +10,7 @@ const StyledIcon = styled.div`
   background-size: 12px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/workshop/svg/${props => props.name }.svg);
+  background-image: url(/svg/${props => props.name }.svg);
 `
 
 export const Icon = ({

@@ -12,11 +12,11 @@
 }
 
 .icon-add:after {
-  background-image: url(/workshop/svg/add.svg);
+  background-image: url(/svg/add.svg);
 }
 
 .icon-play:after {
-  background-image: url(/workshop/svg/play.svg);
+  background-image: url(/svg/play.svg);
 }
 
 .icon.depressed-icon:after {

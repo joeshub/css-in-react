@@ -14,10 +14,10 @@ const iconStyles = {
     display: 'none'
   },
   'icon-add': {
-    backgroundImage: 'url(/workshop/svg/add.svg)'
+    backgroundImage: 'url(/svg/add.svg)'
   },
   'icon-play': {
-    backgroundImage: 'url(/workshop/svg/play.svg)'
+    backgroundImage: 'url(/svg/play.svg)'
   }
 }
 
