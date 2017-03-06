@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
-import '../../../public/workshop/css/video-item.css'
+import '../../../public/css/video-item.css'
 
 export class VideoItem extends Component {
 

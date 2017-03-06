@@ -6,7 +6,7 @@ Notice we have an error. This is because Radium uses plugins to handle things li
 
 ## 2. Import our external global app.css file
 
-We will be using a global css file for main layout of the our app. Open up app.css and uncomment the line that is importing the file from /public/workshop/css/app.css
+We will be using a global css file for main layout of the our app. Open up app.css and uncomment the line that is importing the file from /public/css/app.css
 Notice how in App.js we are using className="" to refer to these global classes.
 
 ## 3. Add the ButtonBuyNow component to the ShoppingCart component

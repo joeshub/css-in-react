@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import classnames from 'classnames'
-import '../../../public/workshop/css/button.css'
-import '../../../public/workshop/css/button-icons.css'
+import '../../../public/css/button.css'
+import '../../../public/css/button-icons.css'
 
 export const Button = ({
   icon,

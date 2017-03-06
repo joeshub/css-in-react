@@ -1,7 +1,7 @@
 {
   "name": "react-css-modules-button",
   "version": "1.0.0",
-  "description": "Button - react-css-modules",
+  "description": "Button - React CSS Modules",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "build/app.js",

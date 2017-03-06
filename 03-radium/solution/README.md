@@ -15,7 +15,7 @@ return (
 
 ## 2. Uncomment this line inside app.css to import our global stylesheet into App.js
 ```css
-@import url("../../public/workshop/css/app.css");
+@import url("../../public/css/app.css");
 ```
 
 ## 3. Add the ButtonBuyNow component to the ShoppingCart.js component

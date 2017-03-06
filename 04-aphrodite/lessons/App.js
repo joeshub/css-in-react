@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import pkg from './package.json'
 import { Button } from './Button/Button'
-import '../../public/lessons/css/main.css'
+import '../../public/css/lessons.css'
 
 export default class App extends Component {
   render () {

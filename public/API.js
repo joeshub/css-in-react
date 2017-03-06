@@ -6,7 +6,7 @@ const videoListData = [
     length: '55 min',
     filesize: '1.48 GB',
     format: '1080p HD',
-    photoPath: '/workshop/img/show-1.jpg'
+    photoPath: '/img/show-1.jpg'
   },
   {
     id: 1233,
@@ -15,7 +15,7 @@ const videoListData = [
     length: '1 hr 29 min',
     filesize: '737 MB',
     format: 'SD',
-    photoPath: '/workshop/img/show-2.jpg'
+    photoPath: '/img/show-2.jpg'
   },
   {
     id: 1234,
@@ -24,7 +24,7 @@ const videoListData = [
     length: '3 hr 12 min',
     filesize: '8.52 GB',
     format: '1080p HD',
-    photoPath: '/workshop/img/show-3.jpg'
+    photoPath: '/img/show-3.jpg'
   },
   {
     id: 1232,
@@ -33,7 +33,7 @@ const videoListData = [
     length: '2 hr 37 min',
     filesize: '3.64 GB',
     format: '1080p HD',
-    photoPath: '/workshop/img/show-4.jpg'
+    photoPath: '/img/show-4.jpg'
   }
 ]
 

@@ -3,8 +3,8 @@ import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
 
-import '../../public/workshop/css/reset.css'
-import '../../public/workshop/css/app.css'
+import '../../public/css/reset.css'
+import '../../public/css/app.css'
 
 export default class App extends Component {
 

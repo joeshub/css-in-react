@@ -1,7 +1,7 @@
 {
   "name": "styled-components-button",
   "version": "1.0.0",
-  "description": "Button - styled components",
+  "description": "Button - Styled Components",
   "author": "Joe Seifi",
   "license": "ISC",
   "main": "build/app.js",

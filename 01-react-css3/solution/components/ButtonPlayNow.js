@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Button } from './index'
-import '../../../public/workshop/css/button-play-now.css'
+import '../../../public/css/button-play-now.css'
 
 export class ButtonPlayNow extends Component {
 

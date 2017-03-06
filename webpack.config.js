@@ -68,7 +68,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      CSS3: path.resolve(__dirname, 'public/workshop/css')
+      CSS3: path.resolve(__dirname, 'public//css')
     }
   },
   module: {

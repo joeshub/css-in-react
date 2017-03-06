@@ -7,7 +7,7 @@ const config = require(path.join(process.cwd(), 'webpack.config'))
 const server = express()
 const compiler = webpack(config)
 
-const publicStylesPath = path.resolve(__dirname, '../public/workshop/css')
+const publicStylesPath = path.resolve(__dirname, '../public//css')
 const cssModulesPath = path.resolve(__dirname, '../05-react-css-modules/css')
 
 server.use(require('webpack-dev-middleware')(compiler, { 

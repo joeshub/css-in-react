@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import numeral from 'numeral'
 import { ButtonBuyNow, ButtonPlayNow } from './index'
-import '../../../public/workshop/css/shopping-cart.css'
+import '../../../public/css/shopping-cart.css'
 
 export class ShoppingCart extends Component {
 
