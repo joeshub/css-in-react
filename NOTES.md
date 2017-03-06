@@ -78,12 +78,15 @@
 
 # Frameworks
 https://github.com/rtsao/styletron
-https://github.com/andreypopp/react-css-components
-https://github.com/threepointone/glamor
-https://github.com/styled-components/styled-components
-https://github.com/rtsao/csjs
 https://github.com/Khan/aphrodite
+https://github.com/css-modules/css-modules
+https://github.com/andreypopp/react-css-components
+https://github.com/styled-components
+https://github.com/typestyle/typestyle
+https://github.com/rofrischmann/fela
+https://github.com/threepointone/glamor
 https://github.com/cssinjs/jss
+https://github.com/rtsao/csjs
 https://github.com/jxnblk/hyp
 https://github.com/jxnblk/react-cxs
 https://github.com/jxnblk/cxs
@@ -91,23 +94,16 @@ https://github.com/ReactTraining/react-media - MJ - media queries
 https://github.com/tachyons-css/react-native-style-tachyons
 https://github.com/Wildhoney/Interpose
 http://reactpatterns.com/#Style component - proxy
-https://github.com/typestyle/typestyle
 http://kyleamathews.github.io/typography.js/
-- fela
-- jss
-- csjs, glamor
-- css modules
-- postcss and css next http://cssnext.io/
+https://github.com/rtsao/csjs
+http://cssnext.io/
 - https://bigbitecreative.com/a-look-into-writing-future-css-with-postcss-cssnext/
-- https://github.com/rtsao/csjs
 - https://github.com/martinandert/react-inline
-- https://github.com/rtsao/csjs
-- pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
+- Pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
 - This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
 - https://formidable.com/blog/2015/03/01/launching-radium/
 - https://github.com/FormidableLabs/radium/tree/master/docs/comparison
 - PostCSS http://cssnext.io/usage/
-- Aphrodite https://github.com/Khan/aphrodite
 - https://github.com/jxnblk/repng
 - https://reactjsnews.com/isomorphic-react-in-real-life
 
@@ -137,6 +133,8 @@ http://kyleamathews.github.io/typography.js/
 - https://youtu.be/0aBv8dsZs84?t=1060
 
 # READS
+- http://typestyle.io/#/why
+- http://fela.js.org/docs/advanced/RendererConfiguration.html
 - https://github.com/FormidableLabs/radium/issues/389
 - https://github.com/FormidableLabs/radium/issues/788
 - https://medium.com/@steida/css-in-js-the-argument-refined-471c7eb83955#.zi7a2jqjp
@@ -175,6 +173,11 @@ http://kyleamathews.github.io/typography.js/
 - https://vimeo.com/channels/986495/187454104
 - https://facebook.github.io/react/docs/dom-elements.html
 - http://learn.shayhowe.com/advanced-html-css/complex-selectors/
+- https://www.webdirections.org/blog/happy-17th-birthday-css/
+- https://en.wikipedia.org/wiki/JavaScript_Style_Sheets
+- https://drafts.csswg.org/css-contain/
+- https://www.webdirections.org/blog/happy-17th-birthday-css/
+- https://github.com/FormidableLabs/radium/issues/524
 
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint
