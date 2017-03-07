@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import numeral from 'numeral'
 import { ButtonBuyNow, ButtonPlayNow } from './index'
-import { shoppingCart } from '../css-modules'
-
-let styles = { ...styles, ...shoppingCart }
+import { shoppingCart as styles } from '../css-modules'
 
 @CSSModules(styles, { allowMultiple: true })
 export class ShoppingCart extends Component {

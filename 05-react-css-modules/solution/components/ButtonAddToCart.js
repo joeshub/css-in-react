@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import { Button } from './index'
-import { buttonAddToCart } from '../css-modules'
-
-let styles = { ...styles, ...buttonAddToCart }
+import { buttonAddToCart as styles } from '../css-modules'
 
 @CSSModules(styles, { allowMultiple: true })
 export class ButtonAddToCart extends Component {

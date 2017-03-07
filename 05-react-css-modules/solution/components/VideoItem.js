@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
-import { videoItem } from '../css-modules'
-
-let styles = { ...styles, ...videoItem }
+import { videoItem as styles } from '../css-modules'
 
 @CSSModules(styles, { allowMultiple: true })
 export class VideoItem extends Component {
