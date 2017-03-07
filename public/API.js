@@ -9,7 +9,7 @@ const videoListData = [
     photoPath: '/img/show-1.jpg'
   },
   {
-    id: 1233,
+    id: 1232,
     name: 'Sep. of Concerns',
     price: 14.95,
     length: '1 hr 29 min',
@@ -18,7 +18,7 @@ const videoListData = [
     photoPath: '/img/show-2.jpg'
   },
   {
-    id: 1234,
+    id: 1233,
     name: 'nln STYLES',
     price: 24.99,
     length: '3 hr 12 min',
@@ -27,7 +27,7 @@ const videoListData = [
     photoPath: '/img/show-3.jpg'
   },
   {
-    id: 1232,
+    id: 1234,
     name: 'Cascade Flex',
     price: 19.95,
     length: '2 hr 37 min',
