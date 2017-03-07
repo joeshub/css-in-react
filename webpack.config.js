@@ -68,7 +68,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      CSS3: path.resolve(__dirname, 'public//css')
+      CSS3: path.resolve(__dirname, 'public/css')
     }
   },
   module: {
@@ -86,8 +86,8 @@ module.exports = {
         include: [ cssModulesPath ],
         use: [
           'style-loader',
-          'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]', 
-          'sass-loader'
+          'css-loader?sourceMap=1&importLoaders=1&modules&localIdentName=[name]__[local]___[hash:base64:5]', 
+          'postcss-loader'
         ]
       },
       {
