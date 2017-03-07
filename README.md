@@ -12,14 +12,22 @@ Learn the top techniques for using CSS in React
 7. Open [http://0.0.0.0:3333](http://0.0.0.0:3333)
 
 ## Sections
-01. CSS files imported into React
-02. [React](https://github.com/facebook/react) with inline styles
-03. [Radium](https://github.com/FormidableLabs/radium) in React
-04. [Aphrodite](https://github.com/Khan/aphrodite) in React
-05. [React-css-modules](https://github.com/gajus/react-css-modules) in React
-06. [Styletron](https://github.com/rtsao/styletron) in React
-07. [Styled Components](https://github.com/styled-components/styled-components) in React
+01. [React](https://github.com/facebook/react) with [CSS loader](https://github.com/webpack-contrib/css-loader)
+02. [React](https://github.com/facebook/react) using inline styles
+03. [Radium](https://github.com/FormidableLabs/radium)
+04. [Aphrodite](https://github.com/Khan/aphrodite)
+05. [React-css-modules](https://github.com/gajus/react-css-modules) with [PostCSS](https://github.com/postcss/postcss)
+06. [Styletron](https://github.com/rtsao/styletron)
+07. [Styled Components](https://github.com/styled-components/styled-components)
 
 ## How this project is organized
+### Lessons
 - Each folder contains a lesson for learning the basics of that framework using a button.
-- Each folder also contains a workshop with challenges along with matching solutions.
+### Workshops
+- Some folders folder also contains a workshop with challenges explained in the README
+- Currently there are workshops for:
+  - Radium
+  - React CSS Modules with PostCSS
+  - Styled Components
+### Solutions
+- Workshops have a separate solutions complete with code and implementation steps in the README
