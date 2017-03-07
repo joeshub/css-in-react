@@ -1,0 +1,120 @@
+/* video-item */
+
+@import url("./variables.css");
+
+.video_item {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-lighter);
+  display: flex;
+  height: 82px;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+.video_item:last-child {
+  border-bottom-width: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item {
+    border: 0;
+    height: auto;
+    flex-flow: column;
+    width: 23%;
+    flex-shrink: 1;
+    position: relative;
+    padding: 180px 22px 22px;
+    max-width: 188px;
+  }
+  .video_item:last-child {
+    border-bottom-width: 1px;
+  }
+}
+
+.video_item_figure {
+  height: 82px;
+  width: 50px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_figure {
+    height: 160px;
+    width: 100.2%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    overflow: hidden;
+    margin-right: 0;
+  }
+}
+
+.video_item_image {
+  height: 100%;
+  margin-left: -50%;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_image {
+    transition: transform 180ms ease;
+    margin-left: 0;
+  }
+  .video_item_image:hover {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+.video_item_details {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_details {
+    display: flex;
+    flex-flow: inherit;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: inherit;
+  }
+}
+
+.video_item_price {
+  margin-top: 6px;
+  color: var(--orange-light);
+  font-weight: normal;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_price {
+    margin-top: 12px;
+    padding: 5px;
+    border: 1px solid var(--orange-light);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.video_item_meta {
+  font-size: 11px;
+  font-weight: normal;
+  color: var(--gray-light);
+  padding-top: 6px;
+}
+
+@media screen and (min-width: 700px) {
+  .video_item_meta {
+    padding-top: 10px;
+    line-height: 1.3;
+  }
+}
