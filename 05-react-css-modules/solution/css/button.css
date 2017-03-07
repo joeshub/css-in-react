@@ -1,5 +1,7 @@
 /* button */
 
+@import url("./variables.css");
+
 .btn {
   display: inline-block;
   outline: none;
@@ -8,21 +10,21 @@
   padding: 10px;
   border: 0;
   cursor: pointer;
-  color: #fff;
-  background-color: #07314d;
+  color: var(--button-fg-color);
+  background-color: var(--button-bg-color);
   user-select: none;
   transition: all 120ms;
 }
 
 .btn:hover {
-  background-color: #336086;
+  background-color: var(--button-bg-color-hover);
 }
 
 .btn.depressed,
 .btn.disabled,
 .btn.disabled:hover {
-  color: #848484;
-  background-color: #bebebe;
+  color: var(--button-disabled-fg-color);
+  background-color: var(--button-disabled-bg-color);
 }
 
 .btn.disabled {

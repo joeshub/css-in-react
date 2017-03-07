@@ -1,8 +1,10 @@
 /* video-item */
 
+@import url("./variables.css");
+
 .video_item {
-  background-color: #fff;
-  border-bottom: 1px solid #E8E8E7;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-lighter);
   display: flex;
   height: 82px;
   align-items: center;
@@ -88,7 +90,7 @@
 
 .video_item_price {
   margin-top: 6px;
-  color: #f98d00;
+  color: var(--orange-light);
   font-weight: normal;
 }
 
@@ -96,7 +98,7 @@
   .video_item_price {
     margin-top: 12px;
     padding: 5px;
-    border: 1px solid #f98d00;
+    border: 1px solid var(--orange-light);
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
@@ -106,7 +108,7 @@
 .video_item_meta {
   font-size: 11px;
   font-weight: normal;
-  color: #ccc;
+  color: var(--gray-light);
   padding-top: 6px;
 }
 

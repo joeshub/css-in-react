@@ -1,11 +1,13 @@
 /* Custom styling for Buy Now Button */
 
+@import url("./variables.css");
+
 .button_buy_now {
-  background-color: #ec4800;
+  background-color: var(--button-action-bg-color);
   width: 110px;
 }
 
 .button_buy_now:hover {
-  background-color: #f98d00;
+  background-color: var(--button-action-fg-color-hover);
 }
 
