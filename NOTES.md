@@ -77,36 +77,37 @@
 - Component state vs Functional Components
 
 # Frameworks
-https://github.com/rtsao/styletron
-https://github.com/Khan/aphrodite
-https://github.com/css-modules/css-modules
-https://github.com/andreypopp/react-css-components
-https://github.com/styled-components
-https://github.com/typestyle/typestyle
-https://github.com/rofrischmann/fela
-https://github.com/threepointone/glamor
-https://github.com/cssinjs/jss
-https://github.com/rtsao/csjs
-https://github.com/jxnblk/hyp
-https://github.com/jxnblk/react-cxs
-https://github.com/jxnblk/cxs
-https://github.com/ReactTraining/react-media - MJ - media queries
-https://github.com/tachyons-css/react-native-style-tachyons
-https://github.com/Wildhoney/Interpose
-http://reactpatterns.com/#Style component - proxy
-http://kyleamathews.github.io/typography.js/
-https://github.com/rtsao/csjs
-http://cssnext.io/
+- https://github.com/rtsao/styletron
+- https://github.com/Khan/aphrodite
+- https://github.com/css-modules/css-modules
+- https://github.com/andreypopp/react-css-components
+- https://github.com/styled-components
+- https://github.com/typestyle/typestyle
+- https://github.com/rofrischmann/fela
+- https://github.com/threepointone/glamor
+- https://github.com/cssinjs/jss
+- https://github.com/rtsao/csjs
+- https://github.com/jxnblk/hyp
+- https://github.com/jxnblk/react-cxs
+- https://github.com/jxnblk/cxs
+- https://github.com/ReactTraining/react-media - MJ media queries
+- https://github.com/tachyons-css/react-native-style-tachyons
+- https://github.com/Wildhoney/Interpose
+- http://kyleamathews.github.io/typography.js/
+- https://github.com/rtsao/csjs
+- http://immutablecss.com/
+- https://github.com/postcss/postcss#plugins
+- http://cssnext.io/
+- http://postcss.parts
+- https://github.com/markgoodyear/postcss-vertical-rhythm/
+- https://madlittlemods.github.io/postcss-css-variables/playground/
 - https://bigbitecreative.com/a-look-into-writing-future-css-with-postcss-cssnext/
 - https://github.com/martinandert/react-inline
-- Pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
-- This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
 - https://formidable.com/blog/2015/03/01/launching-radium/
 - https://github.com/FormidableLabs/radium/tree/master/docs/comparison
-- PostCSS http://cssnext.io/usage/
-- https://github.com/jxnblk/repng
-- https://reactjsnews.com/isomorphic-react-in-real-life
-- http://immutablecss.com/
+- http://cssnext.io/usage/
+- Pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
+- This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
 
 # TALKS
 - https://vimeo.com/116209150
@@ -201,23 +202,16 @@ http://cssnext.io/
 - http://coveo.github.io/vapor/components/
 - https://purecss.io/buttons/
 
-# Shadow DOM and Web components
+# Future
+## Shadow DOM and Web components
 - https://github.com/skatejs/skatejs
 - https://github.com/zeit/next.js/issues/22
 - https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom
 - https://github.com/Wildhoney/ReactShadow
-
-# CSS next
-- http://postcss.parts
-- http://cssnext.io
-
-# Other ideas
+## Other Languages and libraries
 - https://vuejs.org
 - React Native
 - https://github.com/webyak/react-static-plate
-
-# Animation libraries
-- https://github.com/joshwcomeau/react-flip-move
 
 # Tools
 http://staxmanade.com/CssToReact/
