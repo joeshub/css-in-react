@@ -19,8 +19,9 @@ export default class App extends Component {
   }
 
   updateTotal (price, inCart) {
+    const newTotal = inCart ? this.state.totalPrice + price : this.state.totalPrice - price
     this.setState({
-      totalPrice: inCart ? this.state.totalPrice + price : this.state.totalPrice - price
+      totalPrice: parseFloat(newTotal.toFixed(2))
     })
   }
 
