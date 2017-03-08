@@ -1,0 +1,15 @@
+@import url("./variables.css");
+
+:global .nav .btn {
+  right: 20px;
+  left: auto;
+}
+
+body {
+  background: var(--primary-color-lighter) !important;
+}
+
+:global .video_items {
+  background: var(--primary-color-lighter) !important;
+}
+

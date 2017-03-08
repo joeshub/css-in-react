@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
-import { Nav } from '../../public/external/Nav'
+// import Nav here
 
+import './components/main.css'
 import '../../public/css/reset.css'
 import '../../public/css/app.css'
 
@@ -21,17 +22,17 @@ export default class App extends Component {
   }
 
   updateTotal (price, inCart) {
+    const newTotal = inCart ? this.state.totalPrice + price : this.state.totalPrice - price
     this.setState({
-      totalPrice: inCart ? this.state.totalPrice + price : this.state.totalPrice - price
+      totalPrice: parseFloat(newTotal.toFixed(2))
     })
   }
 
   render () {
     const { totalPrice, confirmed } = this.state
-
     return (
       <div>
-        <Nav />
+        { /* render Nav here */ }
         <header className="header">
           <h1 className="header_logo"><span>Festival Store</span></h1>
           <h2 className="header_title">New Videos This Week</h2>

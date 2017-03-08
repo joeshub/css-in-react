@@ -1,0 +1,12 @@
+@import url("./variables.css");
+
+/* add global rule here */
+
+/*body {
+  background: var(--primary-color-lighter) !important;
+}
+
+:global .video_items {
+  background: var(--primary-color-lighter) !important;
+}*/
+

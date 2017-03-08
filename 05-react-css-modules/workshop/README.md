@@ -2,28 +2,40 @@
 
 ## 1. Add the new global nav button to the header
 
-A UX team has created a new global nav component for everyone to use. We have been asked to add this new Nav button to our checkout page by Product. Find the component in /public/Nav/Nav.js and import it into App.js Then render Nav in App.js just before the header section.
+We have been asked to add the company's new global Nav component to our page. Find the Nav component in /public/external/Nav.js and import it into App.js and render it just before the header section.
 
-## 2. Examine nav.css and button.css
+## 2. Why did our header color change?
 
-Notice the updated header! Open up /public/Nav/nav.css and look at the classes. We see a .header class and a .btn class
-Since both Nav and App write to the global .header class, Nav has updated the background-color of header in our app.
+Examine /public/external/nav.css and components/Button/button.css Can you see why this happened?
 
-Now lets' look at /components/Button/buttons.css and notice our .btn class, Notice that nav.css also uses a .btn class. But since we used CSS Modules to scope our button css, Nav's styles did not overwrite any of our .btn styles, and vice versa.
+## 3. Did Nav also have a side effect on our buttons?
 
-## 3. Write global CSS in button.css to style the Nav button.
+Looking carefully at nav.css and button.css do you see shared class names?
 
-Inside of /components/Button/buttons.css add a new global rule that makes the nav button 100 pixels wide. Hint: the syntax for global rules in css-modules looks like this
+## 4. Move the Nav menu button to the right
 
+Inside of components/main.css write a new global rule to move Nav's .btn to the right side. Hint: the syntax for global rules in css-modules looks like this 
+
+```css
 :global .foo {}
+```
 
-## 4. Apply new colors
+## 5. Apply new color theme
 
-We have a new set of colors to apply to the site also from the marketing team. Luckily we have already extracted our colors for this project. Open up the variables.css and update these colors. You should be able to copy and paste.
+Design has updated our brand's look. They sent us new primary and secondary colors. Luckily we've already extracted all colors into the variables.css file. Update these colors in that file.
 
+```css
   --primary-color-dark: #8E5E8F;
   --primary-color-light: #E699E8;
-  --primary-color-light-20: #8E5E8F;
+  --primary-color-lighter: #8E5E8F;
   --secondary-color-dark: #55D750;
   --secondary-color-light: #71DE6E;
+```
 
+Now uncomment the 2 commented out rules in main.css to finalize our theme change. 
+
+## 6. Try extract-text-plugin and weigh in
+
+Stop the server by hitting ctrl+c a couple of times, then run 'npm run build'. Take a look at the page again, and notice that now we have an actual css file for this workshop which is loaded in the head that looks like this <link href="/react-css-modules/workshop.css" rel="stylesheet">
+
+Name some pros and some cons of extracting our CSS out of JS into CSS files?

@@ -1,10 +1,20 @@
 :root {
   --white: #fff;
-  --primary-color-dark: #07314d;
+
+  /* current colors */
+  /*--primary-color-dark: #07314d;
   --primary-color-light: #336086;
-  --primary-color-light-20: rgba(71, 59, 180, 0.20);
+  --primary-color-lighter: rgba(71, 59, 180, 0.20);
   --secondary-color-dark: #ec4800;
-  --secondary-color-light: #f98d00;
+  --secondary-color-light: #f98d00;*/
+
+  /* new colors */
+  --primary-color-dark: #8E5E8F;
+  --primary-color-light: #E699E8;
+  --primary-color-lighter: #8E5E8F;
+  --secondary-color-dark: #55D750;
+  --secondary-color-light: #71DE6E;
+
   --gray-dark: #848484;
   --gray-light: #bebebe;
   --gray-lighter: #E8E8E7;
@@ -19,3 +29,6 @@
   --button-action-bg-color: var(--secondary-color-dark);
   --button-action-fg-color-hover: var(--secondary-color-light);
 }
+
+
+

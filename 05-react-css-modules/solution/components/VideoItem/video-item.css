@@ -10,6 +10,8 @@
   align-items: center;
   box-sizing: border-box;
   padding-right: 20px;
+  box-shadow: 1px 9px 20px 12px rgba(49, 49, 49, 0.17);
+
 }
 .video_item:last-child {
   border-bottom-width: 0;

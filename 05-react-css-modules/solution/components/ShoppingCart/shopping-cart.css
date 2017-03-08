@@ -27,7 +27,7 @@
 
 .confirmed.shopping_cart {
   height: 450px;
-  background-color: var(--primary-color-light-20);
+  background-color: var(--primary-color-lighter);
 }
 
 .cart_title {
