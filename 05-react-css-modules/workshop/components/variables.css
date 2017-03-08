@@ -1,0 +1,24 @@
+:root {
+  --white: #fff;
+  --primary-color-dark: #8E5E8F;
+  --primary-color-light: #E699E8;
+  --primary-color-light-20: #8E5E8F;
+  --secondary-color-dark: #55D750;
+  --secondary-color-light: #71DE6E;
+  --gray-dark: #848484;
+  --gray-light: #bebebe;
+  --gray-lighter: #E8E8E7;
+
+  --button-bg-color: var(--primary-color-dark);
+  --button-fg-color: var(--white);
+  --button-bg-color-hover: var(--primary-color-light);
+
+  --button-disabled-fg-color: var(--gray-dark);
+  --button-disabled-bg-color: var(--gray-light);
+
+  --button-action-bg-color: var(--secondary-color-dark);
+  --button-action-fg-color-hover: var(--secondary-color-light);
+}
+
+
+

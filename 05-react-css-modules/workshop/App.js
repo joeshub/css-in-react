@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { VideoItem, ShoppingCart } from './components/index'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
+import { Nav } from '../../public/external/Nav'
 
 import '../../public/css/reset.css'
 import '../../public/css/app.css'
@@ -30,6 +31,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <Nav />
         <header className="header">
           <h1 className="header_logo"><span>Festival Store</span></h1>
           <h2 className="header_title">New Videos This Week</h2>

@@ -1,0 +1,32 @@
+/* button */
+@import url("../variables.css");
+
+.btn {
+  display: inline-block;
+  outline: none;
+  text-align: center;
+  font: bold 15px helvetica;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+  color: var(--button-fg-color);
+  background-color: var(--button-bg-color);
+  user-select: none;
+  transition: all 120ms;
+}
+
+.btn:hover {
+  background-color: var(--button-bg-color-hover);
+}
+
+.btn.depressed,
+.btn.disabled,
+.btn.disabled:hover {
+  color: var(--button-disabled-fg-color);
+  background-color: var(--button-disabled-bg-color);
+}
+
+.btn.disabled {
+  cursor: auto;
+  pointer-events: none;
+}
