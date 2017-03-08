@@ -179,7 +179,7 @@
 - http://survivejs.com/blog/glamor-interview/
 - http://hugogiraudel.com/2015/06/18/styling-react-components-in-sass/
 - http://alves.im/blog/styled-components.html
-- https://medium.com/@jamiedixon/styled-components-production-patterns-c22e24b1d896#.mtmlfdidt
+- https://medium.com/@jamiedixon/styled-components-production-patterns-c22e24b1d896
 - https://medium.com/maintainable-react-apps/journey-to-enjoyable-maintainable-styling-with-react-itcss-and-css-in-js-632cfa9c70d6
 - https://github.com/zeit/next.js/issues/22
 - http://glenmaddern.com/articles/interoperable-css
