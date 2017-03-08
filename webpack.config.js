@@ -64,7 +64,7 @@ module.exports = {
     path: path.join(__dirname),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: 'http://' + devServer.host  + ':' + devServer.port + '/'
+    publicPath: '/'
   },
   resolve: {
     alias: {
@@ -86,7 +86,7 @@ module.exports = {
         include: [ cssModulesPath ],
         use: [
           'style-loader',
-          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss-loader'
         ]
       },
