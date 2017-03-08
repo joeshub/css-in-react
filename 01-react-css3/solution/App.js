@@ -4,8 +4,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
 import './app.css'
 
-import { Nav } from '../../public/external/Nav'
-
 export default class App extends Component {
 
   state = {
@@ -31,7 +29,6 @@ export default class App extends Component {
 
     return (
       <div>
-        <Nav />
         <header className="header">
           <h1 className="header_logo"><span>Festival Store</span></h1>
           <h2 className="header_title">New Videos This Week</h2>
