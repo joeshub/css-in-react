@@ -109,6 +109,16 @@
 - Pros of inline css https://medium.com/@pioul/modular-css-with-react-61638ae9ea3e#.vj9fphdxt
 - This comes the closest to what the "ultimate" solution likely is: Shadow DOM.
 
+# Helper Frameworks
+- https://github.com/gka/chroma.js
+- https://github.com/qix-/color
+- https://github.com/cuth/postcss-pxtorem
+- https://simplaio.github.io/rucksack/
+- https://github.com/markgoodyear/postcss-vertical-rhythm
+- https://github.com/johnotander/immutable-css
+- https://github.com/ben-eb/cssnano
+
+
 # TALKS
 - https://vimeo.com/116209150
 - https://youtu.be/7rDsRXj9-cU?t=1573 
@@ -133,6 +143,7 @@
 - https://youtu.be/vpNKUYSeT7g?t=356
 - https://youtu.be/84VZ1BHMkUA?t=80
 - https://youtu.be/0aBv8dsZs84?t=1060
+- https://vimeo.com/187454104
 
 # READS
 - http://typestyle.io/#/why
@@ -167,7 +178,8 @@
 - http://maintainablecss.com/chapters/introduction/
 - http://survivejs.com/blog/glamor-interview/
 - http://hugogiraudel.com/2015/06/18/styling-react-components-in-sass/
-- https://vimeo.com/187454104
+- http://alves.im/blog/styled-components.html
+- https://medium.com/@jamiedixon/styled-components-production-patterns-c22e24b1d896#.mtmlfdidt
 - https://medium.com/maintainable-react-apps/journey-to-enjoyable-maintainable-styling-with-react-itcss-and-css-in-js-632cfa9c70d6
 - https://github.com/zeit/next.js/issues/22
 - http://glenmaddern.com/articles/interoperable-css
@@ -184,7 +196,7 @@
 - https://www.w3.org/People/Raggett/book4/ch02.html
 - https://www.viget.com/articles/css-squareoff
 - http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf
-
+- https://hackernoon.com/i-swore-never-to-use-css-in-js-here-are-6-reasons-why-i-was-wrong-541fe3dfdeb7
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint
 - https://github.com/react-bootstrap/react-bootstrap/
