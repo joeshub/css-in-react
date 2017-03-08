@@ -21,13 +21,16 @@ Learn the top techniques for using CSS in React
 07. [Styled Components](https://github.com/styled-components/styled-components)
 
 ## How this project is organized
+
 ### Lessons
 - Each folder contains a lesson for learning the basics of that framework using a button.
+
 ### Workshops
 - Some folders folder also contains a workshop with challenges explained in the README
 - Currently there are workshops for:
   - Radium
   - React CSS Modules with PostCSS
   - Styled Components
+
 ### Solutions
 - Workshops have a separate solutions complete with code and implementation steps in the README
