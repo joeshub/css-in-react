@@ -2,11 +2,26 @@ const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const settings = require('./scripts/settings.js')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+const production = process.env.NODE_ENV === 'production'
+const settings = require('./scripts/settings.js')
 const devServer = settings.devServer
 const basePath = path.join(__dirname)
 const cssModulesPath = path.resolve(__dirname, '05-react-css-modules')
+
+let cssModulesLoaders = [
+  'style-loader',
+  'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+  'postcss-loader'
+]
+
+if (production) {
+  cssModulesLoaders = ExtractTextPlugin.extract([
+    'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+    'postcss-loader'
+  ])
+}
 
 function isDirectory (dir) {
   return fs.lstatSync(dir).isDirectory()
@@ -55,6 +70,10 @@ const webpackPlugins = [
   new webpack.NoEmitOnErrorsPlugin()
 ]
 
+if (production) {
+  webpackPlugins.push(new ExtractTextPlugin('[name].css'))
+}
+
 module.exports = {
   devServer: devServer,
   devtool: 'cheap-module-eval-source-map',
@@ -84,11 +103,7 @@ module.exports = {
       {
         test: /\.s?css$/,
         include: [ cssModulesPath ],
-        use: [
-          'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss-loader'
-        ]
+        use: cssModulesLoaders
       },
       {
         test: /\.css$/,
