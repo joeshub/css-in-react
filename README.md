@@ -2,8 +2,8 @@
 Learn the top techniques for using CSS in React
 
 ## Requirements
-* [node](https://nodejs.org/en/download/releases/) - version 6.9.5
-* [yarn](https://yarnpkg.com) or npm - ``npm i -g yarn``
+* [node](https://nodejs.org/en/download/releases/) - version 6
+* [yarn](https://yarnpkg.com) or npm
 
 ## Usage
 1. Fork and clone this repo
