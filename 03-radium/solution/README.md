@@ -14,11 +14,13 @@ return (
 ```
 
 ## 2. Uncomment this line inside app.css to import our global stylesheet into App.js
+
 ```css
 @import url("../../public/css/app.css");
 ```
 
 ## 3. Add the ButtonBuyNow component to the ShoppingCart.js component
+
 ```javascript
 import { ButtonBuyNow } from './index'
 
@@ -27,6 +29,7 @@ import { ButtonBuyNow } from './index'
 ```
 
 ## 4. Apply custom styling to ButtonBuyNow.js
+
 ```javascript
 const customStyles = {
   btn: {
@@ -39,7 +42,10 @@ const customStyles = {
 }
 ```
 
-## 5. Extra credit - Pass these props to ButtonBuyNow inside of ShoppingCart.js (onClick and disabled). The first one is to go to the confirmation page, and the second one is to disable the button if the cart is empty.
+## 5. Extra credit - Pass these props to ButtonBuyNow inside of ShoppingCart.js 
+(onClick and disabled). The first one is to go to the confirmation page, and 
+the second one is to disable the button if the cart is empty.
+
 ```javascript
 <ButtonBuyNow 
   onClick={ this.props.onBuy }

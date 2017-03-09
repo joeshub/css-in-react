@@ -9,11 +9,13 @@ import { Nav } from '../../public/external/Nav'
 ```
 ## 2. Why did our header color change?
 
-Nav has inadvertently changed the background-color of header in our app because both Nav and App write to the global .header class
+Nav has inadvertently changed the background-color of header 
+in our app because both Nav and App write to the global .header class
 
 ## 3. Did Nav also have a side effect on our buttons?
 
-This is because we used CSS Modules, Nav's styles did not overwrite any of our .btn styles, and vice versa.
+No, we were safe! This is because we used CSS Modules, Nav's styles 
+did not overwrite any of our .btn styles, and vice versa.
 
 ## 4. Move the Nav menu button to the right
 
@@ -25,7 +27,8 @@ This is because we used CSS Modules, Nav's styles did not overwrite any of our .
 ```
 ## 5. Apply new color theme
 
-We use PostCSS in this workshop which gives us the ability to safely use CSS custom properties to create and use variables, amongst other things.
+We use PostCSS in this workshop which gives us the ability to safely 
+use CSS custom properties to create and use variables, amongst other things.
 
 ```css
   --primary-color-dark: #8E5E8F;
