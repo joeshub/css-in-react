@@ -197,6 +197,10 @@
 - https://www.viget.com/articles/css-squareoff
 - http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf
 - https://hackernoon.com/i-swore-never-to-use-css-in-js-here-are-6-reasons-why-i-was-wrong-541fe3dfdeb7
+- http://mxstbr.blog/2016/11/inline-styles-vs-css-in-js/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint
 - https://github.com/react-bootstrap/react-bootstrap/
