@@ -1,6 +1,6 @@
 /* Custom styling for Play Now Button */
 
-@import url("../variables.css");
+@import url("../../variables.css");
 
 .button_play_now {
   background-color: var(--secondary-color-dark);

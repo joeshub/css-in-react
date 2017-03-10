@@ -21,7 +21,7 @@ see shared class names?
 
 ## 4. Move the Nav menu button to the right
 
-Inside of components/main.css write a new global rule 
+Inside of global-styles.css write a new global rule 
 to move Nav's .btn to the right side. Hint: the 
 syntax for global rules in css-modules looks like this 
 
@@ -44,7 +44,7 @@ variables.css file. Update these colors in that file.
   --secondary-color-light: #71DE6E;
 ```
 
-Now uncomment the 2 commented out rules in main.css 
+Now uncomment the 2 commented out rules in global-styles.css 
 to finalize our theme change. 
 
 ## 6. Try extract-text-plugin and weigh in

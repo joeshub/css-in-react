@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { videoListData } from '../../public/API'
 // import Nav here
 
-import './components/main.css'
+import './global-styles.css'
 import '../../public/css/reset.css'
 import '../../public/css/app.css'
 

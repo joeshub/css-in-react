@@ -1,6 +1,6 @@
 /* shopping cart */
 
-@import url("../variables.css");
+@import url("../../variables.css");
 
 .shopping_cart {
   display: flex;
