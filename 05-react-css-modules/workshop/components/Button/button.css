@@ -1,5 +1,5 @@
 /* button */
-@import url("../../variables.css");
+@import url("../../theme.css");
 
 .btn {
   display: inline-block;

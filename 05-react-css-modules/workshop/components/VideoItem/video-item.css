@@ -1,6 +1,6 @@
 /* video-item */
 
-@import url("../../variables.css");
+@import url("../../theme.css");
 
 .video_item {
   background-color: var(--white);

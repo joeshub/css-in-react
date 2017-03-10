@@ -1,6 +1,6 @@
 /* Custom styling for Buy Now Button */
 
-@import url("../../variables.css");
+@import url("../../theme.css");
 
 .button_buy_now {
   background-color: var(--button-action-bg-color);

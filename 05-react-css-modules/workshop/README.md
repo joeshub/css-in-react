@@ -34,7 +34,7 @@ syntax for global rules in css-modules looks like this
 Design has updated our brand's look. They sent us 
 new primary and secondary colors. Luckily we've 
 already extracted all colors into the 
-variables.css file. Update these colors in that file.
+theme.css file. Update these colors in that file.
 
 ```css
   --primary-color-dark: #8E5E8F;
