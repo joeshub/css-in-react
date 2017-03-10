@@ -1,5 +1,4 @@
 /* global app specific styles */
-
 body {
   background-color: #050c0e;
   background-image: url(/img/bg.jpg);
@@ -17,7 +16,7 @@ body {
   }
 }
 
-body, input, button {  
+body, input, button {
   font-family: helvetica;
 }
 
@@ -30,7 +29,6 @@ body, a {
 }
 
 /* header section */
-
 .header {
   display: flex;
   margin: 0 auto;
@@ -80,7 +78,6 @@ body, a {
 }
 
 /* order section */
-
 @media screen and (min-width: 700px) {
   .store {
     max-width: 900px;
@@ -88,7 +85,8 @@ body, a {
   }
 }
 
-/* video items */
+/* video_items */
+/* copy these 2 rules */
 .video_items {
   background-color: rgba(71, 59, 180, 0.20);
   transition: all 600ms ease;
@@ -102,6 +100,17 @@ body, a {
     padding: 50px 32px;
   }
 }
+/* end copy 2 rules */
+
+/* footer section */
+.footer {
+  text-align: center;
+  padding: 40px 0 80px;
+  font-size: 12px;
+  color: #264153;
+}
+
+
 
 /* animate removing store content */
 .closeStoreContent-enter {
@@ -131,13 +140,4 @@ body, a {
   opacity: 0.01;
   padding: 0;
   transition: all 500ms ease;
-}
-
-/* footer section */
-
-.footer {
-  text-align: center;
-  padding: 40px 0 80px;
-  font-size: 12px;
-  color: #264153;
 }

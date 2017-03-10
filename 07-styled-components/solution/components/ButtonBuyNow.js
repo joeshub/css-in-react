@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Button } from './index'
 
 const StyledButtonBuyNow = styled(Button)`
-  background-color: ${props => props.disabled ? '#bebebe' : '#ec4800'};
+  background-color: ${props => props.disabled ? props.theme.grayLight : props.theme.secondaryColor};
   width: 110px;
   &:hover {
-    background-color: #f98d00;
+    background-color: ${(props) => props.theme.secondaryColorLight};
   }
 `
 

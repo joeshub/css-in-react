@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Icon } from './Icon'
 
 export const StyledButton = styled.button`
-  display: inline-block;
+  display: ${props => props.icon ? 'flex' : 'inline-block'};
   align-items: ${props => props.icon ? 'center' : 'initial'};
   justify-content: ${props => props.icon ? 'center' : 'initial'};
   outline: none;
@@ -13,17 +13,18 @@ export const StyledButton = styled.button`
   border: 0;
   cursor: ${props => props.disabled ? 'auto' : 'pointer'};
   pointer-events: ${props => props.disabled ? 'none' : 'auto'};
-  color: ${props => props.disabled || props.depressed ? '#848484' : '#fff'};
-  background-color: ${props => props.disabled || props.depressed ? '#bebebe' : '#07314d'};
+  color: ${props => props.disabled || props.depressed ? props.theme.gray : props.theme.white};
+  background-color: ${props => props.disabled || props.depressed ? props.theme.grayLight : props.theme.primaryColor};
   user-select: none;
   transition: all 120ms;
   &:hover {
-    background-color: ${props => props.disabled || props.depressed ? '#bebebe' : '#336086'};
+    background-color: ${props => props.disabled || props.depressed ? props.theme.grayLight : props.theme.primaryColorLight};
   }
 `
 
 export const Button = ({
   icon,
+  iconSize,
   classNames,
   customStyles = {},
   depressed,
@@ -43,7 +44,7 @@ export const Button = ({
       { ...otherProps }
     >
       { children }
-      {icon && !depressed && <Icon name={ icon } /> }
+      {icon && !depressed && <Icon name={ icon } iconSize={ iconSize } /> }
     </StyledButton>
   )
 

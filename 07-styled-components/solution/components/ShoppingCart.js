@@ -12,9 +12,10 @@ const Cart = styled.aside`
   bottom: 0;
   padding:22px;
   box-sizing: border-box;
-  background-color: ${props => props.confirmed ? 'rgba(71, 59, 180, 0.20)' : '#07314d'};
-  color: #fff;
-  transition: all 300ms ease 200ms;
+  background-color: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.white};
+  overflow: hidden;
+  transition: all ${props => props.theme.cartAnimationSpeed}ms ${props => props.theme.cartAnimationFunc} ${props => props.theme.cartAnimationDelay}ms;
   @media screen and (min-width: 700px) {
     height: ${props => props.confirmed ? '350px' : '80px'};
     position: inherit;

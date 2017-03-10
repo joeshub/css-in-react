@@ -4,8 +4,9 @@ import numeral from 'numeral'
 import { ButtonAddToCart } from './index'
 
 const Item = styled.li`
-  background-color: #fff;
-  border-bottom: 1px solid #E8E8E7;
+  background-color: ${props => props.theme.white};
+  border-bottom: 1px solid ${props => props.theme.grayLighter};
+  box-shadow: 0 0 20px 0 ${props => props.theme.grayLight};
   display: flex;
   height: 82px;
   align-items: center;
@@ -16,6 +17,7 @@ const Item = styled.li`
   }
   @media screen and (min-width: 700px) {
     border: 0;
+    background-color: ${props => props.theme.grayLighter};
     height: auto;
     flex-flow: column;
     width: 23%;
@@ -79,12 +81,12 @@ const ItemDetails = styled.div`
 
 const ItemPrice = styled.span`
   margin-top: 6px;
-  color: #f98d00;
+  color: ${props => props.theme.secondaryColorLight};
   font-weight: normal;
   @media screen and (min-width: 700px) {
     margin-top: 12px;
     padding: 5px;
-    border: 1px solid #f98d00;
+    border: 1px solid ${props => props.theme.secondaryColorLight};
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
@@ -94,7 +96,7 @@ const ItemPrice = styled.span`
 const ItemMeta = styled.span`
   font-size: 11px;
   font-weight: normal;
-  color: #ccc;
+  color: ${props => props.theme.grayLight};;
   padding-top: 6px;
   @media screen and (min-width: 700px) {
     padding-top: 10px;

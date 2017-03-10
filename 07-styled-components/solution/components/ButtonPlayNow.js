@@ -3,22 +3,14 @@ import styled from 'styled-components'
 import { Button } from './index'
 
 const StyledButtonPlayNow = styled(Button)`
-  background-color: #ec4800;
+  background-color: ${(props) => props.theme.secondaryColor};
   width: 110px;
+  height: 50px;
+  font-size: 18px;
   &:hover {
-    background-color: #f98d00;
+    background-color: ${(props) => props.theme.secondaryColorLight};
   }
 `
-
-const customStyles = {
-  btn: {
-    backgroundColor: '#ec4800',
-    width: '110px',
-    ':hover': {
-      backgroundColor: '#f98d00'
-    }
-  }
-}
 
 export class ButtonPlayNow extends Component {
 
@@ -26,7 +18,7 @@ export class ButtonPlayNow extends Component {
     return (
       <StyledButtonPlayNow 
         icon="play"
-        customStyles={ customStyles }
+        iconSize={ 2 }
         { ...this.props }
       >
       </StyledButtonPlayNow>
