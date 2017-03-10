@@ -29,6 +29,8 @@ body, a {
 }
 
 /* header section */
+
+/* START header element styles */
 .header {
   display: flex;
   margin: 0 auto;
@@ -44,6 +46,7 @@ body, a {
     height: 166px;
   }
 }
+/* END header element styles */
 
 .header_logo {
   background-image: url(/img/logo.png);

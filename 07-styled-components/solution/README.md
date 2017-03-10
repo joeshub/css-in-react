@@ -1,37 +1,68 @@
 # Styled Components Workshop
 
-## 1. Replce the video_items unordered list in App.js with a new Styled Component
+## 1. Import ThemeProvider from styled-components
 
-First Uncomment line 6, to import styled from 'styled-components'
+```javascript
+import { ThemeProvider } from 'styled-components'
+```
 
-Write the code for a new Styled Component on top of App.js on line 11 
-and call it VideoItems. Here's the code to get you started:
+## 2. Pass a theme to ThemeProvider
+```javascript
+import theme from './theme'
 
-const VideoItems = styled.ul``
+<ThemeProvider theme={ theme }>
+```
 
-Note the `back ticks` preceded by styled.ul, this is the special sauce 
-in Styled Components, known in ES6 as tagged template literals.
+## 3. Extract the header section into its own component
+```javascript
+export const Header = () => (
+  <header className="header">
+    <h1 className="header_logo"><span>Festival Store</span></h1>
+    <h2 className="header_title">New Videos This Week</h2>
+  </header>
+)
+```
 
-## 2. Replace the UL element with the new VideoItems component
+## 4. Convert header into a Styled Component
 
-Still inside App.js find <ul className="video_items"></ul> and replace
-it with the <VideoItems> component you just created. Save App.js and look
-at the page in the browser. We've still have the same elements but now
-we've lost the CSS rules from the .video_items class. So let's add those.
+```javascript
+const StyledHeader = styled.div`
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  @media screen and (min-width: 700px) {
+      height: 166px;
+  }
+`
 
-## 3. Migrate CSS rules from .video_items to VideoItems
+<StyledHeader className="header">
+  <h1 className="header_logo"><span>Festival Store</span></h1>
+  <h2 className="header_title">New Videos This Week</h2>
+</StyledHeader>
+```
 
-Open up /public/css/app.css and find the /* video_items */ section.
-Copy the 2 .video_items rules. Open App.js and paste those rules inside the
-back ticks of the VideoItems component we created in step 1.
+Notes: 
+* The `back ticks` preceded by styled.div, this is the special sauce in Styled Components, known in ES6 as tagged template literals.
+* Styled Components uses composition, so your class names are actually just functions that return styled html elements. This is why you don't need to have class declarations.
 
-Think of this component as your .video_items class declarations. So, you'll just 
-delete all the class declaration logic and keep everything else in between.
-e.g. remove .video_items {} and keep its contents.
+## 5. Change h1 and h2 to Logo and HeaderTitle
 
-Now if you go back to your web browser everything should be back to normal. Inspect
-the UL element. Notice the new 2 generated classes on the element.
+To save time we have already created these 2 components for you but you can go through them to learn how they work if you like.
 
-Also tagged template 
-literals are nice that you can have line breaks in them. Altohou if you have 
-an error in your tagged template literal, you won't see an error in the console.
+```javascript
+<StyledHeader>
+  <Logo title="Festival Store" />
+  <HeaderTitle>New Videos This Week</HeaderTitle>
+</StyledHeader>
+```
+
+## 6. Change color: #fff to use the black color from ThemeProvide
+
+```javascript
+color: ${props => props.theme.black};
+```
