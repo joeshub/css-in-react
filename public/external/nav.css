@@ -78,6 +78,9 @@
 .nav.showMenu .menu li:nth-child(3) {
   transition-delay: 300ms;
 }
+.nav.showMenu .menu li:nth-child(4) {
+  transition-delay: 350ms;
+}
 
 .nav.showMenu .menu li:first-child {
   margin-top: 50px;
