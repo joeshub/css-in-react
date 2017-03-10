@@ -32,3 +32,6 @@ e.g. remove .video_items {} and keep its contents.
 Now if you go back to your web browser everything should be back to normal. Inspect
 the UL element. Notice the new 2 generated classes on the element.
 
+Also tagged template 
+literals are nice that you can have line breaks in them. Altohou if you have 
+an error in your tagged template literal, you won't see an error in the console.

@@ -10,7 +10,7 @@ const Cart = styled.aside`
   width: 100%;
   position: sticky;
   bottom: 0;
-  padding:22px;
+  padding: 22px;
   box-sizing: border-box;
   background-color: ${props => props.theme.primaryColor};
   color: ${props => props.theme.white};
@@ -31,9 +31,11 @@ const CartTitle = styled.div`
   font-weight: ${props => props.confirmed ? 'normal' : 'bold'};
   align-items: ${props => props.confirmed ? 'center' : 'auto'};
   text-align: ${props => props.confirmed ? 'center' : 'auto'};
+  margin-top: ${props => props.confirmed ? '-12px' : '0'};
   line-height: 2;
   @media screen and (min-width: 700px) {
     flex-grow: 0;
+     margin-top: 0;
   }
 `
 
@@ -45,9 +47,12 @@ const CartTotal = styled.span`
 `
 
 const PlayTitle = styled.h3`
-  margin: 20px auto;
+  margin: 10px auto 40px;
   font-weight: bold;
   font-size: 20px;
+  @media screen and (min-width: 700px) {
+    margin: 20px auto;
+  }
 `
 
 export class ShoppingCart extends Component {

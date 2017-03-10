@@ -8,10 +8,13 @@ export const CustomNav = styled(Nav)`
       right: 20px;
       left: auto;
       border-color: ${theme.black};
-      &:before {
+      &::before {
         border-color: ${theme.black};
       }
-      &:hover, &:hover:before {
+      &:hover {
+        border-color: ${theme.primaryColorLight};
+      }
+      &:hover::before {
         border-color: ${theme.primaryColorLight};
       }
     }
