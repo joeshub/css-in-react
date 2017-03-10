@@ -83,13 +83,13 @@
   margin-top: 50px;
 }
 
-.menu li > a {
+.menu a {
   color: #fff;
   text-decoration: none;
   line-height: 1.5;
   display: block;
 }
 
-.menu li > a:hover {
+.menu a:hover {
   color: #E699E8;
 }
