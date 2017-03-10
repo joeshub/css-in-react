@@ -1,4 +1,4 @@
-# CSS in React
+# 🍭 CSS in React
 Learn the top techniques for using CSS in React by example.
 
 ## Requirements
