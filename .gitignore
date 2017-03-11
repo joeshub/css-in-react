@@ -4,3 +4,5 @@ npm-debug.log*
 **/bundle.*
 **/build
 public/index.html
+*.iml
+.idea
