@@ -118,8 +118,7 @@
 - https://github.com/johnotander/immutable-css
 - https://github.com/ben-eb/cssnano
 
-
-# TALKS
+# Talks related to CSS in React
 - https://vimeo.com/116209150
 - https://youtu.be/7rDsRXj9-cU?t=1573 
 - https://youtu.be/NoaxsCi13yQ?t=165
@@ -145,7 +144,7 @@
 - https://youtu.be/0aBv8dsZs84?t=1060
 - https://vimeo.com/187454104
 
-# READS
+# References
 - http://typestyle.io/#/why
 - http://fela.js.org/docs/advanced/RendererConfiguration.html
 - https://github.com/FormidableLabs/radium/issues/389
@@ -200,6 +199,8 @@
 - http://mxstbr.blog/2016/11/inline-styles-vs-css-in-js/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+- https://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
+- https://github.com/hellofresh/css-in-js-perf-tests
 
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint
