@@ -22,7 +22,7 @@ export class Nav extends Component {
       <nav className={ navClassNames }>
         <button className="btn" onClick={ this.toggleNav }></button>
         <ul className="menu">
-          <li><a href="">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="">Purchases</a></li>
           <li><a href="">Profile</a></li>
           <li><a href="">Log out</a></li>
