@@ -32,7 +32,7 @@ export class ButtonAddToCart extends Component {
     
     return (
       <StyledButtonAddToCart 
-        icon="add"
+        iconName="add"
         depressed={ depressed }
         disabled={ disabled }
         onClick={ this.onButtonClicked }

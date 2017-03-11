@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { Icon } from './Icon'
 
 export const StyledButton = styled.button`
-  display: ${props => props.icon ? 'flex' : 'inline-block'};
-  align-items: ${props => props.icon ? 'center' : 'initial'};
-  justify-content: ${props => props.icon ? 'center' : 'initial'};
+  display: inline-block;
+  align-items: ${props => props.iconName ? 'center' : 'initial'};
+  justify-content: ${props => props.iconName ? 'center' : 'initial'};
   outline: none;
   text-align: center;
   font: bold 15px helvetica;
@@ -23,10 +23,8 @@ export const StyledButton = styled.button`
 `
 
 export const Button = ({
-  icon,
+  iconName,
   iconSize,
-  classNames,
-  customStyles = {},
   depressed,
   disabled,
   onClick,
@@ -38,13 +36,12 @@ export const Button = ({
     <StyledButton 
       disabled={ disabled }
       depressed={ depressed }
-      className={ classNames }
-      icon={ icon }
+      iconName={ iconName }
       onClick={ onClick }
       { ...otherProps }
     >
       { children }
-      {icon && !depressed && <Icon name={ icon } iconSize={ iconSize } /> }
+      {iconName && !depressed && <Icon iconName={ iconName } iconSize={ iconSize } /> }
     </StyledButton>
   )
 

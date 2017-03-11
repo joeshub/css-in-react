@@ -10,18 +10,18 @@ const StyledIcon = styled.div`
   margin-left: 6px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(/svg/${props => props.name }.svg);
+  background-image: url(/svg/${props => props.iconName }.svg);
 `
 
 export const Icon = ({
-  name,
+  iconName,
   children,
   ...otherProps
 }) => {
 
   return (
     <StyledIcon 
-      name={ name }
+      iconName={ iconName }
       { ...otherProps }
     >
     </StyledIcon>

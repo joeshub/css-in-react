@@ -17,8 +17,7 @@ export class ButtonPlayNow extends Component {
   render () {
     return (
       <StyledButtonPlayNow 
-        icon="play"
-        iconSize={ 2 }
+        iconName="play"
         { ...this.props }
       >
       </StyledButtonPlayNow>
