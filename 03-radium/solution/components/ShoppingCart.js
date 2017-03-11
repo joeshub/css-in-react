@@ -14,7 +14,8 @@ const shoppingCartStyles = {
   boxSizing: 'border-box',
   backgroundColor: '#07314d',
   color: '#fff',
-  transition: 'all 300ms ease 200ms',
+  overflow: 'hidden',
+  transition: 'all 300ms ease 800ms',
   '@media (min-width: 700px)': {
     height: '80px',
     position: 'inherit',
@@ -43,13 +44,14 @@ const shoppingCartStyles = {
     height: '350px',
     backgroundColor: 'rgba(71, 59, 180, 0.20)',
     '@media (min-width: 700px)': {
-      height: '350px'
+      height: '420px'
     },
     cartTitle: {
       fontWeight: 'normal',
       flexDirection: 'column',
       alignItems: 'center',
-      textAlign: 'center'
+      textAlign: 'center',
+      marginTop: '-30px'
     },
     cartTotal: {
       paddingLeft: '0',
@@ -57,7 +59,7 @@ const shoppingCartStyles = {
       minWidth: 'auto'
     },
     playTitle: {
-      margin: '20px auto',
+      margin: '40px auto 20px',
       fontWeight: 'bold',
       fontSize: '20px'
     }

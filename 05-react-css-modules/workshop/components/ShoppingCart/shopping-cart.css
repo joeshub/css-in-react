@@ -13,7 +13,8 @@
   box-sizing: border-box;
   background-color: var(--primary-color-dark);
   color: var(--white);
-  transition: all 300ms ease 200ms;
+  overflow: hidden;
+  transition: all 300ms ease 800ms;
 }
 
 @media screen and (min-width: 700px) {
@@ -47,6 +48,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: -30px;
 }
 
 .cart_total {
@@ -62,7 +64,7 @@
 }
 
 .play_title {
-  margin: 20px auto;
+  margin: 40px auto 20px;
   font-weight: bold;
   font-size: 20px;
 }
