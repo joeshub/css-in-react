@@ -1,10 +1,14 @@
 # Styled Components Workshop
 
+npm start
+open http://0.0.0.0:3333/styled-components/workshop/
+
 ## 1. Import ThemeProvider from styled-components
 
-Notice we are using ThemeProvider but it hasn't been defined. 
+Notice we are using ThemeProvider but it hasn't been defined. Notice an error on the page as well. Let's fix it.
 
 * Open App.js and import ThemeProvider from styled-components.
+* Nice work, now check the page, there is a new error asking us to pass in a theme to ThemeProvider
 
 ## 2. Pass a theme to ThemeProvider
 
@@ -12,28 +16,29 @@ We now need to pass ThemeProvider a theme. Luckily we have already created a the
 
 * Import theme.js into App.js
 * Next, find below where ThemeProvider is being rendered and pass it the imported 'theme' as a prop.
+* Now check the page again in the browser, the error should be gone but we notice an unstyled header section.
 
 ## 3. Extract the header section into its own component
 
-Next we want to move the header section of our App.js file into a Styled Component. To get you started we've already created a scaffold.
+We will fix the styling in few mintues, but first let's move the header section out of App.js into its own component. To get you started we've already created a scaffold.
 
-* Cut out the enter header section from App.js and paste it into the export section of components/Header.js
-
+* Cut out the entire header section from App.js and paste it into the export section of components/Header.js
 * Next back in App.js render Header where the header tag used to be. You have now extracted out Header into its own component.
 
 ## 4. Convert header into a Styled Component
 
-Notice the header of our app is unstyled. That is because in this workshop we no longer use an external css file that dictates layout. All that has been now imported into globalStyles.js
+Notice the header of our app still works but is still unstyled. That is because in this workshop we no longer uses an external css file that dictates layout. So .header, .header_logo, and .header_title are not defined anywhere. We will need to import those styles into our App. 
 
 * Open up /public/css/app.css
 * Copy the 2 rules for the header element styles
-* Opne up Header.js and paste them in between the two backticks ``
-* Delete the lines that define the .header wrappers
-* Finally still in the export section, swap out the header HTML tag with StyledHeader component we just created
+* Open up Header.js and paste them in between the two backticks ``
+* Delete the 2 the lines that have a .header selector on them.
+* Finally in the export section, swap out the 'header' HTML tag with the 'StyledHeader' component we just created
+* Save this and open up the browser again, You should see styling for the header component!
 
 ## 5. Change h1 and h2 to Logo and HeaderTitle
 
-Next we will render 2 new Styled Components that give us the H1 and H2 tags in Header.js file.
+Next we will render 2 new Styled Components instead of the H1 and H2 tags in Header.js file.
 
 * Find on line 3 that we have imported Logo, and HeaderTitle
 * Change <h1 to <Logo
