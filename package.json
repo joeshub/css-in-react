@@ -47,7 +47,7 @@
     "serve-static": "^1.12.1",
     "style-loader": "^0.13.2",
     "styled-components": "^2.0.0-4",
-    "styletron-react": "^2.5.2",
+    "styletron-react": "^2.5.3",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",

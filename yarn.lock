@@ -5273,9 +5273,9 @@ styletron-core@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/styletron-core/-/styletron-core-2.5.1.tgz#bf9e8aebc41461b81fdd22b1062f6e25862286fd"
 
-styletron-react@^2.5.2:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/styletron-react/-/styletron-react-2.5.2.tgz#0410ef4f1c88c26e042079eaa7aee3303ea562dd"
+styletron-react@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/styletron-react/-/styletron-react-2.5.3.tgz#381a170f65a1519fb474e8b0ab098d2b03201e59"
   dependencies:
     "@types/react" "*"
     styletron-client "^2.5.1"
