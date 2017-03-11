@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-// uncomment this line to import styled components
 import styled, { ThemeProvider } from 'styled-components'
 import { videoListData } from '../../public/API'
 import theme from './theme'

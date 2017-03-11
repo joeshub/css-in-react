@@ -17,8 +17,8 @@ const StyledHeader = styled.div`
   }
 `
 
-export const Header = (props) => 
+export const Header = () => 
   <StyledHeader>
-    <Logo color={ theme.black } width="526" height="42" />
+    <Logo title="Festival Store" color={ theme.black } />
     <HeaderTitle />
   </StyledHeader>

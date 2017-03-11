@@ -42,9 +42,9 @@ export default class App extends Component {
   render () {
     const { totalPrice, confirmed } = this.state
 
-    { /* pass theme to ThemeProvider */ }
+    { /* pass theme to ThemeProvider as a prop called theme */ }
     return (
-      <ThemeProvider theme={ theme }>
+      <ThemeProvider>
         <Wrapper>
           <CustomNav />
           <header className="header">

@@ -40,10 +40,11 @@ const StyledHeader = styled.div`
   }
 `
 
-<StyledHeader className="header">
-  <h1 className="header_logo"><span>Festival Store</span></h1>
-  <h2 className="header_title">New Videos This Week</h2>
-</StyledHeader>
+export const Header = () => 
+  <StyledHeader className="header">
+    <h1 className="header_logo"><span>Festival Store</span></h1>
+    <h2 className="header_title">New Videos This Week</h2>
+  </StyledHeader>
 ```
 
 Notes: 
@@ -55,10 +56,11 @@ Notes:
 To save time we have already created these 2 components for you but you can go through them to learn how they work if you like.
 
 ```javascript
-<StyledHeader>
-  <Logo title="Festival Store" />
-  <HeaderTitle>New Videos This Week</HeaderTitle>
-</StyledHeader>
+export const Header = () => 
+  <StyledHeader>
+    <Logo title="Festival Store" color={ theme.black } />
+    <HeaderTitle>New Videos This Week</HeaderTitle>
+  </StyledHeader>
 ```
 
 ## 6. Change color: #fff to use the black color from ThemeProvide
