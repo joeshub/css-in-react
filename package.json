@@ -1,7 +1,7 @@
 {
   "name": "css-in-react",
   "version": "2.0.0",
-  "description": "Learn to use various CSS in JS frameworks with your React project",
+  "description": "Learn the best CSS in React frameworks by example",
   "author": "Joe Seifi",
   "license": "ISC",
   "scripts": {

@@ -22,8 +22,8 @@ Learn the best frameworks by example
 
 ## How this project is organized
 
-### Lessons
-- Each folder contains a lesson for learning the basics of that framework using a button.
+### Buttons
+- Each folder contains a button example for learning the basics of that framework and to show what features it supports.
 
 ### Workshops
 - Some folders folder also contains a workshop with challenges explained in the README
