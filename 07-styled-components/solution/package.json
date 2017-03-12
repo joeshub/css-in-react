@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "Festival Store - Styled Components",
   "author": "Joe Seifi",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "ssr": "../../node_modules/.bin/babel-node ssr.js"
+  }
 }
