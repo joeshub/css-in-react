@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
-import classnames from 'classnames'
 
 const styles = StyleSheet.create({
   btn: {
@@ -14,17 +13,13 @@ const styles = StyleSheet.create({
     color: '#fff',
     backgroundColor: '#ec4800',
     transition: 'all 300ms',
-  },
-  depressed: {
-    color: '#848484',
-    backgroundColor: '#bebebe',
-  },
-  hover: {
     ':hover': {
       backgroundColor: '#f98d00'
     }
   },
-  hoverDepressed: {
+  depressed: {
+    color: '#848484',
+    backgroundColor: '#bebebe',
     ':hover': {
       backgroundColor: '#bebebe'
     }
@@ -40,17 +35,10 @@ export class Button extends Component {
   })
   
   render () {
-    const normalClassnames = css(styles.btn, styles.hover, styles.hover.depressed)
-    const depressedClassnames = css(styles.depressed, styles.hoverDepressed)
-    const buttonClassNames = classnames(normalClassnames,
-      {
-        [depressedClassnames]: this.state.depressed
-      }
-    )
-
+    const { depressed } = this.state
     return (
       <button 
-        className={ buttonClassNames }
+        className={ css(styles.btn, depressed && styles.depressed) }
         onClick={ this.onButtonClicked } 
         { ...this.props }>
       </button>
