@@ -56,26 +56,27 @@ export default class App extends Component {
               <ReactCSSTransitionGroup
                 transitionName="closeStoreContent"
                 transitionEnterTimeout={ theme.videoAnimationSpeed }
-                transitionLeaveTimeout={ theme.videoAnimationSpeed }>
-              { !confirmed &&
-              <VideoItems>
-              {
-                videoListData.map( ({ id, name, price, photoPath, length, filesize, format }) => {
-                  return <VideoItem 
-                    key={ id }
-                    name={ name }
-                    price={ price }
-                    photoPath={ photoPath }
-                    length={ length }
-                    filesize={ filesize }
-                    format={ format }
-                    updateTotal= { this.updateTotal.bind(this) }
-                    />
-                })
-              }
-              </VideoItems>
-            }
-            </ReactCSSTransitionGroup>
+                transitionLeaveTimeout={ theme.videoAnimationSpeed }
+              >
+                { !confirmed &&
+                  <VideoItems>
+                    {
+                      videoListData.map( ({ id, name, price, photoPath, length, filesize, format }) => {
+                        return <VideoItem
+                          key={ id }
+                          name={ name }
+                          price={ price }
+                          photoPath={ photoPath }
+                          length={ length }
+                          filesize={ filesize }
+                          format={ format }
+                          updateTotal= { this.updateTotal.bind(this) }
+                        />
+                      })
+                    }
+                  </VideoItems>
+                }
+              </ReactCSSTransitionGroup>
             </Main>
             <ShoppingCart 
               totalPrice={ totalPrice }

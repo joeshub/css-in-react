@@ -39,26 +39,27 @@ export default class App extends Component {
             <ReactCSSTransitionGroup
               transitionName="closeStoreContent"
               transitionEnterTimeout={ 500 }
-              transitionLeaveTimeout={ 500 }>
-            { !confirmed &&
-            <ul className="video_items">
-            {
-              videoListData.map( ({ id, name, price, photoPath, length, filesize, format }) => {
-                return <VideoItem 
-                  key={ id }
-                  name={ name }
-                  price={ price }
-                  photoPath={ photoPath }
-                  length={ length }
-                  filesize={ filesize }
-                  format={ format }
-                  updateTotal= { this.updateTotal.bind(this) }
-                  />
-              })
-            }
-            </ul>
-          }
-          </ReactCSSTransitionGroup>
+              transitionLeaveTimeout={ 500 }
+            >
+              { !confirmed &&
+                <ul className="video_items">
+                  {
+                    videoListData.map( ({ id, name, price, photoPath, length, filesize, format }) => {
+                      return <VideoItem
+                        key={ id }
+                        name={ name }
+                        price={ price }
+                        photoPath={ photoPath }
+                        length={ length }
+                        filesize={ filesize }
+                        format={ format }
+                        updateTotal= { this.updateTotal.bind(this) }
+                      />
+                    })
+                  }
+                </ul>
+              }
+            </ReactCSSTransitionGroup>
           </main>
           <ShoppingCart 
             totalPrice={ totalPrice }
