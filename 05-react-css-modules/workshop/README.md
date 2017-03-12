@@ -7,7 +7,7 @@ Nav component to our page. Find the Nav component
 in /public/external/Nav.js and import it into App.js 
 and render it just before the header section.
 
-## 2. Why did our header color change?
+## 2. We just added a global nav button, but the header color has also changed, why is this?
 
 Examine 
 /public/external/nav.css and 

@@ -4,7 +4,8 @@
 
 Notice we have an error. This is because Radium uses plugins to handle things 
 like media queries and keyframe animations. To fix this issue we need to 'wrap' 
-our entire app with the StyleRoot component. Open up App.js to get started.
+our entire app with the StyleRoot component. Open up App.js and import the 
+StyleRoot component from the Radium package and wrap the App component.
 
 ## 2. Import our external global app.css file
 
