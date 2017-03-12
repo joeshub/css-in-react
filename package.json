@@ -6,8 +6,8 @@
   "license": "ISC",
   "scripts": {
     "clean": "find 0* -type d -name build | xargs rm -rf",
-    "start": "node scripts/make-index.js && ./node_modules/.bin/cross-env NODE_ENV=development node scripts/server-all.js",
-    "build": "node scripts/make-index.js && ./node_modules/.bin/cross-env NODE_ENV=production node scripts/server-all.js"
+    "start": "node scripts/make-index.js && ./node_modules/.bin/cross-env NODE_ENV=development node scripts/server.js",
+    "build": "node scripts/make-index.js && ./node_modules/.bin/cross-env NODE_ENV=production node scripts/server.js"
   },
   "devDependencies": {
     "aphrodite": "^1.1.0",

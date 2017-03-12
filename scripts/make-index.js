@@ -6,7 +6,7 @@ const RootDir = path.resolve(__dirname, '../')
 
 const pageTitle = 'CSS in React'
 
-const BUTTON_TITLE = 'Button Lessons'
+const BUTTON_TITLE = 'Buttons'
 const BUTTON_PREFIX = 'Button -'
 
 const WORKSHOP_TITLE = 'Workshops'
@@ -29,14 +29,14 @@ const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
 
 const projectPages = projectPaths.reduce((allpages, currpage) => {
 
-  var lessonEntryPath = path.join(basePath, currpage, './lessons/entry.js')
-  var lessonJsonPath = path.join(basePath, currpage, '/lessons/package.json')
+  var lessonEntryPath = path.join(basePath, currpage, './button/entry.js')
+  var lessonJsonPath = path.join(basePath, currpage, '/button/package.json')
   if ( fs.existsSync(lessonEntryPath) && fs.existsSync(lessonJsonPath)) {
     var lessonJSON = JSON.parse(fs.readFileSync(lessonJsonPath, 'utf8'))
     var lessonDesc = lessonJSON.description
     allpages.push({
       type: 'lesson',
-      url: '/' + currpage.substr(3) + '/lessons/',
+      url: '/' + currpage.substr(3) + '/button/',
       title: lessonDesc
     })
   }
@@ -71,7 +71,7 @@ const markup = ReactDOMServer.renderToStaticMarkup(
   React.createElement('html', {},
     React.createElement('head', {},
       React.createElement('title', {}, pageTitle),
-      React.createElement('link', { rel: 'stylesheet', href: '/css/lessons.css' })
+      React.createElement('link', { rel: 'stylesheet', href: '/css/server.css' })
     ),
     React.createElement('body', { id: 'index' },
 

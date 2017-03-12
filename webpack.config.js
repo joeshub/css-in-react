@@ -41,8 +41,8 @@ const babelPolyfill = 'babel-polyfill' // core-js ?
 const hotEntries = [ babelPolyfill, reactHotLoader, webpackHotMiddleware ]
 
 const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
-  if (fs.existsSync(path.join(basePath, currPath, './lessons/entry.js'))) {
-    allEntreis[currPath.substr(3) + '/lessons'] = [ ...hotEntries, path.join(basePath, currPath, './lessons/entry.js') ]
+  if (fs.existsSync(path.join(basePath, currPath, './button/entry.js'))) {
+    allEntreis[currPath.substr(3) + '/button'] = [ ...hotEntries, path.join(basePath, currPath, './button/entry.js') ]
   }
   if (fs.existsSync(path.join(basePath, currPath, './workshop/entry.js'))) {
     allEntreis[currPath.substr(3) + '/workshop'] = [ ...hotEntries, path.join(basePath, currPath, './workshop/entry.js') ]
@@ -56,7 +56,7 @@ const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
 let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
   acc.push(new HtmlWebpackPlugin({
     inject: true, 
-    template: 'templates/app.ejs', 
+    template: cur.indexOf('button') !== -1 ? 'templates/server.ejs' : 'templates/plain.ejs', 
     title: cur,
     filename: cur + '/index.html',
     chunks: [ cur ]

@@ -6,5 +6,5 @@ module.exports = {
     host: host,
     port: port
   },
-  publicPath: 'http://' + host  + ':' + port + '/'
+  publicPath: '/public/'
 }
