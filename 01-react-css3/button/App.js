@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import pkg from './package.json'
-import { Button } from './Button/Button'
+import { Button } from './Button'
 
 export default class App extends Component {
   render () {

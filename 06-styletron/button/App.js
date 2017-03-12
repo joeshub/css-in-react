@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Styletron from 'styletron-client'
 import { StyletronProvider } from 'styletron-react'
 import pkg from './package.json'
-import { Button } from './Button/Button'
+import { Button } from './Button'
 
 const styleSheet = document.createElement('style')
 document.head.appendChild(styleSheet)
