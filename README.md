@@ -1,5 +1,5 @@
 # 🍭 CSS in React
-Learn the top techniques for using CSS in React by example.
+Learn the different frameworks by example
 
 ## Requirements
 * [node](https://nodejs.org/en/download/releases/) - version 6
