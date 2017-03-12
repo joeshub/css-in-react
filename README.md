@@ -1,5 +1,5 @@
 # 🍭 CSS in React
-Learn the different frameworks by example
+Learn the best frameworks by example
 
 ## Requirements
 * [node](https://nodejs.org/en/download/releases/) - version 6
