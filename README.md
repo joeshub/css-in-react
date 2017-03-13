@@ -1,6 +1,9 @@
 # 🍭 CSS in React
 Learn the best frameworks by example
 
+## Cheat Sheet
+<img src="https://raw.githubusercontent.com/joeshub/css-in-react-content/master/CSS-in-React-Frameworks-CheatSheet.png" alt="CSS in React Cheat Sheet" align="center" />
+
 ## Requirements
 * [node](https://nodejs.org/en/download/releases/) - version 6
 * [yarn](https://yarnpkg.com) or npm
