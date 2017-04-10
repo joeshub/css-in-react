@@ -37,3 +37,6 @@ Learn the best frameworks by example
 
 ### Solutions
 - Workshops have a separate solutions complete with code and implementation steps in the README
+
+### Workshop Slides
+- To get started check out the [slides for this workshop](http://seifi.org/css/sxsw-slides-css-in-react-the-good-the-bad-and-the-ugly.html) which was given at SXSW 2017
