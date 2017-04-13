@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import cn from 'classnames'
 import buttonStyles from './button.css'

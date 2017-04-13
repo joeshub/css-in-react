@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import CSSModules from 'react-css-modules'
 import numeral from 'numeral'
 import { ButtonBuyNow, ButtonPlayNow } from '../index'

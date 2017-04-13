@@ -10,7 +10,7 @@ References:
 
 ## 1. Import ThemeProvider from styled-components
 
-Notice we are using ThemeProvider but it hasn't been defined. Notice an error on the page as well. Let's fix it.
+Notice an error on the page as well. Let's fix it. We are using ThemeProvider but it hasn't been defined. 
 
 * Open App.js and import ThemeProvider from styled-components.
 * Nice work, now check the page, there is a new error asking us to pass in a theme to ThemeProvider
