@@ -3,12 +3,14 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const StylablePlugin = require('stylable-integration/webpack-plugin')
 
 const production = process.env.NODE_ENV === 'production'
 const settings = require('./scripts/settings.js')
 const devServer = settings.devServer
 const basePath = path.join(__dirname)
 const cssModulesPath = path.resolve(__dirname, '05-react-css-modules')
+const stylablePath = path.resolve(__dirname, '09-stylable')
 
 let cssModulesLoaders = [
   'style-loader',
@@ -55,8 +57,8 @@ const webpackEntries = projectPaths.reduce((allEntreis, currPath) => {
 
 let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
   acc.push(new HtmlWebpackPlugin({
-    inject: true, 
-    template: cur.indexOf('button') !== -1 ? 'templates/server.ejs' : 'templates/plain.ejs', 
+    inject: true,
+    template: cur.indexOf('button') !== -1 ? 'templates/server.ejs' : 'templates/plain.ejs',
     title: cur,
     filename: cur + '/index.html',
     chunks: [ cur ]
@@ -67,7 +69,8 @@ let htmlPlugins = Object.keys(webpackEntries).reduce((acc, cur, idx, arr) => {
 const webpackPlugins = [
   ...htmlPlugins,
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoEmitOnErrorsPlugin()
+  new webpack.NoEmitOnErrorsPlugin(),
+  new StylablePlugin({ injectBundleCss: true })
 ]
 
 if (production) {
@@ -95,9 +98,9 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [ 
-          'react-hot-loader/webpack', 
-          'babel-loader?cacheDirectory=true' 
+        use: [
+          'react-hot-loader/webpack',
+          'babel-loader?cacheDirectory=true'
         ]
       },
       {
@@ -105,16 +108,30 @@ module.exports = {
         include: [ cssModulesPath ],
         use: cssModulesLoaders
       },
+      StylablePlugin.rule(),
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        include: [ stylablePath ],
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
       {
         test: /\.css$/,
-        use: [ 
+        exclude: [ stylablePath, cssModulesPath ],
+        use: [
           'style-loader',
-          'css-loader' 
+          'css-loader'
         ],
-        exclude: [ cssModulesPath ],
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
+        exclude: [ stylablePath ],
         use: [ 'file-loader?name=[path][name].[hash].[ext]' ]
       },
       {

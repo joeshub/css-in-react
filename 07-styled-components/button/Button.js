@@ -27,10 +27,10 @@ export class Button extends Component {
 
   render () {
     return (
-      <StyledButton 
-        onClick={ this.onButtonClicked } 
+      <StyledButton
+        onClick={ this.onButtonClicked }
         depressed={ this.state.depressed }
-        { ...this.props } 
+        { ...this.props }
       />
     )
   }

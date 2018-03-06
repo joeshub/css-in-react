@@ -1,11 +1,11 @@
 {
   "presets": [
-    "es2015", 
-    "stage-2", 
+    "es2015",
+    "stage-2",
     "react"
   ],
   "plugins": [
-    "transform-class-properties", 
+    "transform-class-properties",
     "transform-decorators-legacy",
     "transform-object-rest-spread",
     "react-hot-loader/babel"
