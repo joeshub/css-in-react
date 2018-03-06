@@ -22,6 +22,8 @@ Learn the best frameworks by example
 05. [React-css-modules](https://github.com/gajus/react-css-modules) with [PostCSS](https://github.com/postcss/postcss)
 06. [Styletron](https://github.com/rtsao/styletron)
 07. [Styled Components](https://github.com/styled-components/styled-components)
+08. [Emotion](https://github.com/emotion-js/emotion)
+09. [Stylable](https://github.com/wix/stylable)
 
 ## How this project is organized
 
