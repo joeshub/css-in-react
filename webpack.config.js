@@ -70,7 +70,10 @@ const webpackPlugins = [
   ...htmlPlugins,
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NoEmitOnErrorsPlugin(),
-  new StylablePlugin({ injectBundleCss: true })
+  new StylablePlugin({
+    injectBundleCss: true,
+    nsDelimiter: '_'
+  })
 ]
 
 if (production) {

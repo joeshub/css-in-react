@@ -2,6 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var StylablePlugin = require('stylable-integration/webpack-plugin')
 
 module.exports = {
   entry: [ 'babel-polyfill','./entry.js' ],
@@ -12,8 +13,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ inject: true, template: '../../templates/plain.ejs' }),
-    new ExtractTextPlugin({ filename: 'button.css', disable: false, allChunks: true }),
+    // new ExtractTextPlugin({ filename: 'button.css', disable: false, allChunks: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new StylablePlugin({
+      injectBundleCss: false,
+      nsDelimiter: 'x',
+      filename: '[name].css',
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
@@ -28,15 +34,20 @@ module.exports = {
         use: 'babel-loader'
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader', 
-          use: 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]'
-        })
-      },
-      {
         test: /\.json$/,
         use: 'json-loader'
+      },
+      StylablePlugin.rule(),
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   }
