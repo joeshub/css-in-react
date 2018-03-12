@@ -34,6 +34,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "fs-extra": "^2.0.0",
+    "glamor": "^2.20.40",
     "html-webpack-plugin": "^2.28.0",
     "image-webpack-loader": "^3.2.0",
     "json-loader": "^0.5.4",

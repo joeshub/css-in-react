@@ -14,13 +14,13 @@ const stylablePath = path.resolve(__dirname, '09-stylable')
 
 let cssModulesLoaders = [
   'style-loader',
-  'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+  'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:3]',
   'postcss-loader'
 ]
 
 if (production) {
   cssModulesLoaders = ExtractTextPlugin.extract([
-    'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+    'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:3]',
     'postcss-loader'
   ])
 }
@@ -29,8 +29,9 @@ function isDirectory (dir) {
   return fs.lstatSync(dir).isDirectory()
 }
 
-const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
-  if(projdDir.startsWith('0') && projdDir.indexOf('-') === 2) {
+const projectPaths = fs.readdirSync(basePath).filter((projdDir) => {
+  let isProject = /^[0-9]{2}-.+/
+  if (isProject.test(projdDir)) {
     return isDirectory(path.join(basePath, projdDir))
   }
 })

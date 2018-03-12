@@ -21,8 +21,9 @@ function isDirectory (dir) {
   return fs.lstatSync(dir).isDirectory()
 }
 const basePath = path.join(__dirname, '../')
-const projectPaths = fs.readdirSync(basePath).filter((projdDir) =>{
-  if(projdDir.startsWith('0') && projdDir.indexOf('-') === 2) {
+const projectPaths = fs.readdirSync(basePath).filter((projdDir) => {
+  let isProject = /^[0-9]{2}-.+/
+  if (isProject.test(projdDir)) {
     return isDirectory(path.join(basePath, projdDir))
   }
 })
@@ -129,7 +130,7 @@ const markup = ReactDOMServer.renderToStaticMarkup(
             React.createElement('li', { key: 'twitter-link' },
               React.createElement('a', { href: 'https://twitter.com/joeseifi' }, '@JoeSeifi on Twitter')
             )
-            
+
           )
         )
       )

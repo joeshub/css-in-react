@@ -120,31 +120,12 @@
 
 # Talks related to CSS in React
 - https://vimeo.com/116209150
-- https://youtu.be/7rDsRXj9-cU?t=1573 
-- https://youtu.be/NoaxsCi13yQ?t=165
-- https://youtu.be/E3jQQsFxUes?t=738
-- https://youtu.be/BXOF_8jDdf8?t=407
-- https://youtu.be/U86-MFPsarQ?t=311
-- https://youtu.be/eHS1Ohybb_k?t=37
-- https://youtu.be/u9LBSeeJzXc?t=116
-- https://youtu.be/5yqJxfb0gVU?t=139
-- https://youtu.be/zR1lOuyQEt8?t=928
-- https://youtu.be/19gqsBc_Cx0?t=951
-- https://youtu.be/gNeavlJ7lNY?t=88
-- https://youtu.be/ERB1TJBn32c?t=190
-- https://youtu.be/qu4U7lwZTRI?t=368
-- https://youtu.be/k3OF4A30jSQ?t=911
-- https://youtu.be/XR6eM_5pAb0?t=866
-- https://youtu.be/DGEFNBYJRps?t=162
-- https://youtu.be/UAVJ6feR2LU?t=1347
-- https://youtu.be/D-ioDiacTm8?t=769
-- https://youtu.be/YpSdBDoPemg?t=96
-- https://youtu.be/vpNKUYSeT7g?t=356
-- https://youtu.be/84VZ1BHMkUA?t=80
-- https://youtu.be/0aBv8dsZs84?t=1060
+- https://vimeo.com/166790294
 - https://vimeo.com/187454104
+- https://vimeo.com/147351381
+- https://www.youtube.com/playlist?list=PLHYxfIyQTTANvE5vosx510oV_0JKFoJcq My CSSinJS Playlist of over 40 talks
 
-# References
+# Reads
 - http://typestyle.io/#/why
 - http://fela.js.org/docs/advanced/RendererConfiguration.html
 - https://github.com/FormidableLabs/radium/issues/389
@@ -183,7 +164,6 @@
 - https://github.com/zeit/next.js/issues/22
 - http://glenmaddern.com/articles/interoperable-css
 - https://speakerdeck.com/davidwells/bulletproof-css-in-react
-- https://vimeo.com/channels/986495/187454104
 - https://facebook.github.io/react/docs/dom-elements.html
 - http://learn.shayhowe.com/advanced-html-css/complex-selectors/
 - https://www.webdirections.org/blog/happy-17th-birthday-css/
@@ -201,6 +181,12 @@
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
 - https://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
 - https://github.com/hellofresh/css-in-js-perf-tests
+- https://medium.com/seek-blog/a-unified-styling-language-d0c208de2660
+- https://medium.com/netscape/revolution-vs-evolution-css-in-js-bceae82b1fa0
+- https://medium.com/@tkh44/emotion-ad1c45c6d28b
+
+# Communities
+- https://spectrum.chat/css-in-js
 
 # React Libraries that offer UI components
 - https://github.com/palantir/blueprint

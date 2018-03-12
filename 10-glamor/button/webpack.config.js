@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader','css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]' ]
+        use: ['style-loader','css-loader']
       },
       {
         test: /\.json$/,
