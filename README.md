@@ -25,6 +25,7 @@ Learn the best frameworks by example
 08. [Emotion](https://github.com/emotion-js/emotion)
 09. [Stylable](https://github.com/wix/stylable)
 10. [Glamor](https://github.com/threepointone/glamor)
+11. [React JSS](https://github.com/cssinjs/react-jss)
 
 ## How this project is organized
 
