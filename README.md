@@ -26,6 +26,7 @@ Learn the best frameworks by example
 09. [Stylable](https://github.com/wix/stylable)
 10. [Glamor](https://github.com/threepointone/glamor)
 11. [React JSS](https://github.com/cssinjs/react-jss)
+12. [Glamorous](https://github.com/paypal/glamorous)
 
 ## How this project is organized
 
