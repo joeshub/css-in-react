@@ -23,7 +23,7 @@ module.exports = {
     new HtmlWebpackPlugin({ inject: true, template: '../../templates/server.ejs' }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new StylablePlugin({ injectBundleCss: true })
+    new StylablePlugin({ injectBundleCss: true, nsDelimiter: '_' })
   ],
   module: {
     rules: [

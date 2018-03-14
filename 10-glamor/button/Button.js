@@ -33,9 +33,9 @@ export class Button extends Component {
       transition: 'background-color 300ms',
       transform: 'translateZ(0)',
       backfaceVisibility: 'visible',
-      backgroundColor: `${depressed ? bgDepressed : bgColor}`,
+      backgroundColor: depressed ? bgDepressed : bgColor,
       ':hover': {
-        backgroundColor: `${depressed ? bgDepressed : bgHover}`
+        backgroundColor: depressed ? bgDepressed : bgHover
       }
     })
 
