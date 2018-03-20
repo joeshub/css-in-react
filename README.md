@@ -27,6 +27,7 @@ Learn the best frameworks by example
 10. [Glamor](https://github.com/threepointone/glamor)
 11. [React JSS](https://github.com/cssinjs/react-jss)
 12. [Glamorous](https://github.com/paypal/glamorous)
+13. [DeCSS](https://github.com/kossnocorp/decss)
 
 ## How this project is organized
 
