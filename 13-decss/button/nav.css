@@ -1,0 +1,5 @@
+/* nav.css */
+.nav {
+    composes: btn from "./button.css";
+    background: blue;
+}

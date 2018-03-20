@@ -11,11 +11,18 @@ const devServer = settings.devServer
 const basePath = path.join(__dirname)
 const cssModulesPath = path.resolve(__dirname, '05-react-css-modules')
 const stylablePath = path.resolve(__dirname, '09-stylable')
+const deCSSPath = path.resolve(__dirname, '13-decss')
 
 let cssModulesLoaders = [
-  'style-loader',
+  'decss-loader/react',
   'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:3]',
   'postcss-loader'
+]
+
+let deCSSPathLoaders = [
+  'style-loader',
+  'decss-loader/react',
+  'css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:3]',
 ]
 
 if (production) {
@@ -108,6 +115,11 @@ module.exports = {
         ]
       },
       {
+        test: /\.css/,
+        include: [ deCSSPath ],
+        use: deCSSPathLoaders
+      },
+      {
         test: /\.s?css$/,
         include: [ cssModulesPath ],
         use: cssModulesLoaders
@@ -127,7 +139,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: [ stylablePath, cssModulesPath ],
+        exclude: [ deCSSPath, stylablePath, cssModulesPath ],
         use: [
           'style-loader',
           'css-loader'
